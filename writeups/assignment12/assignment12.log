@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.30)  25 JAN 2024 16:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.30)  25 JAN 2024 16:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -676,10 +676,10 @@ LaTeX Font Warning: Font shape `U/fontawesometwo/bx/n' undefined
 Package xcolor Warning: Incompatible color definition on input line 22.
 
 
-Package xcolor Warning: Incompatible color definition on input line 31.
+Package xcolor Warning: Incompatible color definition on input line 33.
 
 
-Overfull \hbox (43.17511pt too wide) in paragraph at lines 31--32
+Overfull \hbox (43.17511pt too wide) in paragraph at lines 33--34
 [][]  
  []
 
@@ -688,7 +688,7 @@ Overfull \hbox (43.17511pt too wide) in paragraph at lines 31--32
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figur
 es/local//pocslogo002.pdf>]
 LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <12> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 81.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 83.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -710,7 +710,7 @@ Package rerunfilecheck Info: File `assignment12.out' has not changed.
 Here is how much of TeX's memory you used:
  17691 strings out of 478268
  280022 string characters out of 5846347
- 767414 words of memory out of 5000000
+ 767423 words of memory out of 5000000
  35550 multiletter control sequences out of 15000+600000
  477900 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -732,7 +732,7 @@ usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
 r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr
 /local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
 /usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on assignment12.pdf (4 pages, 463664 bytes).
+Output written on assignment12.pdf (4 pages, 464667 bytes).
 PDF statistics:
  135 PDF objects out of 1000 (max. 8388607)
  95 compressed objects within 1 object stream
