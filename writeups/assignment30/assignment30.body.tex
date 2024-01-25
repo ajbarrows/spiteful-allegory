@@ -1,0 +1,4921 @@
+\textbf{Name:} \\
+
+\medskip
+
+\textbf{Conspirators:} 
+
+\medskip
+\medskip
+
+\hrule
+
+\medskip
+
+
+The questions you don't have to do!
+
+Some are open ended madnesses.
+
+\begin{enumerate}
+
+
+\item (3 + 3 points)
+  \textit{Zipfarama via Optimization:}
+
+  Complete the Mandelbrotian derivation of Zipf's law by
+  minimizing the function
+  $$
+  \Psi(p_1,p_2,\ldots,p_n) = 
+  F(p_1,p_2,\ldots,p_n) + \lambda G(p_1,p_2,\ldots,p_n)
+  $$
+  where the `cost over information' function is
+  $$
+  F(p_1,p_2,\ldots,p_n)
+  = 
+  \frac{C}{H}
+  =
+  \frac{
+    \sum_{i=1}^n p_i \ln (i+a)
+  }{-g\sum_{i=1}^n p_i \ln p_i}
+  $$
+  and the
+  constraint function is
+  $$
+  G(p_1,p_2,\ldots,p_n) = \sum_{i=1}^n p_i - 1  \quad (= 0)
+  $$
+  to find
+  $$
+  p_j = e^{-1 -\lambda H^2/gC} (j+a)^{-H/gC}.
+  $$
+  Then use the constraint equation, $\sum_{j=1}^{n} p_j = 1$ 
+  to show that 
+  $$
+  p_j = (j+a)^{-\alpha}.
+  $$
+  where $\alpha = H/gC$.
+
+  3 points: When finding $\lambda$, find an expression
+  connecting $\lambda$, $g$, $C$, and $H$.
+
+  The Perishing Monks who have returned say the way is sneaky.
+  Before collapsing, one monk mumbled something
+  about substituting the form you find
+  for $\ln p_i$ into $H$'s definition (but
+  do not replace $p_i$).
+
+  Note: We have now allowed the cost factor to be $(j+a)$
+  rather than $(j+1)$. 
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item 
+  Carrying on from the previous problem:
+
+  For $n \rightarrow \infty$, use some computation tool (e.g., Matlab, an abacus, 
+  but not a clever friend who's really into computers) 
+  to determine that $\alpha \simeq 1.73$ for $a=1$.
+  (Recall: we expect $\alpha < 1$ for $\gamma > 2$)
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+  Do not do! Solution provided.
+  For finite $n$, find an approximate estimate of $a$
+  in terms of $n$ that yields $\alpha=1$.
+
+  (Hint: use an integral approximation for the relevant sum.)
+
+  What happens to $a$ as $n \rightarrow \infty$?
+
+  \textbf{Solution:}
+
+  For finite $n$ and a burning desire that $\alpha=1$, we 
+  can approximate the above sum with an integral
+  $$ 
+  1 \simeq \int_{x=1}^n (x+a)^{-1}.
+  $$
+  Barging ahead:
+  $$ 
+  1 \simeq 
+  \left.
+  \ln{(x+a)}
+  \right|_{1}^{n}
+  $$
+  $$
+  =
+  \left[
+    \ln{(n+a)}
+    -
+    \ln{(1+a)}
+    \right]
+  $$
+  $$
+  =
+  \ln{\frac{(n+a)}{(1+a)}}.
+  $$
+  Next, we isolate $a$:
+  %%    the Michael Jordan of pronumerals\footnote{
+  %%      Do not be alarmed, this is utter nonsense.
+  %%    }:
+  \begin{align*}
+    e 
+    &
+    \simeq
+    \frac{(n+a)}{(1+a)} 
+    \\
+    &
+    = 
+    \frac{(1+a)}{(1+a)} 
+    +
+    \frac{(n-1)}{(1+a)} 
+    \\
+    & = 
+    1 
+    +
+    \frac{(n-1)}{(1+a)} 
+  \end{align*}
+  Some twists and turns give:
+  $$
+  a \simeq
+  \frac{n-1}{e-1} - 1
+  =
+  \frac{n-e}{e-1}
+  \sim 
+  \frac{1}{e-1} n.
+  $$
+
+  So we see that $a$ grows linearly with $n$ and that
+  that $\alpha=1$ is an impossibility in the $n = \infty$ limit.
+
+  Simon's model also has the $\alpha=1$ case in a peculiar
+  limit (no new arrivals).  
+  While Mandelbrot's model is perhaps
+  the least realistic in the mechanism detail, the broader
+  story of optimization remains plausible.  
+  There is much subsequent work 
+  over the next fifty years that attempts to improve upon
+  both Mandelbrot and Simon.
+
+
+
+\item
+  
+  The 1-$d$ theoretical percolation problem:
+
+  Consider an infinite 1-$d$ lattice forest with 
+  a tree present at any site with probability $p$.
+
+  \begin{enumerate}
+  \item 
+    Find the distribution of forest sizes
+    as a function of $p$.
+    Do this by moving along the 1-d world and
+    figuring out 
+    the probability
+    that any forest you enter will extend for a total length $\ell$.
+  \item 
+    Find $p_c$, the critical probability for
+    which a giant component exists.
+
+    Hint: One way to find critical points is
+    to determine when certain average quantities explode.
+    Compute $\tavg{l}$ and find $p$ such that this
+    expression goes boom (if it does).
+  \end{enumerate}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+  %% square lattice bond percolation?
+
+  Show analytically that the critical probability for
+  site percolation on a triangular lattice
+  is $p_c$ = 1/2.
+
+  \videohint{JlkbU5U7QqU}{Real-space renormalization gets it done.}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item (3 + 3)
+
+  \textbf{Coding, it's what's for breakfast:}
+
+  \begin{enumerate}
+  \item 
+    Percolation in two dimensions (2-$d$) on a simple square lattice provides a classic, nutritious 
+    example of a phase transition.
+
+    Your mission, whether or not you choose to accept it,
+    is to code up and analyse the $L$ by $L$ square lattice percolation model
+    for varying $L$.
+
+    Take $L$ = 20, 50, 100, 200, 500, and 1000.
+    
+    (Go higher if you feel $L$ = 1000 is for mere mortals.)
+
+    (Go lower if your code explodes.)
+
+    Let's continue with the tree obsession.
+    A site has a tree with probability $p$,
+    and a sheep grazing on what's left of
+    a tree with probability $1-p$.
+
+    Forests are defined as any connected component
+    of trees bordered by sheep, where connections
+    are possible with a site's four nearest neighbors
+    on a lattice.
+
+    Each square lattice is to be considered as a landscape
+    on which forests and sheep co-exist.
+
+    Do not bagelize (or doughnutize) the landscape (no periodic
+    boundary conditions---boundaries are boundaries).
+
+    (Note: this set up is called site percolation.  Bond percolation
+    is the alternate case when all links between neighboring sites exist
+    with probability $p$.)
+
+    Steps:
+    \begin{enumerate}
+    \item 
+      For each $L$, run $N_{\rm tests}$=100 tests for occupation probability $p$
+      moving from 0 to 1 in increments of $10^{-2}$.
+      (As for $L$, you may use a smaller or larger increment depending on how
+      things go.)
+    \item 
+      Determine the fractional size of the largest connected forest
+      for each of the $N_{\rm tests}$, and find the average of these,
+      $S_{\rm avg}$.
+    \item 
+      On a single figure, for each $L$, plot the average $S_{\rm avg}$ as a function of $p$.
+    \end{enumerate}
+
+  \item
+    Comment on how $S_{\rm avg}(p;N)$ changes as a function of $L$
+    and estimate the critical probability $p_c$ (the percolation threshold).
+  \end{enumerate}
+
+  For the few Matlabbers,
+  a helpful reuse of code (intended for black and white image analysis): 
+  You can use Matlab's bwconncomp to find 
+  the sizes of components.  Very nice.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item (3 + 3)
+
+  \begin{enumerate}
+  \item 
+    Using your model from the previous question and your
+    estimate of $p_c$, plot the distribution of forest sizes
+    (meaning cluster sizes)
+    for $p \simeq p_c$ for the largest $L$ your code
+    and psychological makeup can withstand.
+    (You can average the distribution over separate simulations.)
+
+    Comment on what kind of distribution you find.
+
+  \item
+    Repeat the above for $p=p_c/2$ and $p=p_c + (1-p_c)/2$,
+    i.e., well below and well above $p_c$.
+
+    Produce plots for both cases,
+    and again, comment on what you find.
+  \end{enumerate}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item
+
+  Show that the Gini coefficient $\ginicoefficient$
+  for our idealized power-law size distribution of wealth is:
+  \begin{equation}
+    \ginicoefficient 
+    =
+    \left\{
+    \begin{array}{cl}
+      1
+      &
+      \ \textnormal{if} \
+      1 < \gamma \le 2,
+      \\
+      \frac{1}{1 + 2(\gamma-2)}
+      &
+      \ \textnormal{if} \
+      \gamma > 2.
+    \end{array}
+    \right.
+    \label{eq:pocs.gini}
+  \end{equation}
+
+  Having developed a sense of what values of $\gamma$ mean,
+  and because of the simplicity of the relationship between
+  $\ginicoefficient$
+  and
+  $\gamma$,
+  we can convert a real-world wealth distribution's
+  value of $\ginicoefficient$
+  to $\gamma$ for
+  the equivalent
+  idealized power-law size distribution:
+  \begin{equation}
+    \begin{array}{cl}
+      \gamma
+      \le
+      2
+      &
+      \ \textnormal{if} \
+      \ginicoefficient = 1,
+      \\
+      \gamma
+      =
+      \frac{1}{2}
+      \left(
+      \frac{1}{\ginicoefficient}
+      +
+      3
+      \right)
+      &
+      \ \textnormal{if} \
+      \ginicoefficient < 1.
+    \end{array}
+    \label{eq:pocs.gini-gamma}
+  \end{equation}
+
+  For example, what does a Gini coefficient of 1/2 mean for an idealized power law?
+
+  Eq.~\ref{eq:pocs.gini-gamma} gives $\gamma = 5/2$,
+  which we recognized as coming from the Bad Place of
+  finite mean and infinite variance.
+  
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item (3 + 3 + 3 + 3 + 3)
+
+  We take a look at the 80/20 rule, 1 per centers, and similar concepts.
+
+  Take $x$ to be the  wealth held by an individual 
+  in a population of $n$ people,
+  and the number of individuals with wealth between $x$ and $x+\dee{x}$
+  to be approximately $N(x) \dee{x}$.
+
+  Given a power-law size frequency distribution $N(x) = c x^{-\gamma}$
+  where $x_{\min} \ll x \ll \infty$, determine the value of $\gamma$
+  for which the so-called 80/20 rule holds.
+
+  In other words, find $\gamma$ for which the bottom 4/5 of the population
+  holds 1/5 of the overall wealth,
+  and the top 1/5 holds the remaining 4/5.
+
+  Note that inherent in our construction of the wealth frequency distribution
+  is that the population is ordered by increasing wealth.
+
+  Assume the mean is finite, i.e., $\gamma > 2$.
+
+  \begin{enumerate}
+  \item 
+    Determine the total wealth $W$ in the system given $\int_{x_{\min}}^{\infty} \dee{x} N(x) = n$.
+  \item 
+    Imagine
+    that the bottom $100\,\popfrac $ percent of the population
+    holds $100\,\wealthfrac$ percent of the wealth.
+
+    Show $\gamma$ depends on $\popfrac$ and $\wealthfrac$ as 
+    \begin{equation}
+      \gamma
+      =
+      1 +
+      \frac{
+        \ln \frac{1}{(1-\popfrac)}
+      }{
+        \ln\frac{1}{(1-\popfrac)} - \ln \frac{1}{(1-\wealthfrac)}
+      }.
+      \label{eq:pocs.gamma-pop-wealth-frac}
+    \end{equation}
+  \item 
+    Given the above, is every pairing of $\popfrac$ and $\wealthfrac$ possible?
+  \item 
+    Find $\gamma$ for the 80/20 requirement ($\popfrac=4/5$ and $\wealthfrac=1/5$).
+  \item 
+    For the ``80/20'' $\gamma$ you find, determine the fraction of
+    wealth $\wealthfrac$ that the bottom fraction $\popfrac$
+    of the population possesses as a function of $\popfrac$ and
+    plot the result.
+  \end{enumerate}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item (3 + 3 + 3)
+
+  \textit{Highly Optimized Tolerance:}
+
+  This question is based on Carlson and Doyle's 1999 paper
+  ``Highly optimized tolerance: {A} mechanism for power
+  laws in design systems''~\cite{carlson1999a}.
+  In class, we made our way through a discrete version
+  of a toy HOT model of forest fires.
+  This paper revolves around the equivalent continuous model's
+  derivation.
+  You do not have to perform the derivation but rather
+  carry out some manipulations of probability distributions
+  using their main formula.
+
+  Our interest is in Table I on p.\ 1415:
+  \includegraphics[width=0.7\textwidth]{carlson1999a_tab1.pdf}\\
+  and Equation 8 on the same page:
+  $$
+  P_{\ge}(A)
+  =
+  \int_{p^{-1}(A^{-\gamma})}^{\infty}
+  p(\mathbf{x})
+  \dee{\mathbf{x}}
+  =
+  p_{\ge}
+  \left(
+  p^{-1}
+  \left(
+  A^{-\gamma}
+  \right)
+  \right),
+  $$
+  where $\gamma = \alpha + 1/\beta$
+  and we'll write $P_{\ge}$ for $P_{\rm cum}$.
+
+  Please note that $P_{\ge}(A)$
+  for $x^{-(q+1)}$ is not correct.
+  Find the right one!
+
+  Here, $A(\mathbf{x})$ is the area connected 
+  to the point $\mathbf{x}$ (think connected patch of trees for forest fires).
+  The cost of a `failure' (e.g., lightning) beginning at $\mathbf{x}$
+  scales as $A(\mathbf{x})^{\alpha}$
+  which in turn occurs with probability 
+  $p(\mathbf{x})$.  
+  The function $p^{-1}$ is the inverse function of $p$.
+
+  Resources associated with point $\mathbf{x}$ 
+  are denoted as $R(\mathbf{x})$ and area is
+  assumed to scale with resource as
+  $A(\mathbf{x}) \sim R^{-\beta}(\mathbf{x})$.
+
+  Finally, $p_{\ge}$ is the complementary cumulative
+  distribution function for $p$.
+
+  As per the table, determine
+  $p_{\ge}(x)$
+  and
+  $P_{\ge}(A)$
+  for the following (3 pts each):
+  \begin{enumerate}
+  \item
+    $
+    p(x) = c x^{-(q+1)}$,
+  \item
+    $
+    p(x) = c e^{-x}$, and 
+  \item
+    $
+    p(x) = c e^{-x^2}.
+    $
+  \end{enumerate}
+
+  Note that these forms are for the tails of $p$ only,
+  and you should incorporate a constant
+  of proportionality $c$, which is not shown
+  in the paper.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+  The discrete version of HOT theory:
+
+  From lectures, we had the following.
+
+  Cost: Expected size of `fire' in a $d$-dimensional lattice:
+  $$
+  C_{\rm fire}
+  \propto \sum_{i=1}^{N_{\rm sites}} p_i a_i
+  $$ 
+  where 
+  $a_i$ = area of $i$th site's region,
+  and
+  $p_i$ = avg.\ prob.\ of fire at site $i$ over a given time period.
+
+  The constraint for building and maintaining 
+  $(d-1)$-dimensional firewalls in $d$-dimensions is
+  $$
+  C_{\rm firewalls} 
+  \propto 
+  \sum_{i=1}^{N_{\rm sites}} a_i^{(d-1)/d} a_i^{-1},
+  $$
+  where we are assuming isometry.
+
+  Using Lagrange Multipliers, and, optionally, safety goggles,
+  rubber gloves, a pair of tongs, and a maniacal laugh,
+  determine that:
+  $$ 
+  p_i 
+  \propto 
+  a_i^{-\gamma} 
+  = 
+  a_i^{-(1 + 1/d)}.
+  $$
+
+  %%  and therefore that 
+  %%  $$
+  %%  \Prob(a_i) 
+  %%  \propto 
+  %%  a_i^{-\gamma}.
+  %%  $$
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item (3 + 3 + 3 + 3)
+
+  A courageous coding festival:
+
+  Code up the discrete HOT model in 2-$d$.
+  Let's see if we find any of these super-duper power laws
+  everyone keeps talking about.  We'll follow the same
+  approach as the $N$ = $L$$\times$$L$ 2-$d$ forest discussed in lectures.
+
+  Main goal: extract yield curves as a function
+  of the design $D$ parameter as described below.
+
+  Suggested simulations elements:
+  \begin{itemize}
+  \item 
+    Take $L=32$ as a start.  Once your code is running, see if $L=64$, 128, or more might
+    be possible.
+    (The original sets of papers used all three of these values.)
+    Use a value of $L$ that's sufficiently large to produced useful
+    statistics but not prohibitively time consuming for simulations.
+  \item 
+    Start with no trees.
+  \item 
+    Probability of a spark at the $(i,j)$th site:
+    $
+    P(i,j) \propto e^{-i/\ell} e^{-j/\ell}
+    $
+    where $(i,j)$ is tree position with the indices
+    starting in the top left corner ($i,j=1$ to $L$).
+    (You will need to normalize this properly.)
+    The quantity $\ell$ is the characteristic
+    scale for this distribution.
+    Try out $\ell = L/10$.
+  \item 
+    Consider a design problem of $D=1$, $2$, $L$, and $L^{2}$.
+    (If $L$ and $L^{2}$ are too much, you can drop them.
+    Perhaps sneak out to $D=3$.)
+    Recall that the design problem is to test $D$ randomly
+    chosen placements of the next tree against the
+    spark distribution.
+  \item 
+    For each test tree, 
+    compute the average forest fire size over the full spark
+    distribution: 
+    $$
+    \sum_{i,j} P(i,j) S(i,j),
+    $$
+    where $S(i,j)$ is the size of the forest component
+    at $(i,j)$.
+    Select the tree location with the highest average yield and plant a tree there.
+  \item 
+    Add trees until the 2-$d$ forest is full, measuring average yield as a function of trees added.
+  \item 
+    Only trees within the cluster surrounding the ignited tree burn
+    (trees are connected through four nearest neighbors).
+  \end{itemize}
+
+  \begin{enumerate}
+  \item 
+    Plot the forest at (approximate) peak yield.
+  \item 
+    Plot the yield curves for each value of $D$,
+    and identify (approximately) the peak yield and the density
+    for which peak yield occurs for each value of $D$.
+  \item 
+    Plot Zipf (or size) distributions of tree component sizes $S$
+    at peak yield.
+    Note: You will have to rebuild forests
+    and stop at the peak yield value of $D$ to
+    find these distributions.
+    By recording the sequence of optimal tree planting,
+    this can be done without running the simulation again.
+  \item
+    Extra level: Plot Zipf (or size) distributions for $D=L^2$ for
+    varying tree densities $\rho=0.10, 0.20, \ldots, 0.90$.
+    This will be an effort to reproduce
+    Fig.~3b in~\cite{carlson2000a}.
+  \end{enumerate}
+
+  Hint: 
+  Working on un-treed locations will
+  make choosing the next location easier.  
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+  
+
+\item
+
+  Plot time series for the rank
+  of the following baby names in the US over all years in the census data.
+
+  Do so for raw ranks and $\textnormal{log}_{10}$ ranks.
+
+  \begin{itemize}
+  \item 
+    Shirley.
+  \item
+    Desmond.
+  \item
+    Madison.
+  \item
+    Aiden.
+  \item
+    A name of your choice.
+  \end{itemize}
+
+  Note that if you plotted relative frequency rather than rank,
+  you would need to know (or estimate) the overall number of babies born.
+  Ranks are both easy simple to work with and easy to understand.
+
+  %% Not using frequency 
+  %%  For each name, you will need to the frequency for each year, as well
+  %%  as that year's total number of names (girls or boys).
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  
+\item
+  \textbf{The complex geographies of fairness, greed, belief.}
+
+  Let's start connecting people to places.
+
+  Now: Source census population data as a function of location
+  with corresponding map shape files.
+
+  Goal: We will want to be able to connect density of people in regions
+  with density of specific facilities.
+
+  So the shape files should be as usefully fine in scale as possible.
+  For the census, we have block, block groups, and tracts.
+
+  Please do this collectively by discussing and sharing links/data in the
+  assignments channel on Teams.
+
+  Depending on the software you use, much of this data may be well curated.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+  From lectures on Supply Networks:
+
+  Show that for large $V$ and $0 < \epsilon < 1/2$
+  $$
+  {\min V_{\rm net}}  \propto 
+  \int_{\volume{V}} {\rho} \, ||\vec{x}||^{1-2\epsilon} \, \dee{\vec{x}}
+  \sim \rho V^{1+\gamma_{\max}(1-2\epsilon)}
+  $$
+  Reminders: we defined 
+  $
+  {L_i} = c_i^{-1} V^{\gamma_i}
+  $
+  where 
+  $
+  \gamma_1 + \gamma_2 + \ldots + \gamma_d = 1
+  $,
+  $
+  \gamma_1 = \gamma_{\max} \ge \gamma_2 \ge \ldots \ge \gamma_d.
+  $,
+  and $c = \prod_i c_i \le 1$ is a shape factor.
+
+  Assume the first $k$ lengths scale
+  in the same way with $\gamma_1 = \ldots = \gamma_k = \gamma_{\max}$,
+  and write $||\vec{x}|| = (x_1^2 + x_2^2 + \ldots + x_d^2)^{1/2}$.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+  
+\item (3 + 3 points)
+  \textbf{Supply networks and allometry:}
+
+  This question's calculation is a specific, exactly-solvable case
+  of the general result that you may attack
+  (with optional relish
+  and other condiments)
+  in a nearby question.
+
+  Consider a set of rectangular areas with side lengths
+  $L_{1}$ and $L_{2}$ such that $L_{1} \propto A^{\gamma_{1}}$ and
+  $L_{2} \propto A^{\gamma_{2}}$ where $A$ is area and $\gamma_{1} + \gamma_{2}=1$.  
+  Assume $\gamma_{1} > \gamma_{2}$ and that $\epsilon=0$.
+
+  Now imagine that material has to be distributed from a central
+  source in each of these areas to sinks distributed with
+  density $\rho(A)$, and that these sinks draw the same amount
+  of material per unit time independent of $L_{1}$ and $L_{2}$.
+
+  \begin{enumerate}
+  \item 
+    Find an exact form for how the volume of the most efficient distribution
+    network scales with overall area $A = L_{1} L_{2}$.  (Hint: you will
+    have to set up a double integration over the rectangle.)
+  \item 
+    If network volume must remain a constant fraction of overall
+    area, determine the maximal scaling of sink density $\rho$ with $A$.
+  \end{enumerate}
+
+  Extra hints: 
+  \begin{itemize}
+  \item 
+    Integrate over triangles as follows.
+  \item 
+    You need to only perform calculations for one triangle.
+  \end{itemize}
+
+  \includegraphics[width=0.7\textwidth]{ass2rectanglescaling.pdf}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+  %% \item Given your findings above, suggest how the most
+  %% efficient distribution network's volume scales
+  %% for a set of volumes with dimensions $L_{1} \times L_{2} \times L_{2}$
+  %% with $L_{1} \propto L_{2}^\alpha$ when (i) $\alpha>1 $ and (ii) $\alpha < 1$.
+  %% 
+  %% In a sentence or two, make an argument for the scalings you observe 
+  %% (hint: what does
+  %% $\alpha<1$ and $\alpha>1$ imply about the shape of volume as $L_{1}$ and
+  %% $L_{2}$ become large.)
+  %% 
+  %% \solution{
+  %% }
+  %% 
+  %% \item Determine the scaling of maximal sink density $\rho$
+  %% for (i) $\alpha > 1$ and (ii) $\gamma < 1$.
+  %% 
+  %% \solution{
+  %% }
+
+  %% \item (e) Can you generalize (c) to $d$ dimensions?
+  %% 
+  %%   \solution{
+  %%   }
+
+    
+\item
+  Open:
+
+  Derive a scaling law for the number of side branches
+  that doesn't use stream ordering.
+
+  How many parameters do we need?  3?
+
+\item
+  
+  Come up with a microscopic description of branching river
+  networks that builds from the outlet of the basin
+  rather than the smallest streams.
+
+  For bodies, move from aorta to capillaries.
+
+\item (3 + 3 + 3)
+
+  \textbf{Estimating the rare:}
+
+  Google's raw data is for word frequency $k \ge 200$ so
+  let's deal with that issue now.
+
+  From Assignment 2,
+  we had for word frequency in the range $200 \le k \le 10^{7}$,
+  a fit for the CCDF of
+  $$
+  N_{\ge k} \sim 3.46 \times 10^{8} k^{-0.661},
+  %%  N_{\ge k} \sim 3.46 \times 10^{8} k^{-0.66054},
+  $$
+  ignoring errors.
+
+  \begin{enumerate}
+  \item 
+    Using the above fit, create a complete hypothetical $N_{k}$ 
+    by expanding $N_{k}$ back for $k=1$ to $k=199$, and plot
+    the result in double-log space (meaning log-log space).
+  \item 
+    Compute the mean and variance of this reconstructed distribution.
+  \item 
+    Estimate:
+    \begin{enumerate}
+    \item 
+      The hypothetical total number and fraction of unique words in
+      Google's data set (think at the species or type level now),
+    \item 
+      The hypothetical fraction of words that appear once
+      out of all words
+      (think of words as organisms or tokens here),
+    \item 
+      And what fraction of total words are left out of the Google data set
+      by providing only those with counts $k \ge 200$ (back to words as organisms or tokens).
+    \end{enumerate}
+  \end{enumerate}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+
+
+  
+
+\item
+  Simulate the small-world model and reproduce
+  Fig.~2 from the 1998 Watts-Strogatz
+  paper showing how clustering and average shortest
+  path behave with rewiring probability $p$~\cite{watts1998a}.
+
+  Please find and use any suitable code online,
+  and feel free to share with each other via Slack.
+
+  Use $N=1000$ nodes and $k=10$ for average degree,
+  and vary $p$ from 0.0001 to 1, evenly spaced on a logarithmic
+  scale (there are only 14 values used in the paper).
+
+  Here's the figure you're aiming for:
+
+  \includegraphics[width=0.6\textwidth]{watts1998a_fig2.pdf}
+  
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  
+
+\item (3 + 3 + 3 + 3 + 3 + 3 pts)
+  \textbf{Generalized entropy and diversity:}
+
+  For a probability distribution of $i=1, \ldots , n$ 
+  entities 
+  with the $i$th entity having probability of
+  being observed $p_{i}$,
+  Shannon's entropy is defined as~\cite{shannon1948a}:
+  $
+  H 
+  = 
+  - \sum_{i=1}^{n} 
+  p_{i} \ln p_{i}.
+  $
+  There are other kinds of entropies and we'll
+  explore some aspects of them here.
+  
+  Let's use the setting of words in a text
+  (another meaningful framing is abundance of species
+  in an ecology).
+  So we have word $i$ appearing with probability $p_{i}$
+  and there are $n$ words.
+
+  Now, a useful quantity associated with any kind of 
+  entropy is diversity, $D$~\cite{jost2006a}.
+  Given a text $T$ with entropy $H$, we define
+  $D$ to be the number of words in another hypothetical text $T'$
+  which 
+  (1) has the same entropy,
+  and 
+  (2) where all words appear with equal frequency $1/D$.
+  In text $T'$, we have $p_{i}=1/D$ for $i=1, \ldots,D$.
+
+  Diversity is thus a number, and behaves in number-like 
+  ways that are more intuitive to grasp than entropy.
+  (Entropy is still the primary thing here.)
+  
+  Determine the diversity $D$ in terms
+  of the probabilities $\{p_{i}\}$ for the following:
+  \begin{enumerate}
+  \item 
+    Simpson concentration: 
+    $$ 
+    S = \sum_{i=1}^{n} p_{i}^{2}.
+    $$ 
+  \item 
+    Gini index: 
+    $$ 
+    G \equiv 1 - S = 1 - \sum_{i=1}^{n} p_{i}^{2}.
+    $$ 
+    Please note any connections between diversity
+    for the Simpson and Gini indices. 
+  \item 
+    Shannon's entropy:
+    $$
+    H 
+    = 
+    - \sum_{i=1}^{n} 
+    p_{i} \ln p_{i}.
+    $$
+  \item 
+    Renyi entropy:
+    $$
+    \Hrenyi{q}
+    =
+    \frac{1}{q-1}
+    \left(
+    - 
+    \ln 
+    \sum_{i=1}^{n} p_{i}^{q}
+    \right),
+    $$
+    where $q \ne 1$.
+  \item 
+    The generalized Tsallis entropy:
+    $$
+    \Htsallis{q}
+    =
+    \frac{1}{q-1}
+    \left(
+    1 - \sum_{i=1}^{n} p_{i}^{q}
+    \right),
+    $$
+    where $q \ne 1$.\\
+    Please note any connections between diversity
+    for Renyi and Tsallis.
+  \item 
+    Show that in the limit $q \rightarrow 1$,
+    the diversity for the Tsallis entropy
+    matches up with that of Shannon's entropy.
+  \end{enumerate}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+  
+
+\item 
+  Determine the average value of samples with value
+  $k \ge \min k_{\rm max}$ to find how the expected
+  value of $k_{\rm max}$ (i.e., $\tavg{k_{\max}}$) scales with $N$.
+
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item (3 + 3)
+  
+  Allotaxonometry.
+
+  Rank-turbulence divergence (RTD) is defined as:
+  \begin{align}
+    &
+    \rtdalpha(
+    \bigrank_{\indexaraw}
+    \,\|\,
+    \bigrank_{\indexbraw}
+    )
+    =
+    \sum_{\elementsymbol \in \bigrankordering}
+    \rtdelement{\alpha}(
+    \bigrank_{\indexaraw}
+    \,\|\,
+    \bigrank_{\indexbraw}
+    )
+    \nonumber
+    \\
+    &
+    =
+    \invrtdnorm
+    \frac{\alpha+1}{\alpha}
+    \sum_{\elementsymbol \in \bigrankordering}
+    \left\lvert
+    \frac{1}{\left[\zipfrank_{\elementsymbol,\indexaraw}\right]^{\alpha}}
+    -
+    \frac{1}{\left[\zipfrank_{\elementsymbol,\indexbraw}\right]^{\alpha}}
+    \right\rvert^{1/(\alpha+1)}.
+    \label{eq:rankturbdiv.rankturbdiv_{g}ood}
+  \end{align}
+
+  Find the limits of RTD for:
+  \begin{enumerate}
+  \item
+    $\alpha \rightarrow 0$.
+  \item
+    $\alpha \rightarrow \infty$.
+  \end{enumerate}
+
+  Leave $\invrtdnorm$ as a constant.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+
+\item
+
+  For finite cutoffs $a$ and $b$ with $a \ll b$, which
+  cutoff dominates the expression for the $n$th moment as a function
+  of $\gamma$ and $n$?  
+
+  \textit{Note: both cutoffs may be involved to some degree.}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+  \begin{enumerate}
+  \item 
+    A parent has two children, not twins, and one is a girl born on a Tuesday.
+    What's the probability that both children are girls?
+
+    See if you can produce both a calculation of probabilities and
+    a visual explanation with shapes (e.g., discs and pie pieces).
+
+    Once you have the answer, can you improve our intuition here?  
+    Why does adding the more
+    detailed piece of information of the Tuesday birth change
+    the probability from $1/3$?
+
+    (Assume 50/50 birth probabilities.)
+  \item 
+    Same as the previous question but we now know that one is
+    a girl born on December 31.  Again, what's the probability that
+    both are girls?
+  \end{enumerate}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item
+  Computational Pareidolia.
+
+  A peculiar class project.
+
+  As a team, figure out how to gather, curate, and analyze
+  pictures of the front of cars as they have evolved over time.
+
+  Upper limit of insanity: All cars ever sold in the US (types)
+  combined with sales (tokens).
+
+  \begin{enumerate}
+  \item
+    Photos should be from the front.
+  \item
+    Ideally, we have photos 
+  \item
+    Figure out how to assess the emotional content expressed by
+    a car's `face'.
+  \item
+    May be purely computational, may need to use people's assessments.
+    We can use Mechanical Turk for example.
+  \item
+    Suggest setting up a single Github repository for the work.
+
+  \end{enumerate}
+
+  Some articles:
+  \begin{itemize}
+  \item
+    The faces thing:\\
+    \url{https://www.smithsonianmag.com/smart-news/for-experts-cars-really-do-have-faces-57005307/}.
+  \item 
+    Sinisterness:\\
+    \url{https://www.latimes.com/business/autos/la-hy-sinister-faces-pg-photogallery.html}.
+  \item
+    Brain imaging:
+    ``High-resolution imaging of expertise reveals reliable object selectivity in the fusiform face area related to perceptual performance''\\
+    \url{https://www.pnas.org/content/early/2012/09/27/1116333109.abstract}.
+  \end{itemize}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item
+
+  \textit{``Any good idea can be stated in fifty words or less.''---Stanis{\l}aw Ulam.}\footnote{At the very least, Ulam's claim is self-consistent.}
+
+  Things have sped up since Ulam made his claim.
+
+  The top of the narrative hierarchy:
+
+  Read through Anderson's seminal paper ``More is different''~\cite{anderson1972a}
+  and generate three descriptions of complexification with exactly the following lengths:
+  \begin{enumerate}
+  \item 
+    1--3 words,
+  \item 
+    4--6 words,
+  \item 
+    and
+    7--12 words.
+  \end{enumerate}
+
+  The 1--3 words one: Try to improve on ``More is different''.
+
+
+
+  %%  All three may contain one or more sentences.
+
+  %%  Anderson's title is his three word soundbite for his thesis.
+  %%  After this assignment, let's see if we can collectively 
+  %%  create a better one in class  based on your six-word efforts.
+
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+  
+  For class discussion, read ``Will a large complex system be stable?'' by Robert May~\cite{may1972a}.
+
+  Put together three comments and/or questions.
+
+
+\item (3 + 3 + 3 + 3)
+  This question is all about pure 
+  finite and infinite random networks
+
+  We'll define a finite random network as follows.  
+  Take $N$ labelled nodes and add links between each pair
+  of nodes with probability $p$.
+
+  \begin{enumerate}
+  \item 
+    \begin{enumerate}
+    \item 
+      For a random node $i$, determine the probability distribution
+      for its number of friends $k$, $P_{k}(p,N)$.
+
+    \item 
+      What kind of distribution is this?
+
+    \item 
+      What does this distribution
+      tend toward in the limit of large $N$, if $p$ is fixed?
+
+      (No need to do calculations here; just invoke the right Rule of
+      the Universe.)
+    \end{enumerate}
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+  \item 
+    Using $P_{k}(p,N)$, determine the average degree.
+    Does your answer seem right intuitively?
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  \item 
+    Show that in the limit of $N \rightarrow \infty$
+    but with mean held constant,
+    we obtain a Poisson degree distribution.
+
+    Hint: to keep the mean constant, you will
+    need to change $p$.
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+  \item
+    \begin{enumerate}
+    \item 
+      Compute the clustering coefficients $C_{1}$ and $C_{2}$ for 
+      standard finite random networks ($N$ nodes).  
+    \item 
+      Explain how your answers make sense.
+    \item 
+      What happens in the limit of an infinite random network
+      with finite mean?
+    \end{enumerate}
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  \end{enumerate}
+
+
+\item (3 + 3)
+
+  Determine the clustering coefficient for 
+  toy model small-world networks~\cite{watts1998a}
+  as a function of the rewiring probability $p$.
+  Find $C_{1}$, the average local clustering coefficient:
+  $$
+  C_{1}(p) = \avg{\frac{\sum_{j_{1} j_{2} \in {\cal N}_{i}} a_{j_{1} j_{2}}}{k_{i}(k_{i}-1)/2}}_{i}
+  =
+  \frac{1}{N}
+  \sum_{i=1}^{N}
+  \frac{\sum_{j_{1} j_{2} \in {\cal N}_{i}} a_{j_{1} j_{2}}}{k_{i}(k_{i}-1)/2}
+  $$
+  where $N$ is the number of nodes,
+  $a_{ij}=1$ if nodes $i$ and $j$ are connected,
+  and ${\cal N}_{i}$ indicates the neighborhood of $i$.
+
+  As per the original model, assume a ring network 
+  with each node connected to a fixed, even number $m$ 
+  local neighbors ($m/2$ on each side).  Take the number of nodes
+  to be $N \gg m$.
+
+  Start by finding $C_{1}(0)$ and argue
+  for a $(1-p)^{3}$ correction factor to 
+  find an approximation of $C_{1}(p)$.
+
+  Hint 1: you can think of finding $C_{1}$ as
+  averaging over the possibilities for a single node.
+
+  Hint 2: assume that the degree of individual
+  nodes does not change with rewiring 
+  but rather stays fixed at $m$.
+  In other words, take the average degree
+  of individuals as the degree of a randomly
+  selected individual.
+
+  For what value of $p$ is $C_{1}(p)/C_{1}(0) \simeq 1/2$?
+
+  Does this seem reasonable given your simulation?
+
+  (3 points for set up, 3 for solving.)
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item (3 + 3):
+
+  Consider a modified version
+  of the Barab\`{a}si-Albert (BA) model~\cite{barabasi1999a}
+  where two possible mechanisms
+  are now in play.  As in the original
+  model, start with $m_{0}$ nodes at time $t=0$.
+  Let's make these initial guys connected such that each
+  has degree 1.  The two mechanisms are:
+  \begin{enumerate}
+  \item[M1:] With probability $p$, 
+    a new node of degree $1$ is added to
+    the network.  
+    At time $t+1$, a node connects to an existing
+    node $j$ with probability 
+    \begin{equation}
+      P(\mbox{connect to node}\ j) = \frac{k_{j}}{\sum_{i=1}^{N(t)} k_{i}}
+      \label{300as1.eq:Pconnectj}
+    \end{equation}
+    where $k_{j}$ is the degree of node $j$ and
+    $N(t)$ is the number of nodes in the system at time $t$.
+  \item[M2:] With probability $q=1-p$, 
+    a randomly chosen node adds a new edge,
+    connecting to node $j$ with
+    the same preferential attachment
+    probability as above.
+  \end{enumerate}
+  Note that in the limit $q=0$, we retrieve the original BA model
+  (with the difference that we are adding one link at a time
+  rather than $m$ here).
+
+  In the long time limit $t \rightarrow \infty$,
+  what is the expected form of the degree distribution $P_{k}$?
+
+  Do we move out of the original model's universality class?
+
+  Different analytic approaches are possible including
+  a modification of the BA paper, or a Simon-like one
+  (see also Krapivsky and Redner~\cite{krapivsky2001a}).
+
+  Hint: You can attempt to solve the problem exactly
+  and you'll find an integrating factor story.
+
+  Another hint, moment of mercy: Approximate 
+  the differential equation by considering
+  large $t$ (this will simplify the denominators).
+
+  (3 points for set up, 3 for solving.)
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item (3 + 3)
+
+  Using Gleeson and Calahane's iterative equations below,
+  derive the contagion condition for
+  a vanishing seed by taking the limit
+  $\phi_{0} \rightarrow 0$ and $t \rightarrow \infty$.
+  In lectures, we derived the discrete evolution equations
+  for the fraction of infected nodes $\phi_{t}$
+  and the fraction of infected edges $\theta_{t}$ as follows:
+  $$
+  \phi_{t+1}
+  = 
+  \phi_{0}
+  + 
+  (1-\phi_{0})
+  \sum_{k=0}^{\infty}
+  P_{k}
+  \sum_{j=0}^{k}
+  \binom{k}{j}
+  \theta_{t}^{\, j}
+  (1-\theta_{t})^{k-j} 
+  \infprob_{kj},
+  $$
+  $$
+  \theta_{t+1}
+  =
+  G(\theta_{t};\phi_{0})
+  =
+  \phi_{0} +
+  (1-\phi_{0})
+  \sum_{k=1}^{\infty}
+  \frac{k P_{k}}{\tavg{k}}
+  \sum_{j=0}^{k-1}
+  \binom{k-1}{j}
+  \theta_{t}^{\ j}
+  (1-\theta_{t})^{k-1-j}
+  \infprob_{kj},
+  $$
+  where $\theta_{0} = \phi_{0}$, and 
+  $\infprob_{kj}$ is the probability 
+  that a degree $k$ node becomes active
+  when $j$ of its neighbors are active.
+
+  Recall that by contagion condition, we mean
+  the requirements of a random network for
+  macroscopic spreading to occur.
+
+  To connect the paper's model and notation
+  to those of our lectures,
+  given a specific response function $F$
+  and a threshold model,
+  the $\infprob_{kj}$ are given by
+  $\infprob_{kj} = F(j/k)$.
+
+  Allow $\infprob_{k0}$ to be arbitrary (i.e., not necessarily
+  0 as for simple threshold functions).
+
+  We really only need to understand how
+  $\theta_{t}$ behaves.  Write the corresponding equation
+  as $\theta_{t+1} = G(\theta_{t};\phi_{0})$ and determine
+  when 
+  \begin{enumerate}
+  \item 
+    $G(0;0) > 0$ (spreading is for free).
+  \item 
+    $G(0;0) = 0$ and $G'(0;\phi_{0}) > 1$ 
+    meaning $\phi=0$ is a unstable fixed point.
+  \end{enumerate}
+
+  Here's a graphical hint for the three cases 
+  you need to consider as $\theta_{0} \rightarrow 0$:
+  \begin{tabular}{lll}
+    Success: &
+    Sucesss: & 
+    Fail: \\
+    \includegraphics[width=0.3\textwidth]{2011-04-26initial-spreading-random-networks-4-tp-5.pdf} &
+    \includegraphics[width=0.3\textwidth]{2011-04-26initial-spreading-random-networks-2-tp-5.pdf} &
+    \includegraphics[width=0.3\textwidth]{2011-04-26initial-spreading-random-networks-3-tp-5.pdf}
+  \end{tabular}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item (3 + 3 + 3) Optional:
+
+  Solve Krapivsky-Redner's model for the pure linear attachment
+  kernel $A_{k}=k$. 
+
+  Starting point:
+  $$
+  n_{k}
+  =
+  \frac{1}{2}
+  (k-1) n_{k-1} 
+  - 
+  \frac{1}{2}
+  k n_{k}
+  + \delta_{k1}
+  $$
+  with $n_{0}=0$.
+
+  \begin{enumerate}
+  \item 
+    Determine $n_{1}$.
+  \item 
+    Find a recursion relation for $n_{k}$ in terms
+    of $n_{k-1}$.
+  \item 
+    Now find
+    $$
+    \alert{n_{k}} 
+    = 
+    \frac{4}{k(k+1)(k+2)}
+    $$
+    for all $k$ and
+    hence determine $\gamma$.
+  \end{enumerate}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item (3 + 3) Optional:
+
+  From lectures:
+
+  \begin{enumerate}
+  \item 
+    Starting from the recursion relation
+    $$
+    n_{k}
+    =
+    \frac{A_{k-1}}{\mu + A_{k}}
+    n_{k-1},
+    $$
+    and $n_{1} = \mu/(\mu+A_{1})$,
+    show that the expression for $n_{k}$ for
+    the Krapivsky-Redner model with an asymptotically linear
+    attachment kernel $A_{k}$ is:
+    $$
+    \frac{\mu}{A_{k}}
+    \prod_{j=\alert{1}}^{k}
+    \frac{1}{1 + \frac{\mu}{A_{j}}}.
+    $$
+  \item 
+    Now show that if $A_{k} \rightarrow k$ for
+    $k \rightarrow \infty$ (or for large $k$), we obtain
+    $n_{k} \rightarrow k^{-\mu-1}$.
+  \end{enumerate}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+  
+
+\item (3 + 3 + 3)
+
+  From lectures, complete the analysis for the Krapivsky-Redner model
+  with attachment kernel:
+  $$
+  A_{1} = \alpha 
+  \
+  \mbox{and} 
+  \
+  A_{k} = k
+  \
+  \mbox{for} 
+  \
+  k \ge 2.
+  $$
+
+  Find the scaling exponent $\gamma = \mu + 1$ by finding $\mu$.
+  From lectures, we assumed a linear growth in the sum
+  of the attachment kernel weights $\mu t = \sum_{k=1}^{\infty} N_{k}(t) A_{k}$,
+  with $\mu=2$ for the standard kernel $A_{k}=k$.
+
+  We arrived at this expression for $\mu$
+  which you can use as your starting point:
+  $$
+  1 =
+  \sum_{k=1}^{\infty} 
+  \prod_{j=1}^{k}
+  \frac{1}{1 + \frac{\mu}{A_{j}}}
+  $$
+
+  \begin{enumerate}
+  \item
+    Show that the above expression leads to 
+    $$
+    \frac{\mu}{\alpha}
+    =
+    \sum_{k=2}^{\infty} 
+    \frac{\Gamma(k+1)\Gamma(2+\mu)}{\Gamma(k+\mu+1)}
+    $$
+    Hint: you'll want to separate out the $j=1$ case
+    for which $A_{j}=\alpha$.
+  \item
+    Now use result that~\cite{krapivsky2001a}
+    $$
+    \sum_{k=2}^{\infty}
+    \frac{\Gamma(a+k)}{\Gamma(b+k)}
+    =
+    \frac{\Gamma(a+2)}{(b-a-1)\Gamma(b+1)}
+    $$
+    to find the connection
+    $$
+    \mu(\mu-1) = 2\alpha,
+    $$
+    and show this leads to 
+    $$
+    \mu = \frac{1+\sqrt{1+8\alpha}}{2}.
+    $$
+  \item
+    Interpret how varying $\alpha$ affects 
+    the exponent $\gamma$, explaining why $\alpha<1$
+    and $\alpha>1$ lead to the particular values
+    of $\gamma$ that they do.
+  \end{enumerate}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+
+\item
+  Yes, even more on power law size distributions.
+  It's good for you.
+  
+  For the probability distribution $P(x) = c x^{-\gamma}$,
+  $0 < a \le x \le b$,
+  compute the mean absolute displacement (MAD),
+  which is given by
+  $\tavg{|X - \tavg{X}|}$ where $\tavg{\cdot}$ represents 
+  expected value.  As always, simplify your expression
+  as much as possible.
+  
+  \textit{MAD is a more reasonable estimate for the width
+    of a distribution, but we like variance $\sigma^{2}$ because
+    the calculations are much prettier.  Really.}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+
+  In the limit of $b \rightarrow \infty$,
+  show that MAD asymptotically behave as:
+  $$
+  \tavg{|X - \tavg{X}|}
+  =
+  \frac{2(\gamma-2)^{(\gamma-3)}}
+       {(\gamma-1)^{(\gamma-2)}
+       }
+       a.
+       $$
+       How does this compare with the behavior of the variance?
+       (See the last question of Assignment todo{???}.)
+
+       
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+     \item 
+
+       \textit{Simon's model II:}
+
+       A missing piece from the lectures: Obtain $\gamma$ in terms of $\simonalpha$ 
+       by expanding Eq.~\ref{eq:300.asn2nk} in terms of $1/k$.  In the end,
+       you will need to express $n_{k}/n_{k-1}$ as $(1-1/k)^\theta$; from
+       here, you will be able to identify $\gamma$.
+       Taylor expansions and Procrustean truncations will be in order.
+
+       This (dirty) method avoids finding the exact form for $n_{k}$.
+
+       
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+       
+     \item 
+       A spectacularly optional extra.
+       
+       \textbf{Warning:}
+       \begin{itemize}
+       \item 
+         Only attempt if using registered safety equipment
+         including welding goggles and a lead apron.
+       \item 
+         Make sure to back up your brain in at least two
+         geographically distant places beforehand (e.g., 
+         on different planets).
+       \end{itemize}
+
+       \textbf{Dangerous feature:}
+       \begin{itemize}
+       \item 
+         If you make it out, you will be very happy.
+       \end{itemize}
+
+       %% add a video here for hints and solution
+
+       In lectures on lognormals and other heavy-tailed distributions,
+       we came across a super fun and interesting integral when considering 
+       organization size distributions
+       arising from growth processes with variable lifespans.
+
+       Show that 
+       $$
+       P(x) = \int_{t=0}^\infty
+       \lambda e^{-\lambda t}
+       \frac{1}{x \sqrt{2\pi t}}
+       \exp
+       \left(
+       -\frac{(\ln \frac{x}{m})^{2}}
+       {2t}
+       \right)
+       \dee{t}
+       $$
+       leads to:
+       $$
+       P(x)
+       \propto
+       x^{-1} e^{- \sqrt{2 \lambda (\ln \frac{x}{m}) ^{2}}},
+       $$
+       and therefore, surprisingly, two different scaling regimes.
+       Enjoyable suffering may be involved.
+       Really enjoyable suffering.
+       But many monks have found a way so you should
+       follow their path laid out below.
+
+       Hints and steps:
+       \begin{itemize}
+       \item 
+         Make the substitution $t = u^{2}$ to
+         find an integral of the form
+         (excluding a constant of proportionality)
+         $$
+         I_{1}(a,b) = \int_{0}^{\infty} \exp \left( -au^{2} - b/u^{2} \right) \dee{u}
+         $$
+         where in our case
+         $a = \lambda$ and $b=(\ln \frac{x}{m})^{2}/2$.
+       \item
+         Substitute $au^{2} = t^{2}$ into the above to find
+         $$
+         I_{1}(a,b)
+         =
+         \frac{1}{\sqrt{a}}
+         \int_{0}^{\infty} 
+         \exp \left( -t^{2} - ab/t^{2} \right) \dee{t}
+         $$
+       \item
+         Now work on this integral:
+         $$
+         I_{2}(r)
+         =
+         \int_{0}^{\infty} 
+         \exp \left( -t^{2} - r/t^{2} \right) \dee{t}
+         $$
+         where $r = ab$.
+       \item
+         Differentiate $I_{2}$ with respect to $r$
+         to create a simple differential equation for $I_{2}$.
+         You will need to use the substitution $u=\sqrt{r}/t$
+         and your differential equation should be of the (very simple) form
+         $$
+         \diff{I_{2}(r)}{r} = -(\mbox{something}) I_{2}(r).
+         $$
+       \item
+         Solve the differential equation you find.
+         To find the constant of integration,
+         you can evaluate $I_{2}(0)$ separately:
+         $$
+         I_{2}(0)
+         =
+         \int_{0}^{\infty} 
+         \exp (-t^{2}) \dee{t},
+         $$
+         where our friend 
+         $\Gamma(frac{1}{2})$ 
+         comes into play.
+       \end{itemize}
+
+       
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+
+
+       
+\end{enumerate}
+
+A collection of questions from earlier
+seasons of
+PoCS, Vol 2 (also variously known as CoNKs, CocoNuTs, and Complex Networks).
+
+This is all a big soup and some questions may be poorly constructed or repeated.
+
+
+
+\begin{itemize}
+\item 
+  The first series of questions will explore real networks
+  by performing some key measurements introduced
+  in Principles of Complex Systems, Vol. 1.
+\item
+  For general coherence with other humans, you are encouraged to use Python.
+  Also very good: Unix command line tools, R, Julia, Matlab.
+  But you can of course use whatever system you like.
+\item
+  Data is available in two compressed formats:
+  \begin{itemize}
+  \item 
+    Matlab + text (tgz): \url{\coursewebsite/data/303complexnetworks-data-package.tgz}
+  \item 
+    Matlab + text (zip): \url{\coursewebsite/data/303complexnetworks-data-package.zip}
+  \end{itemize}
+  and can also be found on the course website (helpfully) under data.
+\item
+  The main Matlab file containing everything is networkdata\_{c}ombined.mat.
+\item
+  For directed networks, the $ij$th entry of the adjacency matrix
+  represents the weight of the link from node $i$ to node $j$.
+  Adjacency matrices for undirected networks are symmetric.
+\item
+  For all questions below, 
+  treat each network as undirected unless otherwise instructed.
+\item
+  For this assignment, convert all weights on
+  links to 1, if the network is weighted.
+\item 
+  You do not have to use Matlab for your basic
+  analyses.
+  Python would be a preferred route for many.
+\item 
+  The supplied text versions may be of
+  use for visualization using gml.
+\item
+  The Matlab command spy will give you a quick plot
+  of a sparse adjacency matrix.
+\item
+  Real data sets used here are taken
+  from Mark Newman's compilation (and linked-to sites) at
+  \url{http://www-personal.umich.edu/~mejn/netdata/}.
+\end{itemize}
+
+\begin{enumerate}
+
+\item
+  Record in a table the following basic characteristics:
+  \begin{itemize}
+  \item 
+    $N$, the number of nodes;
+  \item 
+    $m$, the total number of links;
+  \item
+    Whether the network is undirected or directed based on the symmetry
+    of the adjacency matrix;
+  \item 
+    $\tavg{k}$, the average degree
+    ($\tavg{k_{\rm in}}$ 
+    and 
+    $\tavg{k_{\rm out}}$ 
+    if the 
+    network is directed);
+  \item
+    The maximum degree $k^{\rm max}$ (for both out-degree and in-degree if the network is directed);
+  \item
+    The minimum degree $k^{\rm min}$ (for both out-degree and in-degree if the network is directed).
+  \end{itemize}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item (3+3)
+  \begin{enumerate}
+  \item   
+    Plot the degree distribution $P_{k}$
+    as a function of $k$.  In the case that $P_{k}$ versus $k$
+    is uninformative, also produce plots that are clarifying.
+    For example, $\log_{10} P_{k}$ versus $\log_{10} k$.
+
+    (Note: Always use base 10.)
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  \item   
+    See if you can characterize the distributions you find
+    (e.g., exponential, power law, etc.).
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  \end{enumerate}
+
+
+\item   
+  Measure the clustering coefficient $C_{2}$ where
+  $$ C_{2} = \frac{3 \times \rm\#triangles}{\rm \#triples}. $$ 
+
+  For directed networks, transform them into undirected ones
+  first.
+  
+  One approach is to compute $C_{2}$ as
+  $$
+  C_{2}
+  =
+  \frac{
+    3
+    \times
+    \frac{1}{6}{\rm Tr} A^{3} 
+  }
+  {
+    \frac{1}{2}
+    \left(
+      \sum_{ij} [A^{2}]_{ij}
+      -
+      {\rm Tr} A^{2}
+    \right)
+  }.
+  $$
+  Note: avoiding computing $A^{3}$ is important
+  and can be done.
+
+%%  (Hint: to compute triangles, consider the trace of $A^{3}$.)
+ 
+
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+  For each of our main six networks, compute and present distributions of the shortest
+  path length 
+  between all pairs of nodes.
+  Notation: $d_{i,j}$ is the shortest distance between $i$ and $j$.
+
+  Also compute the average shortest path length, 
+  $\tavg{d}$.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+  Generate ensembles of random networks of the same `size' as
+  the six networks.  Process 1 random network and 
+  then scale up as computing power/time/sanity permits.
+  1000 random networks would be good.
+
+  Size here means having the same number of
+  nodes and the same number of edges.
+
+  As for the real networks, compute the
+  shortest path lengths for these random networks
+  and present frequency distributions.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+  Determine how well/poorly random networks produce
+  the shortest path distributions of real world networks.
+
+  Using whatever tests you like, show how well
+  both the average shortest path length and
+  the full distributions compare between
+  the real network and their random counterparts.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+
+\item
+  Given $N$ labelled nodes and allowing for
+  all possible number of edges $m$, what's the
+  total number of undirected, unweighted
+  networks we can construct?
+
+  How does this number scale with $N$?
+
+  
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+  Given $N$ labelled nodes and a variable number of $m$ edges,
+  for what value of $m$ do we obtain the largest diversity
+  of networks?  And for this $m$, how does the number
+  of networks scale with $N$?
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+
+\item
+  We've seen that large random networks have 
+  essentially no clustering, meaning that locally,
+  random networks are pure branching networks.
+  Nevertheless, a finite, non-zero number
+  of triangles will be present.
+  
+  For pure random networks, with connection probability
+  $p = \tavg{k}/(N-1)$, what is the expected total number
+  of triangles as $N \rightarrow \infty$?
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item
+
+  Repeat the preceding calculation for cycles of length 4 and 5
+  (triangles are cycles of length 3).
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+
+\item
+  Show that the second moment of the Poisson distribution
+  is  
+  $$
+  \tavg{k^{2}} = \tavg{k}^{2} + \tavg{k}.
+  $$
+  and hence that the variance is $\sigma^{2} = \tavg{k}$.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item
+  We've figured out in class that for large enough $N$ 
+  (and $\avg{k}$ fixed),
+  a random network always has a Poisson degree distribution:
+  $$
+  P(k;\lambda)
+  =
+  \frac{\lambda^{k}}
+       {k!}
+       e^{-\lambda}
+       $$
+       where $\lambda = \avg{k}$.
+       And as we've discussed, we don't find these networks in the real world
+       (they don't arise due to simple mechanisms).
+       Let's investigate this oddness a little further.
+
+       Compute the expected size of the largest degree 
+       in an infinite random network given $\tavg{k}$ and as a function of 
+       increasing sample size $N$.
+       In other words, in selecting (with replacement) $N$ degrees from a
+       pure Poisson distribution
+       with mean $\tavg{k}$, what's the expected minimum value of the 
+       largest degree $\min k_{\max}$?
+
+       A good way to compute $k_{\max}$ is to equate
+       it to the value for which we expect $1/N$ of our
+       random selections to exceed.  (We had a question in 300
+       along these lines for power-law size distributions.)
+
+       \videohint{uK5yakuX59M}{Of course we'll be using Stirling's Approximation.}
+
+       
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+       %%  \begin{enumerate}
+       %%  \item 
+
+       %%   \item 
+       %%     Now let's flip the question: How likely is it to
+       %%     find a very high degree node in a
+       %%     pure random network?
+       %% 
+       %%     Compute the probability that a randomly selected node
+       %%     in a randomly selected network (specified again by $N$ and $\tavg{k}$)
+       %%     has a degree exceeding $\simeq 1 \cdot N^{\alpha}$ where $\alpha \le 1$.
+       %% 
+       %%     Start with the case $\alpha=1$ which is to be interpreted
+       %%     as a node being connected to all other $N-1$ nodes.
+       %% 
+       %% 
+       %%  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+       %%     
+       %%   \end{enumerate}
+
+
+
+     \item 
+       Generating functions and giant components:  In 
+       this question, you will use generating functions to obtain
+       a number of results we found in class for standard
+       random networks.
+
+       \begin{enumerate}
+       \item 
+         For an infinite standard random network 
+         (\erdosrenyi/ER network)
+         with average degree $\tavg{k}$,
+         compute the generating function $F_{P}$ for the degree distribution $P_{k}$.
+
+         (Recall the degree distribution is Poisson: 
+         $P_{k} = e^{-{\tavg{k}}} {\tavg{k}}^{\, k} / k!$, $k \ge 0$.)
+
+         
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+       \item
+         Show that $F_{P}'(1) = {\tavg{k}}$ (as it should).
+
+         
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+       \item
+         Using the joyous properties of 
+         generating functions, show that
+         the second moment of the degree distribution
+         is $\tavg{k^{2}}={\tavg{k}}^{2}+{\tavg{k}}$.
+
+         
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+       \end{enumerate}
+
+
+     \item 
+       \begin{enumerate}
+       \item
+         Continuing on from Q1 for infinite standard
+         random networks, find the generating function $F_{R}(x)$ for the $\{R_{k}\}$, 
+         where $R_{k}$ is the probability
+         that a node arrived at by following a random direction
+         on a randomly chosen edge has $k$ outgoing edges.
+
+         
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend      
+
+
+       \item
+         Now, using $F_{R}(x)$ determine
+         the average number of outgoing edges 
+         from a randomly-arrived-at-along-a-random-edge node.
+
+         
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend      
+
+
+       \item
+         Given your findings above and the condition for a giant
+         component existing in terms of generating functions,
+         what is the condition 
+         on ${\tavg{k}}$ for a standard random network
+         to have a giant component?
+
+         %% (Hint: you need to find for what values of ${\tavg{k}}$,
+         %% a randomly chosen neighbor will, on average, have at least one other
+         %% neighbor.)
+
+
+         
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend      
+
+       \end{enumerate}
+
+     \item 
+       \begin{enumerate}
+         
+       \item 
+         Find the generating function for the degree distribution
+         $P_{k}$ of a finite random network with $N$ nodes and
+         an edge probability of $p$.
+
+         
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+       \item 
+         Show that the generating function for the finite
+         ER network tends to the generating function for 
+         the infinite one.  Do this 
+         by taking the limit $N\rightarrow \infty$
+         and $p\rightarrow 0$ such that $p(N-1)=\tavg{k}$ 
+         remains constant.
+
+         
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+       \end{enumerate}
+
+     \item
+
+       \begin{enumerate}
+       \item 
+
+         Prove that if random variables $U$ and $V$ are distributed
+         over the non-negative integers 
+         then the generating function for the random variable $W = U + V$ 
+         is
+         $$
+         F_{W}(x) = F_{U}(x) F_{V}(x).
+         $$
+         Denote the specific distributions by
+         $\Prob(U=i) = U_{i}$,
+         $\Prob(V=i) = V_{i}$,
+         and 
+         $\Prob(W=i) = W_{i}$.
+
+         
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+       \item
+
+         Using the your result in part (a), argue that 
+         if 
+         $$
+         W = \sum_{j=1}^{U} V^{(j)}
+         $$
+         where $V^{(j)} \stackrel{d}{=} V$
+         then 
+         $$
+         F_{W}(x) = F_{U}(F_{V}(x)).
+         $$
+
+         Hint: write down the generating function
+         of probability distribution of 
+         $\sum_{j=1}^{k} V^{(j)}$ in terms of $F_{V}(x)$.
+
+         
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+       \end{enumerate}
+
+     \item
+
+       \begin{enumerate}
+       \item 
+         Again, given 
+         $$
+         W = \sum_{i=1}^{U} V^{(i)}
+         \
+         \mbox{with each}
+         \
+         V^{(i)}
+         \stackrel{d}{=}
+         V
+         $$
+         where we know that
+         $$
+         F_{W}(x) 
+         = 
+         F_{U} 
+         \left(
+         F_{V}(x)
+         \right),
+         $$
+         determine the mean of $W$
+         in terms of the means of $U$ and $V$.
+       \item
+         For $W = U + V$, similarly find
+         the mean of $W$ in terms of $U$ and $V$ 
+         via generating functions.
+         Your answer should make rather good sense.
+       \end{enumerate}
+
+       
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+     \item
+       Consider the family of generalized random networks with
+       $$
+       P_{k} 
+       = 
+       a 
+       \delta_{k1} 
+       + 
+       (1-a) 
+       \delta_{k3}
+       $$
+       where $0 \le a \le 1$.
+
+       General note: We worked through the $a=1/2$ case in class
+       so those notes should be rather helpful.
+
+       Determine the following (3 points each for a--d):
+       \begin{enumerate}
+       \item 
+         \begin{enumerate}
+         \item 
+           The distribution of other friends for a node
+           arrived along a randomly chosen direction
+           of a randomly chosen edge,
+           $R_{k}$.
+
+           
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+         \item 
+           The generating function $F_{P}(x)$.
+
+           
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+         \item 
+           The generating function $F_{R}(x)$, both
+           directly from $R_{k}$ and via 
+           $F_{R}(x) = F'_{P}(x)/F'_{P}(1)$.
+
+           
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+         \end{enumerate}
+
+
+       \item 
+         For which values of $a$ a giant component exists,
+         noting the critical value $a_{c}$ if any phase
+         transition is present.
+
+         
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+       \item
+         \begin{enumerate}
+         \item 
+           The generating function $F_{\rho}(x)$.
+           Note: Do not expand the form you find.
+
+           
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+         \item
+           The probability that a random edge leads
+           to a subcomponent of finite size, $F_{\rho}(1)$.
+
+           
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+         \end{enumerate}
+
+       \item 
+         \begin{enumerate}
+         \item 
+           The generating function $F_{\pi}(x)$.
+
+           
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+         \item
+           The fractional size of the largest component
+           $S_{1} = 1 - F_{\pi}(1)$ as a function of $a$.
+
+           
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+         \end{enumerate}
+
+       \end{enumerate}
+
+
+     \item
+       By expanding $F_{\rho}(x)$ as a formal power series,
+       find the probabilities that a random edge leads to 
+       components of finite size 1, 2, 3, 4, and 5, all
+       as a function of $a$.
+
+       
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+     \item
+       Using Python's NetworkX (or similar package in any language), simulate random networks
+       with $N=10^{4}$ nodes and determine the fractional 
+       size of the giant component as a function of $a$.
+       
+       Plot the simulation's output against your theoretical
+       curve determined in the first question.
+       
+       
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+     \item (3 + 3 + 3 + 3)
+
+       Generalize the theory for the previous questions and solve for the same
+       quantities and features in Q1a--Q1d for random networks with:
+       $$
+       P_{k} 
+       = 
+       a 
+       \delta_{k1} 
+       + 
+       (1-a) 
+       \delta_{kk'}
+       $$
+       for fixed $k' \ge 2$ with $0 \le a \le 1$.
+
+       \textbf{Modifications:}
+
+       You will be able to do Q1a and Q1b exactly.
+
+       Important: Please minimally set up and then
+       solve Q1c and Q1d numerically (only)
+       for $k' = 3, \ldots, 10$.
+
+       Put everything on the same plot.
+       
+       \begin{enumerate}
+       \item 
+         \begin{enumerate}
+         \item 
+           The distribution of other friends for a node
+           arrived along a randomly chosen direction
+           of a randomly chosen edge,
+           $R_{k}$.
+
+           
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+         \item 
+           The generating function $F_{P}(x)$.
+
+           
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+         \item 
+           The generating function $F_{R}(x)$, both
+           directly from $R_{k}$ and via 
+           $F_{R}(x) = F'_{P}(x)/F'_{P}(1)$.
+
+           
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+         \end{enumerate}
+
+
+       \item 
+         For which values of $a$ a giant component exists,
+         noting the critical value $a_{c}$ if any phase
+         transition is present.
+
+         
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+       \item
+         \begin{enumerate}
+         \item 
+           The generating function $F_{\rho}(x)$.
+           Note: Do not expand the form you find.
+
+           
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+         \item
+           The probability that a random edge leads
+           to a subcomponent of finite size, $F_{\rho}(1)$.
+
+           
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+         \end{enumerate}
+
+       \item 
+         \begin{enumerate}
+         \item 
+           The generating function $F_{\pi}(x)$.
+
+           
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+         \item
+           The fractional size of the largest component
+           $S_{1} = 1 - F_{\pi}(1)$ as a function of $a$.
+
+           
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+         \end{enumerate}
+
+       \end{enumerate}
+
+\item
+
+  Plan: Work through some random bipartite calculations
+  reproducing a few results from the classic Newman \etal\
+  paper~\cite{newman2001b}.
+  Our stories are their stars, and our tropes are their movies.
+
+  Please note that we use a different convention for defining
+  certain distributions, not just notation.  It's a bit confusing.
+  Okay, it's very confusing.
+
+  Here's a key to help:
+  \begin{center}
+    
+    \begin{tabular}{|r|r|l|}
+      \hline
+      Feature: & Our notation: & Newman \etal~\cite{newman2001b}: \\
+      \hline
+  \hline
+  First node type, symbol & stories, $\rbone$ & movies, 0 \\
+  Second node type, symbol & tropes, $\rbtwo$ & actors, 1 \\
+  Number of type 1 nodes & $\rboneng$ & M \\
+  Number of type 2 nodes & $\rbtwong$ & N \\
+  Average affiliations of type 1 nodes & $\avg{k}_{\rbone}$ & $\nu$ \\
+  Average affiliations of type 2 nodes & $\avg{k}_{\rbtwo}$ & $\mu$ \\
+  Affiliation distribution for type 1 nodes & $P^{(\rbone)}_{k}$ & $q_{k}$ \\
+  Affiliation distribution for type 1 nodes & $P^{(\rbtwo)}_{k}$ & $p_{k}$ \\
+  $P$ Generating function for type 1 nodes & $F_{P^{(\rbone)}}$ & $g_{0}$ \\
+  $P$ generating function for type 2 nodes & $F_{P^{(\rbtwo)}}$ & $f_{0}$ \\
+  $R$ generating function for type 1 nodes & $F_{P^{(\rbone)}}$ & $g_{1}$ \\
+  $R$ generating function for type 2 nodes & $F_{P^{(\rbtwo)}}$ & $f_{1}$ \\
+  Induced $P$ generating function for type 1 nodes & $F_{\Prboneindplain}$
+  & $F_{0}$ \\
+  Induced $P$ generating function for type 2 nodes & $F_{\Prbtwoindplain}$
+  & $G_{0}$ \\
+  Induced $R$ generating function for type 1 nodes & $F_{\Rrboneindplain}$
+  & $F_{1}$ \\
+  Induced $R$ generating function for type 2 nodes & $F_{\Rrbtwoindplain}$
+  & $G_{1}$ \\
+  \hline
+    \end{tabular}
+  \end{center}
+
+
+  Note: You can of course use something simple like
+  $a$ and $b$ instead of the film and lightbulb glyphs.
+  Nevertheless, for notation happiness, feel free to use font awesome
+  and the following structures:
+\begin{verbatim}
+\usepackage{fontawesome}
+
+%% random biparite networks
+
+\newcommand{\rbone}{\textnormal{\faFilm}}
+\newcommand{\rbtwo}{\textnormal{\faLightbulbO}}
+
+\newcommand{\rboneng}{N_{\rbone}}
+\newcommand{\rbtwong}{N_{\rbtwo}}
+
+\newcommand{\Prboneind}{P^{(\rbone)}_{\textnormal{ind},k}}
+\newcommand{\Prbtwoind}{P^{(\rbtwo)}_{\textnormal{ind},k}}
+
+\newcommand{\Rrboneind}{R^{(\rbone)}_{\textnormal{ind},k}}
+\newcommand{\Rrbtwoind}{R^{(\rbtwo)}_{\textnormal{ind},k}}
+
+\newcommand{\Prboneindplain}{P^{(\rbone)}_{\textnormal{ind}}}
+\newcommand{\Prbtwoindplain}{P^{(\rbtwo)}_{\textnormal{ind}}}
+
+\newcommand{\Rrboneindplain}{R^{(\rbone)}_{\textnormal{ind}}}
+\newcommand{\Rrbtwoindplain}{R^{(\rbtwo)}_{\textnormal{ind}}}
+\end{verbatim}
+
+
+  Show that the triple-triangle clustering coefficient for the induced 
+  networks produced by an arbitrary random bipartite affiliation graph
+  are
+  $$
+  C_{2}^{(\rbone)}
+  =
+  \frac{
+    \rbtwong
+  }
+  {
+    \rboneng
+  }
+  \frac{
+  F_{P^{(\rbtwo)}}'''(1)
+  }
+  {
+    F_{\Prboneindplain}''(1)
+  }
+  $$
+  and
+  $$
+  C_{2}^{(\rbtwo)}
+  =
+  \frac{
+    \rboneng
+  }
+  {
+    \rbtwong
+  }
+  \frac{
+  F_{P^{(\rbone)}}'''(1)
+  }
+  {
+    F_{\Prbtwoindplain}''(1)
+  }
+  $$
+
+%% (V1,pn(1),pn(2))
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item (6 + 6 + 6)
+  Consider the following bipartite affiliation graph degree distributions.
+  \begin{enumerate}
+  \item 
+    Fixed degree and fixed degree: 
+    $k_{\rbone}$ and $k_{\rbtwo}$, both at least 1.
+  \item 
+    Poisson (mean $\tavg{k}_{\rbone}$) and fixed degree ($k_{\rbtwo}$): 
+  \item 
+    Poisson and Poisson with mean degrees
+    $\tavg{k}_{\rbone}$
+    and
+    $\tavg{k}_{\rbtwo}$.
+  \end{enumerate}
+
+  For each case, determine these generating functions:
+    $F_{P^{(\rbone)}}(x)$,
+    $F_{P^{(\rbtwo)}}(x)$,
+    $F_{R^{(\rbone)}}(x)$,
+    $F_{R^{(\rbtwo)}}(x)$,
+    $F_{\Prboneindplain}(x)$,
+    $F_{\Rrboneindplain}(x)$,
+    $F_{\Prbtwoindplain}(x)$,
+    and
+    $F_{\Rrbtwoindplain}(x)$.
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+  
+  For the three bipartite graphs given above,
+  determine the condition for a giant component
+  in both induced networks, i.e., 
+  $$
+  \tavg{k}_{R,\rbone,\textnormal{ind}}
+  \equiv
+  \tavg{k}_{R,\rbtwo,\textnormal{ind}}
+  > 1
+  $$
+  where
+  $$
+  \tavg{k}_{R,\rbone,\textnormal{ind}}
+  =
+  \tavg{k}_{R,\rbtwo,\textnormal{ind}}
+  =
+  \frac{
+    F''_{P^{(\rbtwo)}}(1)
+  }
+  {
+    F'_{P^{(\rbtwo)}}(1)
+  }
+  \frac{
+    F''_{P^{(\rbone)}}(1)
+  }
+  {
+    F'_{P^{(\rbone)}}(1)
+  }
+  $$
+  $$
+  =
+  \frac{\tavg{k(k-1)}_{\rbone}}
+  {\tavg{k}_{\rbone}}
+  \frac{\tavg{k(k-1)}_{\rbtwo}}
+  {\tavg{k}_{\rbtwo}}.
+  $$
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+  
+\item
+  
+  Using whatever network package you like, 
+  construct random bipartite affiliation networks
+  to reproduce Fig.~7 from~\cite{newman2001b}:
+
+  \begin{center}
+    \includegraphics[height=0.5\textheight]{newman2001b_fig07.pdf}
+  \end{center}
+
+  Consider this to be $\Prbtwoind$, the probability a trope shares 
+  appears alongside $k$ other tropes in stories.
+
+  Parameters: 
+  $N_\rbone = 10^{4}$,
+  $N_\rbtwo = 10^{5}$,
+  $\tavg{k}_\rbone = 15$,
+  and
+  $\tavg{k}_\rbtwo = 1.5$.
+  
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+
+  Plot the induced distribution $\Prboneind$,
+  the probability a story is connected to 
+  $k$ other stories through shared tropes.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item (optional)
+  
+  Derive equation 89 in~\cite{newman2001b} for the
+  degree distribution:
+  $$
+  \Prboneind
+  =
+  \frac{
+    (\tavg{k}_{\rbtwo})^{k}
+  }
+  {
+    k!
+  }
+  e^{\tavg{k}_{\rbone}(e^{-\tavg{k}_{\rbtwo}}-1)}
+  \sum_{i=1}^{k}
+  \stirlingnumber{k}{i}
+  \left[
+    \tavg{k}_{\rbone} \, e^{-\tavg{k}_{\rbtwo}}
+  \right]^{i},
+  $$
+  where
+  $$
+  \stirlingnumber{k}{i}
+  =
+  \sum_{j=1}^{i}
+  \frac{(-1)^{i-j}}
+  {j!(i-j)!}
+  j^{k}
+  $$
+  is the Stirling number of the second kind.
+  
+
+%%  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item (optional)
+  Add the theoretical curve obtained above to the plot you generated before that.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+
+
+\item 
+  Data snaring and wrangling:
+
+  Find two (2) interesting, large network data sets online.
+  The networks may be weighted or not, directed or undirected.
+
+  Transform each network's representation 
+  into row, column, and weight vectors
+  as per the first assignment. The row vector contains
+  the node at the start of an edge, the column vector
+  the ends, and the weights, well, the weight of the edge.
+
+  Include a one line description for each network
+  along with a link to the data source.
+  
+  This time round, if you haven't already, please give NetworkX a shot too.
+
+  Please submit your data via email with the subject heading \\
+  ``CocoNuTS: Network submission for \codename''.
+
+  In the next assignment, we'll examine all submitted networks.
+  Possibly.
+  
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+  
+
+
+
+  \renewcommand{\fboxrule}{1pt}
+  \renewcommand{\fboxsep}{0pt}
+%%  \fbox{
+    For questions \ref{ass7.startq}--\ref{ass7.endq}:
+
+    Consider the simple spreading mechanism on
+    generalized random networks 
+    for which each link has a probability  $\beta \le 1$
+    of successfully transmitting a disease.
+
+    We assume that this transmission probability is tested
+    only once: either a link will or will not be
+    able to send an infection one way or the other
+    (this is a bond percolation problem).
+    We'll call these edges `active.'
+
+    Denote the degree distribution of the network as $P_{k}$
+    and the corresponding generating function as $F_{P}$.
+    In class, we wrote down the probability that
+    a node has $k$ active edges as
+    $$
+    \tilde{P}_{k}
+    =
+    \beta^{k}
+    \sum_{i=k}^{\infty}
+    \binom{i}{k}
+    (1-\beta)^{i-k}
+    P_{i}.
+    $$
+%%  }
+
+
+
+\item 
+  \label{ass7.startq}
+
+
+  Given a random network with degree distribution $P_{k}$,
+  find $F_{\tilde{P}}$, the generating function for $\tilde{P}_{k}$, 
+  in terms of $F_{P}$.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+  Find the generating function for $\tilde{R}_{k}$,
+  the analogous version of $R_{k}$, the probability
+  that a random friend has $k$ other friends.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item 
+  For standard random (ER) networks,
+  use your results from the preceding questions to 
+  find the critical value of 
+  $\tavg{k}$ above which global spreading occurs.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+
+  Find an expression connecting the three quantities 
+  $\beta$, the average degree $\tavg{k}$, 
+  and the size of the giant component $\tilde{S}_{1}$.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+  
+
+\item
+  What is the slope of the $\tilde{S}_{1}$ curve near the critical
+  point for ER networks?
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+  \label{ass7.endq}
+
+  Using whichever method you find most exciting, plot
+  how $\tilde{S}_{1}$ depends on $\tavg{k}$ for $\beta=1$, $\beta=0.8$,
+  and $\beta=0.5$.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+%% add simulation
+%% move to assignment 9?
+
+\item
+  Using either generating function methods (original) or the physical approach
+  (better) from slides on contagion,
+  reproduce the following pieces 
+  from Watts's 2002 paper~\cite{watts2002a} on global cascades on random networks:
+  \begin{enumerate}
+  \item 
+    The cascade windows diagram in Fig.~1.  
+  \item 
+    The vulnerable and triggering component curves in Fig.~2b.
+  \end{enumerate}
+
+  Note 1: Only the vulnerable component was determined
+  theoretically in~\cite{watts2002a}.  The slides go further
+  and determine the triggering component's size.
+
+  Note 2: This question is all theory but you will need
+  to solve the second and third problems numerically.
+
+\item 
+  Using Gleeson and Calahane's iterative equations below,
+  derive the contagion condition for
+  a vanishing seed by taking the limit
+  $\phi_{0} \rightarrow 0$ and $t \rightarrow \infty$.
+  $$
+  \phi_{t+1}
+  = 
+  \phi_{0}
+  + 
+  (1-\phi_{0})
+  \sum_{k=0}^{\infty}
+  P_{k}
+  \sum_{j=0}^{k}
+  \binom{k}{j}
+  \theta_{t}^{\, j}
+  (1-\theta_{t})^{k-j} 
+  \infprob_{kj},
+  $$
+  $$
+  \theta_{t+1}
+  =
+  \phi_{0} +
+  (1-\phi_{0})
+  \sum_{k=1}^{\infty}
+  \frac{k P_{k}}{\tavg{k}}
+  \sum_{j=0}^{k-1}
+  \binom{k-1}{j}
+  \theta_{t}^{\ j}
+  (1-\theta_{t})^{k-1-j}
+  \infprob_{kj},
+  $$
+  where $\theta_{0} = \phi_{0}$, and 
+  $\infprob_{kj}$ is the probability 
+  that a degree $k$ node becomes active
+  when $j$ of its neighbors are active.
+
+  Recall that by contagion condition, we mean
+  the requirements of a random network for
+  macroscopic spreading to occur.
+
+  To connect the paper's model and notation
+  to those of our lectures,
+  given a specific response function $F$
+  and a threshold model,
+  the $\infprob_{kj}$ are given by
+  $\infprob_{kj} = F(j/k)$.
+
+  Allow $\infprob_{k0}$ to be arbitrary (i.e., not necessarily
+  0 as for simple threshold functions).
+
+  Here's a graphical hint for the three cases 
+  you need to consider as $\theta_{0} \rightarrow 0$:
+  \begin{tabular}{lll}
+    Success: &
+    Sucesss: & 
+    Fail: \\
+    \includegraphics[width=0.3\textwidth]{2011-04-26initial-spreading-random-networks-4-tp-5.pdf} &
+    \includegraphics[width=0.3\textwidth]{2011-04-26initial-spreading-random-networks-2-tp-5.pdf} &
+    \includegraphics[width=0.3\textwidth]{2011-04-26initial-spreading-random-networks-3-tp-5.pdf}
+  \end{tabular}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item 
+  Derive equation 4 in Gleeson and Cahalane (2007)~\cite{gleeson2007a}:
+  $$
+  C_{\ell}
+  =
+  \sum_{k=\ell+1}^{\infty}
+  \sum_{j=0}^{\ell}
+  \binom{k-1}{\ell}
+  \binom{\ell}{j}
+  (-1)^{\ell+j}
+  \frac{k P_{k}}{\tavg{k}}
+  F
+  \left(
+    \frac{j}{k}
+  \right).
+  $$
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item (9 pts)
+
+  \begin{enumerate}
+  \item 
+    Derive equation 6 in Gleeson and Cahalane (2007),
+    which is a second order approximation to the
+    cascade condition for vanishing seeds.
+
+    Here's an example of how this must work:\\
+    \includegraphics[width=0.3\textwidth]{2011-04-26initial-spreading-random-networks-1-tp-5.pdf}
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  \item 
+    Hence reproduce the dashed analytic curve 
+    shown in Figure 1 of their paper.
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  \item 
+    Explain why there are jumps in the 
+    cascade window outline that do not occur at
+    reciprocals of the integers.
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  \end{enumerate}
+
+\item (6 pts)
+
+  \begin{enumerate}
+  \item 
+    By numerically finding the fixed points of
+    $\theta_{t+1} = G(\theta_{t};0)$,
+    reproduce Figure 3 in Gleeson and Cahalane (2007):
+
+    \includegraphics[width=0.4\textwidth]{gleeson2007a_fig3.pdf}
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  \item
+    Also plot $G(\theta_{t};0)$ for an average
+    threshold $\phi_{\ast} (= R)$ of 0.371 for $\tavg{k} (= z) = 1, 2, 3, \ldots, 10$.
+
+    Add the cobweb diagram for a $\phi_{0}=0$ seed.  
+
+    Do this by creating a recursive plotting script in matlab, for example.
+
+    You can use the following Matlab scripts/data as a basis, and most of the work is done.
+    You'll need to improve the plots with some labels, and interpret
+    them properly.  The first function calls the other two.
+
+    \url{\mywebsite/share/matlab/Gfunction.m}\\
+    \url{\mywebsite/share/matlab/gleeson_{f}ig3_{0}2.mat}\\
+    \url{\mywebsite/share/matlab/cobweb3.m}
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  \item  
+    Discuss how the stable points move with $\tavg{k}$.
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  \end{enumerate}
+  
+  Note: $\phi_{\ast} = 0.371$ matches plot (b) in Figure 3 of~\cite{gleeson2007a}.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  \item
+  We've figured out in class that for large enough $N$ 
+  (and $\avg{k}$ fixed),
+  a random network always has a Poisson degree distribution:
+  $$
+  P(k;\lambda)
+  =
+  \frac{\lambda^{k}}
+  {k!}
+  e^{-\lambda}
+  $$
+  where $\lambda = \avg{k}$.
+  And as we've discussed, we don't find these networks in the real world
+  (they don't arise due to simple mechanisms).
+  Let's investigate this oddness a little further.
+
+  Compute the expected size of the largest degree 
+  in an infinite random network given $\tavg{k}$ and as a function of 
+  increasing sample size $N$.
+  In other words, in selecting (with replacement) $N$ degrees from a
+  pure Poisson distribution
+  with mean $\tavg{k}$, what's the expected minimum value of the 
+  largest degree $\min k_{\max}$?
+
+  A good way to compute $k_{\max}$ is to equate
+  it to the value for which we expect $1/N$ of our
+  random selections to exceed.  (We had a question in 300
+  along these lines for power-law size distributions.)
+
+  \videohint{uK5yakuX59M}{Of course we'll be using Stirling's Approximation.}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+%%  \begin{enumerate}
+%%  \item 
+
+%%   \item 
+%%     Now let's flip the question: How likely is it to
+%%     find a very high degree node in a
+%%     pure random network?
+%% 
+%%     Compute the probability that a randomly selected node
+%%     in a randomly selected network (specified again by $N$ and $\tavg{k}$)
+%%     has a degree exceeding $\simeq 1 \cdot N^{\alpha}$ where $\alpha \le 1$.
+%% 
+%%     Start with the case $\alpha=1$ which is to be interpreted
+%%     as a node being connected to all other $N-1$ nodes.
+%% 
+%%  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+%%     
+%%   \end{enumerate}
+
+
+\item In 1-d, consider a population density 
+  $\rho(x) = c x^{-\gamma}$ for $x \ge 1$ and $\gamma > 2$
+  (note that $c = \gamma-1$).
+
+  Find the ideal distribution for $N$ sources
+  where $N$ is large.
+
+  Hint: draw yourself a clear picture of what's going on.
+
+  Hint: guess the form of the locations of the centers
+  and work from there.
+
+  Also: Feel free to do some numerics to see how
+  things work.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+
+\item Repeat the above treatment for
+  $\rho(x) = \lambda e^{-\lambda x}$ for $x \ge 0$.  
+
+  %% One suggestion (this may not work perfectly): Assume sources are located at $a e^{b i}$ where
+  %% $i=1,2,\ldots N$.  The end point locations of sources should not matter too much.
+  %% 
+  %% Find an expression for the average distance to the $n$th source for those
+  %% sinks closest to that source, and then find 
+  %% $a$ and $b$ (or just one of these parameters)
+  %% so that this average is a constant.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item
+  Yes, even more on power law size distributions.
+  It's good for you.
+  
+  For the probability distribution $P(x) = c x^{-\gamma}$,
+  $0 < a \le x \le b$,
+  compute the mean absolute displacement (MAD),
+  which is given by
+  $\tavg{|X - \tavg{X}|}$ where $\tavg{\cdot}$ represents 
+  expected value.  As always, simplify your expression
+  as much as possible.
+  
+  \textit{MAD is a more reasonable estimate for the width
+    of a distribution, but we like variance $\sigma^{2}$ because
+    the calculations are much prettier.  Really.}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+
+  In the limit of $b \rightarrow \infty$,
+  show that MAD asymptotically behave as:
+  $$
+  \tavg{|X - \tavg{X}|}
+  =
+  \frac{2(\gamma-2)^{(\gamma-3)}}
+  {(\gamma-1)^{(\gamma-2)}
+  }
+  a.
+  $$
+  How does this compare with the behavior of the variance?
+  (See the last question of Assignment todo{???}.)
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+
+
+
+\item 
+  Using the CCDF and standard linear regression, 
+  measure the exponent $\gamma-1$ as a function
+  of the upper limit of the scaling window, with
+  a fixed lower limit of $k_{\rm min}=200$.
+
+  Please plot $\gamma$ as a function of $k_{\rm max}$,
+  including 95\% confidence intervals.
+
+  Note that the break in scaling should mess things up
+  but we're interested here in how stable
+  the estimate of $\gamma$ is up until the break point.
+
+  Comment on the stability of $\gamma$ over
+  variable window sizes.
+
+  Pro Tip: your upper limit values should be distributed
+  evenly in log space.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+
+
+\item (3 + 3 + 3)
+
+  \textbf{Estimating the rare:}
+
+  Google's raw data is for word frequency $k \ge 200$ so
+  let's deal with that issue now.
+
+  From Assignment 2,
+  we had for word frequency in the range $200 \le k \le 10^{7}$,
+  a fit for the CCDF of
+  $$
+  N_{\ge k} \sim 3.46 \times 10^{8} k^{-0.661},
+  %% N_{\ge k} \sim 3.46 \times 10^{8} k^{-0.66054},
+  $$
+  ignoring errors.
+
+  \begin{enumerate}
+  \item 
+    Using the above fit, create a complete hypothetical $N_{k}$ 
+    by expanding $N_{k}$ back for $k=1$ to $k=199$, and plot
+    the result in double-log space (meaning log-log space).
+  \item 
+    Compute the mean and variance of this reconstructed distribution.
+  \item 
+    Estimate:
+    \begin{enumerate}
+    \item 
+      the hypothetical fraction of words that appear once
+      out of all words
+      (think of words as organisms here),
+    \item 
+      the hypothetical total number and fraction of unique words in
+      Google's data set (think at the species level now),
+    \item 
+      and what fraction of total words are left out of the Google data set
+      by providing only those with counts $k \ge 200$ (back to words as organisms).
+    \end{enumerate}
+  \end{enumerate}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+
+
+
+  
+  
+
+\item
+
+  Starting from here:
+  \url{http://mskcc.convio.net/pdf/cycle_{f}or_{s}urvival/cfs_{c}ancer_{f}act_{s}heet1.pdf},
+  explore the ``rare are legion'' aspect of heavy-tailed distributions for cancer.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+  
+\item
+
+  Explain the scaling of RPM for engines.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+  \textbf{Zombies!} 
+
+  (Optional.  But taking practical precautions for your survival in
+  the event of a global zombie attack is not optional.)
+
+  %% Zombie version of SIRZ model on networks.
+  
+  Network version of the SZR model:
+
+  Based on the work of Munz \textit{et al.}~\cite{munz2009a},
+  we will model Zombie attacks on generalized random networks
+  (the paper is \href{http://www.uvm.edu/~pdodds/research/papers/others/2009/munz2009a.pdf}{here}).
+
+  There are three states: $S$, susceptible, $Z$, zombie, and, $R$, removed.
+
+  For the random mixing model studied by Munz et al., the differential equations are
+  \begin{gather}
+    \diff{S}{t} = \theta - \beta S Z - \delta S, \nonumber \\
+    \diff{Z}{t} = \beta S Z + \zeta R - \alpha S Z, \nonumber \\
+    \mbox{and} \ \diff{R}{t} = \delta S + \alpha S Z - \zeta R, \nonumber 
+  \end{gather}
+  where
+  \begin{itemize}
+  \item[] 
+    $\theta$ is the birth rate of new susceptibles;
+  \item[] 
+    $\beta$ is the rate at which susceptibles who bump
+    into zombies become zombies
+  \item[] 
+    $\delta$ is the background, non-zombie related death rate for susceptibles;
+  \item[] 
+    $\zeta$ is the rate at which the dead (removed) are resurrected as zombies;
+  \item[] 
+    and $\alpha$ is the rate at which susceptibles defeat zombies (through
+    traditional methods shown in movies).
+  \end{itemize}
+
+  For our purposes, consider a random network with degree distribution $P_{k}$
+  containing completely susceptible individuals
+  and discrete time updates.  We'll now think of the parameters above
+  as probabilities, and ignore birth and death processes ($\theta  = \delta = 0$).
+
+  We'll further assume that if a susceptible takes out a zombie, the latter
+  cannot resurrect.  So this means there's a fourth category, let's call
+  it $D$ for definitely dead.
+
+  Assume that in each time step, all edges convey interactions,
+  meaning each individual interacts with each of their neighbors.
+
+  Under what conditions ($P_{k}$ and spreading parameters)
+  will local zombification be guaranteed to take off (i.e., grow exponentially,
+  at least in the short term),
+  given one randomly chosen individual becomes the first zombie?
+
+  (The long term dynamics will likely be complicated so 
+  we will focus on
+  the initial dynamics.)
+  
+  See \href{http://www.wired.com/wiredscience/2009/08/zombies/}{http://www.wired.com/wiredscience/2009/08/zombies/}
+  for more information/enjoyment.
+  
+  %% The slashdot story is here:
+  %% http://science.slashdot.org/story/09/08/15/0019258/A-Mathematical-Model-For-a-Spreading-Zombie-Infestation?from=Ross
+  
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+  %% Other possibilities
+
+  %% Find the second moment of the size distribution
+
+  %% Estimate the number of random networks with
+  %% $N$ edges.  What about with $N^{\alpha}$ edges?
+
+
+  %% Prove translation result for generating functions
+
+  %% Find pi_{0}, pi_{1}, for standard random networks
+  %% easy
+
+  %% finite random networks, generating functions
+
+  %% \item How does $C(k)$, the clustering change with $k$?
+
+
+\item (12 pts)
+  Consider a family of undirected random networks with degree distribution
+  $$ 
+  P_{k} = c \delta_{k1} + (1-c) \delta_{k3},
+  $$
+  where $\delta_{ij}$ is the Kronecker delta function,
+  and where $c$ is a constant to be determined below.
+  Also allow nodes to be correlated according to the following
+  node-node mixing probabilities.  
+
+  Conditional probability version, $P(k\, |k'\ )$:
+  \begin{gather}
+    P(1\, |\, 1) = \frac{1}{2}{(1+r)}, \nonumber \\
+    P(3\, |\, 1) = \frac{1}{2}{(1-r)}, \nonumber \\
+    P(1\, |\, 3) = \frac{1}{2}{(1-r)}, \nonumber \\
+    \mbox{and} \ P(3\, |\, 3) = \frac{1}{2}{(1+r)}. \nonumber
+  \end{gather}
+  where $-1 \le r \le 1$ is the family's tunable parameter.
+
+  Newman's correlation probability version:
+  $$
+  E 
+  =
+  [e_{ij}]
+  =
+  \left[
+    \begin{array}{cc}
+      e_{00} & e_{02} \\
+      e_{20} & e_{22} \\
+    \end{array}
+  \right]
+  =
+  \frac{1}{4}
+  \left[
+    \begin{array}{cc}
+      (1+r) & (1-r) \\
+      (1-r) & (1+r) \\
+    \end{array}
+  \right]
+  $$
+  where $e_{ij}$ is the probability that a 
+  randomly chosen edge connects
+  a node of degree $i+1$ an
+  a node of degree $j+1$, 
+  and only the non-zero
+  values of $E$ are shown.
+
+  For the following questions, you can use either formulation.
+  
+  \begin{enumerate}
+  \item 
+    Determine $c$ so that purely disassortative networks
+    are achievable if $r$ is tuned to -1.
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  \item
+    Determine which networks in this family have a giant component.
+    In other words, find the values of $r$ for which a giant component
+    exists.  
+
+    Note which value (or values) of $r$ mark a phase transition.
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  \item
+    Analytically determine the size of the giant component
+    as a function of $r$.
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  \item
+    Determine the size of the largest component
+    containing only degree 3 nodes as a function of $r$.
+
+    Hint: allow degree 3 nodes to be always vulnerable
+    ($\beta_{3i}=1$ for $i=0$, 1, 2, and 3)
+    and degree 1 nodes to be never vulnerable
+    ($\beta_{1i}=0$ for $i=0$ and 1).
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  \end{enumerate}
+
+
+\item
+  Spreading on assortative networks:
+  Starting from
+  $$
+  \theta_{j,t+1}
+  =
+  G_{j}(\vec{\theta}_{t})
+  =
+  \phi_{0} + 
+  (1-\phi_{0}) \times
+  $$
+  $$
+  \sum_{k=1}^{\infty}
+  \frac{e_{j-1,k-1}}{R_{j-1}}
+  \sum_{i=0}^{k-1}
+  \binom{k-1}{i}
+  \theta_{k,t}^{\, i}
+  (1-\theta_{k,t})^{k-1-i}
+  \infprob_{ki}.
+  $$
+  show the matrix for which we must have
+  the largest eigenvalue greater than 1 for
+  spreading to occur is
+  $$
+  \partialdiff{G_{j}(\vec{0})}{\theta_{k,t}} 
+  = 
+  \frac{e_{j-1,k-1}}{R_{j-1}}
+  (k-1)
+  (\beta_{k1} - \beta_{k0}).
+  $$
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item
+  Show that for uncorrelated networks, i.e,
+  when $e_{jk} = R_{j} R_{k}$, the above condition
+  collapses to the standard condition
+  $$
+  \sum_{k=1}^{\infty} (k-1) \frac{k P_{k}}{\tavg{k}} (\beta_{k1} - \beta_{k0}) > 1.
+  $$
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+
+\item (3 + 3 + 3) Optional:
+
+  Solve Krapivsky-Redner's model for the pure linear attachment
+  kernel $A_{k}=k$. 
+
+  Starting point:
+  $$
+  n_{k}
+  =
+  \frac{1}{2}
+  (k-1) n_{k-1} 
+  - 
+  \frac{1}{2}
+  k n_{k}
+  + \delta_{k1}
+  $$
+  with $n_{0}=0$.
+
+  \begin{enumerate}
+  \item 
+    Determine $n_{1}$.
+  \item 
+    Find a recursion relation for $n_{k}$ in terms
+    of $n_{k-1}$.
+  \item 
+    Now find
+    $$
+    \alert{n_{k}} 
+    = 
+    \frac{4}{k(k+1)(k+2)}
+    $$
+    for all $k$ and
+    hence determine $\gamma$.
+  \end{enumerate}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item (3 + 3) Optional:
+
+  From lectures:
+
+  \begin{enumerate}
+  \item 
+    Starting from the recursion relation
+    $$
+    n_{k}
+    =
+    \frac{A_{k-1}}{\mu + A_{k}}
+    n_{k-1},
+    $$
+    and $n_{1} = \mu/(\mu+A_{1})$,
+    show that the expression for $n_{k}$ for
+    the Krapivsky-Redner model with an asymptotically linear
+    attachment kernel $A_{k}$ is:
+    $$
+    \frac{\mu}{A_{k}}
+    \prod_{j=\alert{1}}^{k}
+    \frac{1}{1 + \frac{\mu}{A_{j}}}.
+    $$
+  \item 
+    Now show that if $A_{k} \rightarrow k$ for
+    $k \rightarrow \infty$ (or for large $k$), we obtain
+    $n_{k} \rightarrow k^{-\mu-1}$.
+  \end{enumerate}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item (3 + 3 + 3) Optional:
+
+  From lectures, complete the analysis for the Krapivsky-Redner model
+  with attachment kernel:
+  $$
+  A_{1} = \alpha 
+  \
+  \mbox{and} 
+  \
+  A_{k} = k
+  \
+  \mbox{for} 
+  \
+  k \ge 2.
+  $$
+
+  Find the scaling exponent $\gamma = \mu + 1$ by finding $\mu$.
+  From lectures, we assumed a linear growth in the sum
+  of the attachment kernel weights $\mu t = \sum_{k=1}^{\infty} N_{k}(t) A_{k}$,
+  with $\mu=2$ for the standard kernel $A_{k}=k$.
+
+  We arrived at this expression for $\mu$
+  which you can use as your starting point:
+  $$
+  1 =
+  \sum_{k=1}^{\infty} 
+  \prod_{j=1}^{k}
+  \frac{1}{1 + \frac{\mu}{A_{j}}}
+  $$
+
+  \begin{enumerate}
+  \item
+    Show that the above expression leads to 
+    $$
+    \frac{\mu}{\alpha}
+    =
+    \sum_{k=2}^{\infty} 
+    \frac{\Gamma(k+1)\Gamma(2+\mu)}{\Gamma(k+\mu+1)}
+    $$
+    Hint: you'll want to separate out the $j=1$ case
+    for which $A_{j}=\alpha$.
+  \item
+    Now use result that~\cite{krapivsky2001a}
+    $$
+    \sum_{k=2}^{\infty}
+    \frac{\Gamma(a+k)}{\Gamma(b+k)}
+    =
+    \frac{\Gamma(a+2)}{(b-a-1)\Gamma(b+1)}
+    $$
+    to find the connection
+    $$
+    \mu(\mu-1) = 2\alpha,
+    $$
+    and show this leads to 
+    $$
+    \mu = \frac{1+\sqrt{1+8\alpha}}{2}.
+    $$
+  \item
+    Interpret how varying $\alpha$ affects 
+    the exponent $\gamma$, explaining why $\alpha<1$
+    and $\alpha>1$ lead to the particular values
+    of $\gamma$ that they do.
+  \end{enumerate}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+
+
+\item (10 pts)
+  What is the clustering coefficient $C$ for a standard random network
+  with degree distribution $P_{k}$?  Compute $C$ for the following
+  two cases:
+
+  (a) $N$ is finite and links between nodes exist with probability $p$.
+
+  (b) The random network is infinite with mean degree $\tavg{k} = z$.
+
+  Use the definition 
+  $C = \frac{3\#\mbox{triangles}}{\#\mbox{triples}},$
+  or equivalently, that $C$ is the probability
+  that if $a$ is connected to $b$ and $c$, then
+  $b$ and $c$ are connected.
+
+  (c) What's the interpretation for the local structure of infinite random networks
+  given your answer to (b)?
+
+
+\item (25 pts) Generating functions and giant components.  In 
+  this question, you will use generating functions to obtain
+  a number of results we found in class for standard
+  random networks.
+
+  (a) For an infinite standard random network with average degree $\tavg{k}=z$,
+  compute the generating function for the degree distribution $P_{k}$.
+
+  (Recall the degree distribution is Poisson: $P_{k} = e^{-z} z^{\, k} / k!$, $k \ge 0$.)
+
+  (b) Using your answer to (a) and the joyous properties of 
+  generating functions, show that $\tavg{k}=z$ and that
+  the degree variance is $\tavg{k^{2}}=z^{2}+z$.
+
+  (c) Find the generating function for the $\{\tilde{q}_{k}\}$, 
+  where $q_{k}$ is the probability
+  that a node arrived at by following a random direction
+  on a randomly chosen edge has $k$ outgoing edges.
+
+  (d) Using your result for (c), determine
+  the average number of outgoing edges from a randomly-arrived-at-along-a-random-edge node.
+
+  (e) Based on (d), what is the condition on $z$ for a standard random network
+  to have a giant component?
+
+  (Hint: you need to find for what values of $z$,
+  a randomly chosen neighbor will, on average, have at least one other
+  neighbor.)
+
+\item (15 pts) In Krapivsky and Redner's treatment of
+  growing random network for linear attachment kernels,
+  they assumed $\sum_{k=1}^{\infty} n_{k} A_{k} = \mu t$ and
+  found that $\mu$ must be such that
+  $$
+  1 = \sum_{k=1}^{\infty} \prod_{j=1}^{k}
+  \left(
+    1 + \frac{\mu}{A_{j}}
+  \right)^{-1}.
+  $$
+  
+  (a) Show that when the attachment kernel is purely linear, $A_{j}=j$,
+  and when $\mu=2$, the above equation above is satisfied.
+
+  (b) Bonus question territory: Krapivsky and Redner also 
+  looked at the specific attachment kernel
+  $A_{1} = \alpha$ and $A_{k} = k$ for $k>1$, where $\alpha>0$.
+  They determined that the resulting degree distribution has
+  a power-law tale obeying $k^{-\gamma}$ where $\gamma = (3+\sqrt{1+8\alpha})/2$.
+  
+  Using this modified linear attachment kernel, show that 
+  $\mu(\mu-1)=2\alpha$.
+
+
+
+\item (20 pts)
+  % Simple Kleinberg question
+
+  Aspects of Kleinberg's search problem in one dimension:
+
+  Consider N nodes connected in a 1-d line graph (i.e., 
+  a sequence of N nodes lying on a line, with adjacent nodes
+  connected), labelled $i=1$ to $N$.
+
+  Take our starting node to be at one end of the line, say $i=1$,
+  and the target node to be at the other end, $i=N$.
+
+  Let node $i=1$ have exactly one long distance link (i.e., a shortcut link).
+
+  In attempting to construct a searchable network,
+  we add a link from our start node $i=1$ to another node
+  $j=2, \ldots, N$
+  with probability $c r^{-\alpha}$, where $c$ is
+  a constant of proportionality and $r=j-i$ is the distance
+  between $i$ and $j$.  (Normally, we add links to all nodes but
+  for this question, we're only interested in what happens
+  with the first step from $i=1$.)
+
+  \begin{enumerate}
+  \item Compute the constant of proportionality $c$ 
+    (Hint: the sum over the probabilities of attaching
+    to all other nodes must be unity; use an integral approximation again.)
+  \item Show that for $\alpha=1$, the chance of the link from node
+    $i=1$ reaching a node at position $j \ge N/2$ is on the order
+    of $1/\ln{N}$.  (This effectively means 
+    that by moving along the line starting at $i$,
+    we should find a shortcut
+    to the other half of the line within a factor of $\ln{N}$ steps. 
+    This is pretty good.)
+  \item For $\alpha>1$, show that the probability of $i$ having
+    a shortcut to the other half of the line decays as an inverse
+    power of $N$.  (This means that our shortcut is
+    likely too close to $i$ and won't help us jump to the other 
+    half of the line.)
+  \item If $\alpha<1$, our shortcut will link
+    to the other half of the line with a finite, constant probability,
+    independent of $N$ for large $N$.  So what's the drawback here?
+  \end{enumerate}
+
+\item
+
+  More of a note:
+
+  \begin{itemize}
+  \item
+    Newman\cite{newman2003a}: 
+    $$ C_{3} = \frac{6 \times \rm\#triangles}{\mbox{\#ordered pairs}} $$ 
+  \item
+    Now count each triple twice
+  \item
+    Same as $C_{2}$ but interpretation is different
+  \item
+    Probability that a friend of $i$'s friend is also $i$'s friend.
+  \end{itemize}
+
+  \begin{itemize}
+  \item $C_{1}$ = probability that two friends
+    of a randomly chosen node are connected
+  \item $C_{2}$ = probability that two nodes are
+    connected given they have a friend in common.
+  \item $C_{3} (=C_{2})$ = probability that a node's friend of a friend
+    is also a friend of that node.
+  \end{itemize}
+
+  \begin{itemize}
+  \item For sparse networks, $C_{1}$ tends to discount
+    highly connected nodes.
+  \item While $C_{1}$ is a measure of clustering, it
+    doesn't quite as simple interpretation as $C_{2}$.
+  \item Some variability in which measure is
+    used in the literature.
+  \item Not always clear which one is being used...
+  \end{itemize}
+
+
+
+
+
+
+
+
+  \item Generating functions and giant components:  In 
+    this question, you will use generating functions to obtain
+    a number of results we found in class for standard
+    random networks.
+
+    \begin{enumerate}
+    \item 
+      For an infinite standard random network 
+      (\erdosrenyi/ER network)
+      with average degree $\tavg{k}$,
+      compute the generating function $F_{P}$ for the degree distribution $P_{k}$.
+
+      (Recall the degree distribution is Poisson: 
+      $P_{k} = e^{-{\tavg{k}}} {\tavg{k}}^{\, k} / k!$, $k \ge 0$.)
+
+      
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+    \item
+      Show that $F_{P}'(1) = {\tavg{k}}$ (as it should).
+
+      
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+    \item
+      Using the joyous properties of 
+      generating functions, show that
+      the second moment of the degree distribution
+      is $\tavg{k^{2}}={\tavg{k}}^{2}+{\tavg{k}}$.
+
+      
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+    \item 
+      Find the generating function for the degree distribution
+      $P_{k}$ of a finite random network with $N$ nodes and
+      an edge probability of $p$.
+
+      
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+    \item 
+      Show that the generating function for the finite
+      ER network tends to the generating function for 
+      the infinite one.  Do this 
+      by taking the limit $N\rightarrow \infty$
+      and $p\rightarrow 0$ such that $p(N-1)=\tavg{k}$ 
+      remains constant.
+
+      
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+    \end{enumerate}
+
+
+  \item 
+    \begin{enumerate}
+    \item
+      Continuing on from Q1 for infinite standard
+      random networks, find the generating function $F_{R}(x)$ for the $\{R_{k}\}$, 
+      where $R_{k}$ is the probability
+      that a node arrived at by following a random direction
+      on a randomly chosen edge has $k$ outgoing edges.
+
+      
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+    \item
+      Now determine
+      the average number of outgoing edges 
+      from a randomly-arrived-at-along-a-random-edge node.
+
+      
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+    \item
+      Given your findings above, what is the condition 
+      on ${\tavg{k}}$ for a standard random network
+      to have a giant component?
+
+      (Hint: you need to find for what values of ${\tavg{k}}$,
+      a randomly chosen neighbor will, on average, have at least one other
+      neighbor.)
+
+
+      
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+    \end{enumerate}
+
+
+  \item
+
+    Consider the simple spreading mechanism on
+    generalized random networks 
+    for which each link has a probability  $\beta \le 1$
+    of successfully transmitting a disease.
+
+    We assume that this transmission probability is tested
+    only once: either a link will or will not be
+    able to send an infection one way or the other
+    (this is a bond percolation problem).
+    We'll call these edges `active.'
+
+    Denote the degree distribution of the network as $P_{k}$
+    and the corresponding generating function as $F_{P}$.
+    In class, we wrote down the probability that
+    a node has $k$ active edges as
+    $$
+    P'_{k}
+    =
+    \beta^{k}
+    \sum_{i=k}^{\infty}
+    \binom{i}{k}
+    (1-\beta)^{i-k}
+    P_{i}.
+    $$
+
+    \begin{enumerate}
+    \item 
+      Given a random network with degree distribution $P_{k}$,
+      find $F_{P'}$, the generating function for $P'_{k}$, 
+      in terms of $F_{P}$.
+
+      
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+    \item
+      Find the generating function for $R'_{k}$,
+      the analogous version of $R_{k}$, the probability
+      that a random friend has $k$ other friends.
+
+      
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+    \end{enumerate}
+
+  \item 
+    \begin{enumerate}
+
+    \item 
+      For standard random networks,
+      use your results for Q3 to 
+      find an expression connecting $\beta$, the average
+      degree $\tavg{k}$, and the size of the giant component $S'_{1}$.
+
+      
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+      
+
+    \item
+      What is slope of the $S'_{1}$ curve near the critical
+      point for ER networks?
+
+      
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+    \item
+      Using whichever method you find most exciting, plot
+      how $S'_{1}$ depends on $\tavg{k}$ for $\beta=1$, $\beta=0.8$,
+      and $\beta=0.5$.
+
+      
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+    \end{enumerate}
+
+
+  \item
+
+    %% scale free networks question
+    
+    Consider a network with a degree distribution
+    that obeys a power law and is otherwise random.
+    
+    Assume that the network is drawn from
+    an ensemble of networks which have $N$ nodes
+    whose degrees are drawn from the probability
+    distribution
+    $P_{k} = c k^{-\gamma}$ where $k \ge 1$ and $2 < \gamma < 3$.
+
+    \begin{enumerate}
+    \item Estimate $\min k_{\rm max}$, the approximate minimum of 
+      the largest degree in the network, 
+      finding how it depends on $N$.  (Hint: we expect on
+      the order of 1 of the $N$ nodes to have a degree
+      of $\min k_{\rm max}$ or greater.)
+
+      
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+    \item Determine the average degree of nodes with degree
+      $k \ge \min k_{\rm max}$ to find how the expected
+      value of $k_{\rm max}$ scales with $N$.
+
+      
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+    \end{enumerate}
+
+
+
+  \end{enumerate}
+
+  
+  %% Other possibilities
+
+  %% Find the second moment of the size distribution
+
+  %% Estimate the number of random networks with
+  %% $N$ edges.  What about with $N^{\alpha}$ edges?
+
+
+  %% Prove translation result for generating functions
+
+  %% Find pi_{0}, pi_{1}, for standard random networks
+  %% easy
+
+  %% finite random networks, generating functions
+
+  %% \item How does $C(k)$, the clustering change with $k$?
+  
+
+
+%%   Questions on structure detection.
+
+
+%%   Give them a few networks to play around with
+%%   for each assignment.
+
+%%  Facility allocation with different weights
+
+%%  HOT model
+
+
+  % generating function question
+
+Repeats:
+
+\textbf{I. Supply networks and allometry:}
+
+
+Consider a set of rectangular areas with side lengths
+$L_{1}$ and $L_{2}$ such that $L_{1} \propto A^{\gamma_{1}}$ 
+$L_{2} \propto A^{\gamma_{2}}$ where $A$ is area and $\gamma_{1} + \gamma_{2}=1$.  
+Assume $\gamma_{1} > \gamma_{2}$.
+
+Now imagine that material has to be distributed from a central
+source in each of these areas to sinks distributed with
+density $\rho(A)$, and that these sinks draw the same amount
+of material per unit time independent of $L_{1}$ and $L_{2}$.
+
+\begin{enumerate}
+
+\item
+  Find an exact form for how the volume of the most efficient distribution
+  network scales with overall area $A = L_{1} L_{2}$.  (Hint: you will
+  have to set up a double integration over the rectangle.)
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item
+  If network volume must remain a constant fraction of overall
+  area, determine the maximal scaling of sink density $\rho$ with $A$.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+  %% \item Given your findings above, suggest how the most
+  %%   efficient distribution network's volume scales
+  %%   for a set of volumes with dimensions $L_{1} \times L_{2} \times L_{2}$
+  %%   with $L_{1} \propto L_{2}^\alpha$ when (i) $\alpha>1 $ and (ii) $\alpha < 1$.
+  %%   
+  %%   In a sentence or two, make an argument for the scalings you observe 
+  %%   (hint: what does
+  %%   $\alpha<1$ and $\alpha>1$ imply about the shape of volume as $L_{1}$ and
+  %%   $L_{2}$ become large.)
+  %%   
+  %%   \solution{
+  %%   }
+  %%   
+  %% \item Determine the scaling of maximal sink density $\rho$
+  %%   for (i) $\alpha > 1$ and (ii) $\gamma < 1$.
+  %%   
+  %%   \solution{
+  %%   }
+
+  %% \item (e) Can you generalize (c) to $d$ dimensions?
+  %%   
+  %%   \solution{
+  %%   }
+  
+\end{enumerate}
+
+
+\textbf{II. Size-density law:}
+
+In two dimensions, the size-density law for distributed source density $D(\vec{x})$
+given a sink density $\rho(\vec{x})$ states that $D \propto \rho^{2/3}$.
+We showed in class that an approximate argument that minimizes the 
+average distance between sinks and nearest sources gives the 2/3 exponent.
+
+\begin{enumerate}
+
+\item Repeat this argument for the $d$-dimensional case and find
+  the general form of the exponent $\beta$ in $D \propto \rho^{\beta}$.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\end{enumerate}
+
+\begin{itemize}
+\item 
+  We will explore real networks throughout
+  the course
+  performing some key measurements introduced
+  in Principles of Complex Systems.
+\item
+
+  you are encouraged to use Python
+  (along with, for example, NetworkX or graph-tools).
+\item
+  Data is available in two compressed formats:
+  \begin{itemize}
+  \item 
+    Matlab + text (tgz): \url{\coursewebsite/data/303complexnetworks-data-package.tgz}
+  \item 
+    Matlab + text (zip): \url{\coursewebsite/data/303complexnetworks-data-package.zip}
+  \end{itemize}
+  and can also be found on the course website (helpfully) under data.
+\item
+  The main Matlab file containing everything is networkdata\_{c}ombined.mat.
+\item
+  For directed networks, the $ij$th entry of the adjacency matrix
+  represents the weight of the link from node $i$ to node $j$.
+  Adjacency matrices for undirected networks are symmetric.
+\item
+  For all questions below, 
+  treat each network as undirected unless otherwise instructed.
+\item
+  For this assignment, convert all weights on
+  links to 1, if the network is weighted.
+\item 
+  You do not have to use Matlab for your basic
+  analyses.
+  Python would be a preferred route for many.
+\item 
+  The supplied text versions may be of
+  use for visualization using gml.
+\item
+  The Matlab command spy will give you a quick plot
+  of a sparse adjacency matrix.
+\item
+  Real data sets used here are taken
+  from Mark Newman's compilation (and linked-to sites) at
+  \url{http://www-personal.umich.edu/~mejn/netdata/}.
+\end{itemize}
+
+\begin{enumerate}
+
+\item
+  Record in a table the following basic characteristics:
+  \begin{itemize}
+  \item 
+    $N$, the number of nodes;
+  \item 
+    $m$, the total number of links;
+  \item
+    Whether the network is undirected or directed based on the symmetry
+    of the adjacency matrix;
+  \item 
+    $\tavg{k}$, the average degree
+    ($\tavg{k_{\rm in}}$ 
+    and 
+    $\tavg{k_{\rm out}}$ 
+    if the 
+    network is directed);
+  \item
+    The maximum degree $k^{\rm max}$ (for both out-degree and in-degree if the network is directed);
+  \item
+    The minimum degree $k^{\rm min}$ (for both out-degree and in-degree if the network is directed).
+  \end{itemize}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item (3+3)
+  \begin{enumerate}
+  \item   
+    Plot the degree distribution $P_{k}$
+    as a function of $k$.  In the case that $P_{k}$ versus $k$
+    is uninformative, also produce plots that are clarifying.
+    For example, $\log_{10} P_{k}$ versus $\log_{10} k$.
+
+    (Note: Always use base 10.)
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  \item   
+    See if you can characterize the distributions you find
+    (e.g., exponential, power law, etc.).
+
+    
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+  \end{enumerate}
+
+
+\item   
+  Measure the clustering coefficient $C_{2}$ where
+  $$ C_{2} = \frac{3 \times \rm\#triangles}{\rm \#triples}. $$ 
+
+  For directed networks, transform them into undirected ones
+  first.
+  
+  One approach is to compute $C_{2}$ as
+  $$
+  C_{2}
+  =
+  \frac{
+    3
+    \times
+    \frac{1}{6}{\rm Tr} A^{3} 
+  }
+  {
+    \frac{1}{2}
+    \left(
+      \sum_{ij} [A^{2}]_{ij}
+      -
+      {\rm Tr} A^{2}
+    \right)
+  }.
+  $$
+  Note: avoiding computing $A^{3}$ is important
+  and can be done.
+
+%%  (Hint: to compute triangles, consider the trace of $A^{3}$.)
+ 
+
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\end{enumerate}
+
+\begin{itemize}
+\item 
+  We will explore real networks throughout
+  the course
+  performing some key measurements introduced
+  in Principles of Complex Systems.
+\item
+
+  you are encouraged to use Python
+  (along with, for example, NetworkX or graph-tools).
+\item
+  Data is available in two compressed formats:
+  \begin{itemize}
+  \item 
+    Matlab + text (tgz): \url{\coursewebsite/data/303complexnetworks-data-package.tgz}
+  \item 
+    Matlab + text (zip): \url{\coursewebsite/data/303complexnetworks-data-package.zip}
+  \end{itemize}
+  and can also be found on the course website (helpfully) under data.
+\item
+  The main Matlab file containing everything is networkdata\_{c}ombined.mat.
+\item
+  For directed networks, the $ij$th entry of the adjacency matrix
+  represents the weight of the link from node $i$ to node $j$.
+  Adjacency matrices for undirected networks are symmetric.
+\item
+  For all questions below, 
+  treat each network as undirected unless otherwise instructed.
+\item
+  For this assignment, convert all weights on
+  links to 1, if the network is weighted.
+\item 
+  You do not have to use Matlab for your basic
+  analyses.
+  Python would be a preferred route for many.
+\item 
+  The supplied text versions may be of
+  use for visualization using gml.
+\item
+  The Matlab command spy will give you a quick plot
+  of a sparse adjacency matrix.
+\item
+  Real data sets used here are taken
+  from Mark Newman's compilation (and linked-to sites) at
+  \url{http://www-personal.umich.edu/~mejn/netdata/}.
+\end{itemize}
+
+\begin{enumerate}
+
+\item
+  Okay, let's get back to the 6 networks we explored in
+  the first assignment.  Questions 2 through 4 will
+  focus on them.
+  
+  Measure the degree-degree assortativity.
+  This is the standard Pearson correlation coefficient
+  and the focus is on links, and then the nodes at the
+  end of each link.
+
+  For undirected networks, we need to think about
+  how we choose the ordering of an edge's two degrees
+  when we perform the correlation.  Which degree
+  goes first?  Or should we include both orderings?
+  How about randomly choosing the ordering?
+  Does it matter?
+
+  For directed networks, various correlations
+  are possible (in-in, in-out, etc.).  
+  For this question, measure the correlation
+  of the in-degree of the source
+  node and the out-degree of the destination node
+  for each link.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item   
+  Produce plots of the adjacency matrices.
+%%   In Matlab, this can be done using the spy command.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item   
+  Using a network visualization tool of your choice,
+  produce plots of the networks (if possible, depending on size).
+
+  For the smaller ones, 
+  please label the nodes
+  numerically.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item (3 + 3)
+
+  Consider a modified version
+  of the Barab\`{a}si-Albert (BA) model~\cite{barabasi1999a}
+  where two possible mechanisms
+  are now in play.  As in the original
+  model, start with $m_{0}$ nodes at time $t=0$.
+  Let's make these initial guys connected such that each
+  has degree 1.  The two mechanisms are:
+  \begin{enumerate}
+  \item[M1:] With probability $p$, 
+    a new node of degree $1$ is added to
+    the network.  
+    At time $t+1$, a node connects to an existing
+    node $j$ with probability 
+    \begin{equation}
+      P(\mbox{connect to node}\ j) = \frac{k_{j}}{\sum_{i=1}^{N(t)} k_{i}}
+      \label{300as1.eq:Pconnectj}
+    \end{equation}
+    where $k_{j}$ is the degree of node $j$ and
+    $N(t)$ is the number of nodes in the system at time $t$.
+  \item[M2:] With probability $q=1-p$, 
+    a randomly chosen node adds a new edge,
+    connecting to node $j$ with
+    the same preferential attachment
+    probability as above.
+  \end{enumerate}
+  Note that in the limit $q=0$, we retrieve the original BA model
+  (with the difference that we are adding one link at a time
+  rather than $m$ here).
+
+  In the long time limit $t \rightarrow \infty$,
+  what is the expected form of the degree distribution $P_{k}$?
+
+  Do we move out of the original model's universality class?
+
+  Different analytic approaches are possible including
+  a modification of the BA paper, or a Simon-like one
+  (see also Krapivsky and Redner~\cite{krapivsky2001a}).
+
+  Hint: You can attempt to solve the problem exactly
+  and you'll find an integrating factor story.
+
+  Another hint, moment of mercy: Approximate 
+  the differential equation by considering
+  large $t$ (this will simplify the denominators).
+
+  (3 points for set up, 3 for solving.)
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+
+\item
+
+  Optional:
+
+  Watch ``Remedial Chaos Theory.''
+
+  Community, S3E04.
+
+  \url{https://en.wikipedia.org/wiki/Remedial_Chaos_Theory}
+
+  
+\end{enumerate}
+
+
+
+  

@@ -1,0 +1,186 @@
+\textbf{Name: Anthony Barrows} \\
+
+\medskip
+
+\textbf{Conspirators:} 
+
+\medskip
+\medskip
+
+\hrule
+
+\medskip
+
+
+\assignmentsonly{\pleasesubmitprojectdraft}
+
+\begin{itemize}
+\item 
+  Please use Overleaf for writing up your project.
+\item
+  Build your paper using:
+  \url{https://github.com/petersheridandodds/universal-paper-template}
+\item
+  Please use Github and Gitlab to share the code and data things you make.
+\item
+  For this first assignment, just getting the paper template up is enough.
+\end{itemize}
+
+\fbox{\begin{minipage}{40em}
+		Code (if applicable) is available at \href{https://github.com/ajbarrows/spiteful-allegory}{https://github.com/ajbarrows/spiteful-allegory}.
+\end{minipage}}
+\begin{enumerate}
+  
+\item
+
+  Begin formulating project ideas.
+
+  See storyology slides.
+  
+  General suggestion: Come up with some rich, text-based set of stories for analysis.
+
+  For example: One (longish) book, or a book series, or a TV series.
+
+  Data would be the original text (books), subtitles, screenplay, or scripts (TV series).
+
+  \begin{itemize}
+  \item 
+    You must be able to obtain the full text.
+  \item 
+    You will want something with at least around $10^{5}$ words.
+    More than $10^{6}$ would be great.
+  \item 
+    Transcripts of shows may be good for extracting
+    temporal character interaction networks.
+  \end{itemize}
+  
+  Please talk about possibilities with others in the class.
+  
+  For this assignment, simply list at least one possibility, noting the approximate text size
+  in number of words, or whatever measure of size makes sense.
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+For whatever reason, the first thing that comes to mind that would be fun to analyze is a play. Character interactions and line delivery are critical; plays are horrendously boring if interactions are poorly displayed. I'm not sure if these texts will be long enough.
+	
+Some plays:
+\begin{itemize}
+	\item Samuel Beckett's Waiting for Godot is $10^4$
+	\item Authur Miller's Death of a Salesman is $10^4$
+	\item Even Shakespeare's Hamlet, known for being long, is $10^4$
+\end{itemize}
+
+That might not work. Full seasons of TV shows seem to have the same problem. Perhaps there's merit in combining some.
+
+Books are a bit more straightforward since, thanks to many large-scale projects, curated texts seem to be readily available. For example:
+
+\begin{itemize}
+	\item Notoriously long, Tolstoy's \textit{War and Peace}: $10^5$
+	\item Hugo's \textit{Les Miserables}: also $10^5$
+	\item Powell's 	\textit{A Dance to the Music of Time}: $10^6$!
+\end{itemize}
+
+There are options. It would be helpful to know more about what we plan to do with the text, I suppose.
+
+	
+	
+   \solutionend
+
+\item
+
+  Lexical calculus:
+
+  Derive the word shift equation for simple additive lexical instruments.
+
+  You will have the derivation per class.
+
+  The idea is to simply work through it yourself.
+
+  There are no advanced mathematics here.
+
+  But over and over, people do not understand what's going on.
+
+  Word shifts are a kind of discrete derivative (difference) with words on the inside.
+
+  Per lectures, the goal is to derive.
+  $$
+  \delta h_{\textnormal{avg},i}
+  =
+  \frac{100}{
+    \left|
+    \havgsup{(\rm comp)} - \havgsup{(\textnormal{ref})}
+    \right|
+  }
+  \underbrace{
+    \left[
+      \havg{w_{i}} - \havgsup{(\textnormal{ref})}
+      \right]
+  }_{+/-}
+  \underbrace{
+    \left[
+      p_{i}^{(\textnormal{comp})} - p_{i}^{(\textnormal{ref})}
+      \right]
+  }_{\uparrow/\downarrow}
+  $$
+
+  Performed in class and in numerous papers~\cite{dodds2009c,dodds2011e,dodds2015a}.
+
+  
+   \solutionstart
+
+   %% solution goes here
+   
+$\delta h_{\textnormal{avg},i}$ is the change in happiness, $h$, on average, for word $i$ (i.e., the contribution from word $i$), given two texts (reference and comparison). The expression above derives from the measure of happiness of a given text, as the sum of the happiness associated with all words $i$, weighted by each word's fractional abundance in the text (probability):
+
+\[
+\theta_{\textnormal{avg}}
+=
+\sum_{i=1}^{N}
+p_i\theta_i
+\]
+
+
+To quantify a difference, we would simply consider the differences in happiness for each text (with and without word $i$):
+
+\[
+\begin{gathered}
+	h^{\textnormal{comp}}_{\textnormal{avg}}
+	-
+	h^{\textnormal{ref}}_{\textnormal{avg}}
+	=
+	\sum_{i=1}^{N}p_i^{\textnormal{comp}}h_{\textnormal{avg}}(w_i)
+	-
+	\sum_{i=1}^{N}p_i^{\textnormal{ref}}h_{\textnormal{avg}}(w_i) \\
+	=
+	\sum_{i=1}^{N} (p_i^{\textnormal{comp}} - p_i^{\textnormal{ref}} )h_{\textnormal{avg}}(w_i) \\
+	=
+	\sum_{i=1}^{N} (p_i^{\textnormal{comp}} - p_i^{\textnormal{ref}} ) (h_{\textnormal{avg}}(w_i) - h^{\textnormal{ref}}_{\textnormal{avg}} + h^{\textnormal{ref}}_{\textnormal{avg}}) \\
+	=
+	\sum_{i=1}^{N} (p_i^{\textnormal{comp}} - p_i^{\textnormal{ref}} ) (h_{\textnormal{avg}}(w_i) - h^{\textnormal{ref}}_{\textnormal{avg}}) + 
+	\underbrace{
+		\sum_{i=1}^{N} (p_i^{\textnormal{comp}} - p_i^{\textnormal{ref}} ) h^{\textnormal{ref}}_{\textnormal{avg}}
+	}_{0}
+\end{gathered}
+\]
+
+And so,
+\[
+  \delta h_{\textnormal{avg},i}
+=
+(h^{\textnormal{comp}}_{\textnormal{avg}} - h^{\textnormal{ref}}_{\textnormal{avg}})
+(h_{\textnormal{avg}}(w_i) - h^{\textnormal{ref}}_{\textnormal{avg}})
+(p_i^{\textnormal{comp}} - p_i^{\textnormal{ref}} )
+\]
+
+
+
+
+
+
+
+   \solutionend
+
+\end{enumerate}
