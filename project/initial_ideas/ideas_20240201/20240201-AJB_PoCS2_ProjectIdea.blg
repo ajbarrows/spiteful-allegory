@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: 20240201-AJB_PoCS2_ProjectIdea.aux
+The style file: unsrt.bst
+Database file #1: ../zotero.bib
+You've used 3 entries,
+            1791 wiz_defined-function locations,
+            472 strings with 5326 characters,
+and the built_in function-call counts, 1444 in all, are:
+= -- 69
+> -- 186
+< -- 0
++ -- 63
+- -- 60
+* -- 176
+:= -- 282
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 3
+chr.to.int$ -- 0
+cite$ -- 3
+duplicate$ -- 27
+empty$ -- 74
+format.name$ -- 60
+if$ -- 265
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 3
+newline$ -- 18
+num.names$ -- 3
+pop$ -- 3
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 9
+stack$ -- 0
+substring$ -- 74
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 8
+width$ -- 4
+write$ -- 35

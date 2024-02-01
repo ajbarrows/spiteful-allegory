@@ -1,0 +1,34 @@
+\begin{thebibliography}{1}
+
+\bibitem{MarekEtAl2022}
+Scott Marek, Brenden {Tervo-Clemmens}, Finnegan~J. Calabro, David~F. Montez,
+  Benjamin~P. Kay, Alexander~S. Hatoum, Meghan~Rose Donohue, William Foran,
+  Ryland~L. Miller, Timothy~J. Hendrickson, Stephen~M. Malone, Sridhar Kandala,
+  Eric Feczko, Oscar {Miranda-Dominguez}, Alice~M. Graham, Eric~A. Earl,
+  Anders~J. Perrone, Michaela Cordova, Olivia Doyle, Lucille~A. Moore,
+  Gregory~M. Conan, Johnny Uriarte, Kathy Snider, Benjamin~J. Lynch, James~C.
+  Wilgenbusch, Thomas Pengo, Angela Tam, Jianzhong Chen, Dillan~J. Newbold,
+  Annie Zheng, Nicole~A. Seider, Andrew~N. Van, Athanasia Metoki, Roselyne~J.
+  Chauvin, Timothy~O. Laumann, Deanna~J. Greene, Steven~E. Petersen, Hugh
+  Garavan, Wesley~K. Thompson, Thomas~E. Nichols, B.~T.~Thomas Yeo, Deanna~M.
+  Barch, Beatriz Luna, Damien~A. Fair, and Nico U.~F. Dosenbach.
+\newblock Reproducible brain-wide association studies require thousands of
+  individuals.
+\newblock {\em Nature}, 603(7902):654--660, March 2022.
+
+\bibitem{YarkoniEtAl2011}
+Tal Yarkoni, Russell~A Poldrack, Thomas~E Nichols, David~C Van~Essen, and Tor~D
+  Wager.
+\newblock Large-scale automated synthesis of human functional neuroimaging
+  data.
+\newblock {\em Nature Methods}, 8(8):665--670, August 2011.
+
+\bibitem{owensRecalibratingExpectationsEffect2021}
+Max~M. Owens, Alexandra Potter, Courtland~S. Hyatt, Matthew Albaugh, Wesley~K.
+  Thompson, Terry Jernigan, Dekang Yuan, Sage Hahn, Nicholas Allgaier, and Hugh
+  Garavan.
+\newblock Recalibrating expectations about effect size: {{A}} multi-method
+  survey of effect sizes in the {{ABCD}} study.
+\newblock {\em PLOS ONE}, 16(9):e0257535, September 2021.
+
+\end{thebibliography}

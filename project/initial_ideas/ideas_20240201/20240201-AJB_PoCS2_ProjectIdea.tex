@@ -1,0 +1,52 @@
+\documentclass[]{article}
+
+\usepackage{fontawesome}
+\usepackage{fullpage}
+\usepackage{hyperref}
+
+
+%opening
+\title{PoCS2 Project Ideas}
+\author{Anthony Barrows}
+
+\begin{document}
+	
+\sffamily
+
+\maketitle
+
+
+\section{Background}
+
+The field of neuroimaging suffers from a crisis of reproducibility, best documented in \cite{MarekEtAl2022}, which demonstrated that resolving individual differences when effect sizes are small often requires thousands of participants. Pioneers in the field have built fantastic tools like \href{https://neurosynth.org/}{\texttt{Neurosynth}} \cite{YarkoniEtAl2011} to extract relevant information from each paper in their vast database of neuroimaging studies. By the authors' own admission, this technique is crude, and risks erroneously connecting psychological constructs by identifying terms (e.g., attention, ADHD, depression) and functional magnetic resonance imaging (fMRI) image coordinates that appear in the same paper. This approach is unprecedented and could lead to transformative work, but it also presents several key drawbacks:
+
+\begin{itemize}
+	\item Methods for processing analyzing MRI scans are far from harmonized.
+	\item \cite{owensRecalibratingExpectationsEffect2021} showed that even \textit{with} large-scale imaging efforts effect sizes remain small, suggesting that under-powered studies reporting large effects may involve spurious associations
+	\item Neurosynth relies on word associations that may not represent psychological constructs, and fails to assign meaning to brain map coordinates (e.g., ``activation'' vs. ``deactivation''). 
+	\item For various reasons (some more principled than others), not all papers report coordinates.
+\end{itemize}
+
+
+\section{Proposed Approach}
+
+Instead of focusing solely on results (i.e., brain-behavior associations), I propose to focus on common methods. \textbf{Goal: Use existing literature to produce a basic description of neuroimaging analysis strategies used to model various brain-behavior relationships.} 
+
+If successful, this approach could:
+\begin{itemize}
+	\item Inform which analytical strategies (e.g., pre-processing, variable and model selection, external validity estimates) are most often used, and under which conditions
+	\item Identify which strategies are most effective (\textit{or at least lay the groundwork})
+\end{itemize}
+
+
+\section{Next Steps}
+
+Such an endeavor will require assembling a workable text database. With any luck, I can piggyback on Neurosynth's own database. Failing that, I'll need to use some kind of pub-scraping tool.
+
+This will be a challenging project, and it will be important to define reasonable expectations. 
+
+
+\bibliographystyle{unsrt}
+\bibliography{../zotero.bib}
+
+\end{document}
