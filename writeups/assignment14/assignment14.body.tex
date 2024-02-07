@@ -1,0 +1,176 @@
+\textbf{Name:} \\
+
+\medskip
+
+\textbf{Conspirators:} 
+
+\medskip
+\medskip
+
+\hrule
+
+\medskip
+
+
+%% pride and prejudice
+%% frankenstein
+%% moby dick
+
+%% share the data needed here with:
+%% 
+%% assignment13-share-story-data.sh
+
+\assignmentsonly{\pleasesubmitprojectdraft}
+
+\assignmentsonly{Semester goal: A paper per text studied, building through assignments.}
+
+%% pride and prejudice
+
+\textbf{Three stories to analyze:}
+
+\begin{itemize}
+\item
+  \textbf{Pride and Prejudice}\\
+  \url{https://www.gutenberg.org/ebooks/1342}
+\item
+  \textbf{Frankenstein; or the Modern Prometheus}\\
+  \url{https://www.gutenberg.org/files/84/84-h/84-h.htm}
+\item
+  \textbf{Moby Dick; Or, The Whale}\\
+  \url{https://www.gutenberg.org/ebooks/2701}
+\end{itemize}
+
+\textbf{Data:}
+
+For this assignment, the novels have been processed into 1-grams
+with an attempt to capture all elements including punctuation.
+
+You can use the data below, or what you produced in the previous assignment.
+
+The basic data format is as a time series with one 1-gram per line (links below).
+
+For each story, also linked to below are the rank distributions of 1-grams by counts.
+
+\url{https://pdodds.w3.uvm.edu/permanent-share/pride_and_prejudice_narrativetimeseries.txt}\\
+\url{https://pdodds.w3.uvm.edu/permanent-share/pride_and_prejudice_1grams.txt}
+
+\url{https://pdodds.w3.uvm.edu/permanent-share/frankenstein_narrativetimeseries.txt}\\
+\url{https://pdodds.w3.uvm.edu/permanent-share/frankenstein_1grams.txt}
+
+\url{https://pdodds.w3.uvm.edu/permanent-share/moby-dick_narrativetimeseries.txt}\\
+\url{https://pdodds.w3.uvm.edu/permanent-share/moby-dick_1grams.txt}
+
+\textbf{Instrument---Shifterator:}
+
+\begin{itemize}
+\item 
+  For word shifts,
+  use the Python package described in Ref.~\cite{gallagher2021a}.
+
+  Links to paper versions (arXiv is always best),
+  Github repository,
+  and an
+  exhilarating Twitter feed
+  can be found here: \url{https://pdodds.w3.uvm.edu/research/papers/gallagher2021a/}.
+
+  (Various Matlab versions made by the Unreliable Deliverator do exist
+  and need to be shared on Gitplaces.
+ A more sophisticated map+list version has long been in development.)
+
+  
+  Github repository:
+  \url{https://github.com/ryanjgallagher/shifterator}
+\end{itemize}
+
+
+\begin{enumerate}
+
+\item
+
+  Measure the average happiness of each text
+  using the labMT word list
+  with the lexical lens:
+  \begin{equation}
+    \typelens
+    =
+    \left\{
+    \elementsymbol
+    \in
+    \systemsymbol
+    \|
+    \havg{\elementsymbol} \le 4
+    \
+    \mbox{or}
+    \
+    \havg{\elementsymbol} \ge 6
+    \right\}
+    \label{eq:lexicallens}
+  \end{equation}
+  where
+  $\systemsymbol$ is the labMT lexicon
+  and
+  $\elementsymbol$ is a word in $\systemsymbol$.
+  
+
+\item (3 points each)
+
+  For the following 
+  $\Tref$
+  and
+  $\Tcomp$
+  for each novel,
+  generate a collection of word shifts
+  as described below.
+
+  Continue to use the same lexical lens $\typelens$ as above.
+
+  Pride and Prejudice:
+
+
+  \begin{itemize}
+  \item
+    Pride and Prejudice:\\
+    $\Tref$ = the first 40\% of the book,\\
+    $\Tcomp$ = 70\% to 75\% of the book.
+  \item 
+    Frankenstein:\\
+    $\Tref$ =  the first 20\% of the book,\\
+    $\Tcomp$ = the last 10\% of the book.
+  \item
+    Moby Dick:\\
+    $\Tref$ =  the whole book,\\
+    $\Tcomp$ = 80\% to 90\% of the book.
+  \end{itemize}
+
+  \begin{enumerate} 
+  \item 
+    For each novel,
+    produce word shifts comparing text $\Tcomp$ relative to text $\Tref$.
+    Important: Use the average happiness of text $\Tref$ as the baseline (this is not the default in the Python package).
+  \item 
+    Interpret the word shifts. Does what you see make sense?
+    Are there any surprises?
+    Are some words being used in what the average person might not think is their primary meaning?
+    For example, ``crying'' in Moby Dick means yelling, and ``sick'' can mean ``awesome.''
+  \item
+    Reverse the comparison:
+    Produce word shifts comparing text $\Tref$ relative to text $\Tcomp$.
+    Now use the average happiness of text $\Tcomp$ as the baseline.
+  \item
+    Comment on any asymmetries you see (the basic word shifts we use are asymmetric).
+  \item
+    Produce word shifts comparing text $\Tref$ relative to text $\Tcomp$.
+    Now use 5 as the baseline reference score (neutral on the happiness-sadness spectrum of 1--9 for labMT).
+  \item
+    Compared to your first word shifts, how interpretable are these ones?
+  \end{enumerate}
+
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\end{enumerate}
+

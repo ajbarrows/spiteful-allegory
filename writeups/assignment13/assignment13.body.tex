@@ -1,4 +1,4 @@
-\textbf{Name:} \\
+\textbf{Name: Anthony Barrows} \\
 
 \medskip
 
@@ -12,80 +12,181 @@
 \medskip
 
 
+%% pride and prejudice
+%% frankenstein
+%% moby dick
+
+%% share the data needed here with:
+%% 
+%% assignment13-share-story-data.sh
+
 \assignmentsonly{\pleasesubmitprojectdraft}
 
-\assignmentsonly{Goal: A paper per text studied, building through assignments.}
+\assignmentsonly{Semester goal: A paper per text studied, building through assignments.}
 
-%% - Characters: ``x-ray''
-%% 
-%% - punctuation
-%% 
-%% Assignments:
-%% - [ ] Emotion words in LLM ...
-%% 
-%% Read this paper:
-%% - [ ] Semantic differentials in LLMs ...
-%% 
-%% Write up slides for word shifts (appendix from 2015)
+%% pride and prejudice
+
+\textbf{Three stories to analyze:}
+
+\begin{itemize}
+\item
+  \textbf{Pride and Prejudice}\\
+  \url{https://www.gutenberg.org/ebooks/1342}
+\item
+  \textbf{Frankenstein; or the Modern Prometheus}\\
+  \url{https://www.gutenberg.org/files/84/84-h/84-h.htm}
+\item
+  \textbf{Moby Dick; Or, The Whale}\\
+  \url{https://www.gutenberg.org/ebooks/2701}
+\end{itemize}
+
+\textbf{Tasks:}
+
+\fbox{\begin{minipage}{40em}
+		Code  is available at \href{https://github.com/ajbarrows/spiteful-allegory}{https://github.com/ajbarrows/spiteful-allegory}.
+		
+		See \texttt{/work/notebooks}
+\end{minipage}}
+
 
 \begin{enumerate}
+\item (9 points, 3 points for each novel)
 
-\item (3 points each)
+  Take the UTF-8 text versions of each of these three novels
+  and parse them into narrative time series of 1-grams
+  which include all punctuation, numbers, and words.
 
-  Using your text of choice, generate word shifts comparing two ``interesting'' regions of text.
+  See below for instructions.
 
-  Use the Python package described in Ref.~\cite{gallagher2021a}.
-
-  (Various Matlab versions made by the Unreliable Deliverator do exist and need to be shared on Gitplaces. A more sophisticated map+list version has long been in development.)
-
-  Links to paper versions (arXiv is always best),
-  Github repository,
-  and an
-  exhilarating Twitter feed
-  can be found here: \url{https://pdodds.w3.uvm.edu/research/papers/gallagher2021a/}.
-
-  ``Interesting'' is anything you find interesting.  Could be books 3 and 12 in a series,
-  second half of a book compared to the first half, season 4 of a show versus all seasons, etc.
-
-  Aim to find two texts that are both reasonably large (more than $10^{4}$ words)
-  and fairly different in average happiness scores (though even the same scores can be
-  meaningfully explored with word shifts).
+  For each novel,
+  present your output for the first paragraph, rendered as a single, wrapped line.
   
-  Let's call the two texts
-  $\texta$
-  and
-  $\textb$.
-  In your plots, you should label them meaningfully based on your choices).
+ \vspace{1em}
 
-  Use a reasonable exclusion lens of your choice, e.g., [4, 6] or [3, 7].
+\hrule
 
-  \begin{enumerate} 
-  \item 
-    Produce a word shift comparing text $\textb$ relative to text $\texta$.
-    Use the average happiness of text $\texta$ as the baseline.
-  \item 
-    Interpret the word shift. Does what you see make sense?
-    Are there any surprises?
-    Are some words being used in what the average person might not think is their primary meaning?
-    For example, ``crying'' in Moby Dick means yelling, and ``sick'' can mean ``awesome.''
-  \item
-    Produce a word shift comparing text $\texta$ relative to text $\textb$.
-    Use the average happiness of text $\textb$ as the baseline.
-  \item
-    Comment on any asymmetries you see (the basic word shifts we use are asymmetric).
-  \item
-    Produce a word shift comparing text $\texta$ relative to text $\textb$.
-    Now use 5 as the baseline reference score (neutral on the happiness-sadness spectrum of 1--9).
-  \item
-    Compared to your first word shift, how interpretable is this one?
-  \end{enumerate}
+\vspace{1em}
 
+\textbf{Frankenstein}
+
+	\fbox{
+	\begin{minipage}{30em}
+	You will rejoice to hear that no disaster has accompanied the commencement of an enterprise which you have regarded with such evil forebodings . I arrived here yesterday , and my first task is to assure my dear sister of my welfare and increasing confidence in the success of my undertaking .
+	\end{minipage}
+}
+
+
+\item (9 points, 3 points for each novel)
+
+  For each novel, produce size rank distributions of 1-grams according to counts.
+
+  Display the 1-grams and counts for the first 100 1-grams.
   
-   \solutionstart
+\item (9 points, 3 points for each novel)
 
-   %% solution goes here
-
-   \solutionend
-
+  For each novel, plot the rank-count distribution for 1-grams.
 \end{enumerate}
 
+\textbf{Outputs provided for comparison:}
+
+The basic data format is as a time series with one 1-gram per line (links below).
+
+For each story, also linked to below are the rank distributions of 1-grams by counts.
+
+\url{https://pdodds.w3.uvm.edu/permanent-share/pride_and_prejudice_narrativetimeseries.txt}\\
+\url{https://pdodds.w3.uvm.edu/permanent-share/pride_and_prejudice_1grams.txt}
+
+\url{https://pdodds.w3.uvm.edu/permanent-share/frankenstein_narrativetimeseries.txt}\\
+\url{https://pdodds.w3.uvm.edu/permanent-share/frankenstein_1grams.txt}
+
+\url{https://pdodds.w3.uvm.edu/permanent-share/moby-dick_narrativetimeseries.txt}\\
+\url{https://pdodds.w3.uvm.edu/permanent-share/moby-dick_1grams.txt}
+
+\textbf{General instructions:}
+
+\begin{itemize}
+\item
+  Using an editor, remove the start and finish material
+  for each of the three novels that Gutenberg adds to books
+  somewhat inconsistently.
+\item
+  Using a judicious selection of regex operations,
+  create a script (Python is strongly recommended but you can use whatever you like)
+  to break up the text into meaningful 1-grams that
+  may be words, punctuation, and numbers.
+
+  Regex = \wordwikilink{https://en.wikipedia.org/wiki/Regular\_expression}{Regular Expression.}
+\item
+  See Perl code below for an example.
+\end{itemize}
+
+\begin{verbatim}
+    ## for Frankenstein
+    $text =~ s/D--n/Damn/g;
+
+    ## separate out some basic punctuation
+    $text =~ s/([\!\?\,\.])/ \1 /g;
+    $text =~ s/:/ : /g; 
+    $text =~ s/;/ \; /g;
+
+    ## remove underscores used for emphasis
+    $text =~ s/_//g; 
+
+    ## isolate parentheses
+    $text =~ s/\(/ ( /g;
+    $text =~ s/\)/ ) /g;
+
+    ## dash madness    
+    $text =~ s/----/ --- /g; ## long dash
+    $text =~ s/--/ --- /g; ## em dash
+    $text =~ s/;—/ --- /g; ## em dash
+    $text =~ s/—/ --- /g; ## em dash
+
+    ## handle specific salutations
+    $text =~ s/Mr \./Mr./g;
+    $text =~ s/Mrs \./Mrs./g;
+    $text =~ s/Dr \./Dr./g;
+
+    ## clean up white space duplication
+    $text =~ s/\s+/ /g;
+
+    ## separate quotes
+    ## opening quotes should have a space before them (except for em dashes, treated above)
+    $text =~ s/\s"/ " /g;
+    ## closing quotes should be what's left:
+    $text =~ s/"/ " /g;
+    $text =~ s/“/ “ /g;
+    $text =~ s/”/ ” /g;
+
+    ## separate off opening single quotation mark
+    $text =~ s/‘/ ‘ /g;
+
+    ## dyspunctional catapostrophes:
+    ## clean up apostrophes and opening and closing single quote mark
+    ## closing single quote mark should generally be isolated
+    ## leave alone to preserve contractions
+    $text =~ s/‘/ ' /g;
+
+    $text =~ s/’/'/g;
+    ## opening quote mark
+    ## \p{L} stands for any UTF-8 letter
+    $text =~ s/(\s)'(\p{L})/\1' \2/g;
+    ## closing quote mark (will be a problem with contractions)
+    $text =~ s/(\p{L})'(\s)/\1 '\2/g;
+    
+    ## split off possession indicator
+    $text =~ s/'s/ 's/g;
+
+    ## remove any white space at the front
+    $text =~ s/^\s+//;
+
+    ## add new line at the end
+    $text = $text."\n";
+
+    ## now create time series text by replacing spaces with returns
+    ($timeseriestext = $text) =~ s/ /\n/g;
+    
+    ## last: remove any white space redundancies
+    $timeseriestext =~ s/\s+/\n/ms;
+  
+\end{verbatim}
