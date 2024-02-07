@@ -18,5 +18,4 @@ cp ../../overleaf/$1.tex $1.tex
 cp ../../overleaf/$1.body.tex $1.body.tex
 
 # link to /work
-# ln -s ../../../work/data/08_reporting/ ./figures/
-cp -S ../../work/data/08_reporting/* ./figures/
+ln -s ../../../work/data/08_reporting/ ./figures/

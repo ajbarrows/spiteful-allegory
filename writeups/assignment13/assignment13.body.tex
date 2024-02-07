@@ -67,6 +67,16 @@
 
 \vspace{1em}
 
+
+\textbf{Pride and Prejudice}
+
+\fbox{
+	\begin{minipage}{30em}
+It is a truth universally acknowledged , that a single man in possession of a good fortune must be in want of a wife . However little known the feelings or views of such a man may be on his first entering a neighbourhood , this truth is so well fixed in the minds of the surrounding families , that he is considered as the rightful property of some one or other of their daughters . “ My dear Mr. Bennet , ” said his lady to him one day , “ have you heard that Netherfield Park is let at last ? ”
+	\end{minipage}
+}
+
+
 \textbf{Frankenstein}
 
 	\fbox{
@@ -75,16 +85,69 @@
 	\end{minipage}
 }
 
+\textbf{Moby Dick}
+
+\fbox{
+	\begin{minipage}{30em}
+		Call me Ishmael . Some years agoever mind how long preciselyaving little or no money in my purse , and nothing particular to interest me on shore , I thought I would sail about a little and see the watery part of the world . It is a way I have of driving off the spleen and regulating the circulation . Whenever I find myself growing grim about the mouth ; whenever it is a damp , drizzly November in my soul ; whenever I find myself involuntarily pausing before coffin warehouses , and bringing up the rear of every funeral I meet ; and especially whenever my hypos get such an upper hand of me , that it requires a strong moral principle to prevent me from deliberately stepping into the street , and methodically knocking people’s hats offhen , I account it high time to get to sea as soon as I can . This is my substitute for pistol and ball . With a philosophical flourish Cato throws himself upon his sword ; I quietly take to the ship . There is nothing surprising in this . If they but knew it , almost all men in their degree , some time or other , cherish very nearly the same feelings towards the ocean with me .
+	\end{minipage}
+}
+
+
 
 \item (9 points, 3 points for each novel)
 
   For each novel, produce size rank distributions of 1-grams according to counts.
 
   Display the 1-grams and counts for the first 100 1-grams.
-  
+
+
+ \vspace{1em}
+
+\hrule
+
+\vspace{1em}
+
+
+\begin{tabular}{lll}
+	
+	\centering
+
+	\textbf{Pride and Prejudice} & \textbf{Frankenstein} & \textbf{Moby Dick} \\
+	\begin{minipage}{2in}
+		\VerbatimInput[fontsize=\fontsize{8}{4}]{../../work/data/03_primary/gutenberg_size_rank/pride_prej_top_100_sizerank.txt}
+	\end{minipage} &
+
+	\begin{minipage}{2in}
+		\VerbatimInput[fontsize=\fontsize{8}{4}]{../../work/data/03_primary/gutenberg_size_rank/frankenstein_top_100_sizerank.txt}
+	\end{minipage} &
+
+	\begin{minipage}{2in}
+	\VerbatimInput[fontsize=\fontsize{8}{4}]{../../work/data/03_primary/gutenberg_size_rank/moby_dick_top_100_sizerank.txt}
+	\end{minipage} 
+	
+\end{tabular}
+
+
+My counts are reasonably close to the examples, which I attribute to a difference in manually removing material. Or some other thing. 
+
+
 \item (9 points, 3 points for each novel)
 
   For each novel, plot the rank-count distribution for 1-grams.
+ 
+ 
+ \vspace{1em}
+
+\hrule
+
+\vspace{1em}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.75\textwidth]{08_reporting/assign13_gutenberg_rankcount.png}
+\end{figure}
+  
 \end{enumerate}
 
 \textbf{Outputs provided for comparison:}
