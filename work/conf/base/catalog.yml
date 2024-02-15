@@ -2,3 +2,38 @@
 #
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+
+gb_ts_pride_prej:
+  type: text.TextDataSet
+  filepath: data/02_intermediate/gutenberg_peter/narrative_ts/pride_prej.txt
+gb_ts_frankenstein:
+  type: text.TextDataSet
+  filepath: data/02_intermediate/gutenberg_peter/narrative_ts/frankenstein.txt
+gb_ts_moby_dick:
+  type: text.TextDataSet
+  filepath: data/02_intermediate/gutenberg_peter/narrative_ts/moby_dick.txt
+
+gb_onegrams_pride_prej:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/gutenberg_peter/onegrams/pride_prej.txt
+  load_args:
+    sep: '\t'
+    header:
+    names: ['word', 'count']
+
+gb_onegrams_frankenstein:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/gutenberg_peter/onegrams/frankenstein.txt
+  load_args:
+    sep: '\t'
+    header: 
+    names: ['word', 'count']
+
+gb_onegrams_moby_dick:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/gutenberg_peter/onegrams/moby_dick.txt
+  load_args:
+    sep: '\t'
+    header:
+    names: ['word', 'count']

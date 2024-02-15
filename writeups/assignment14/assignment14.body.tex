@@ -1,4 +1,4 @@
-\textbf{Name:} \\
+\textbf{Name: Anthony Barrows} \\
 
 \medskip
 
@@ -82,6 +82,12 @@ For each story, also linked to below are the rank distributions of 1-grams by co
   \url{https://github.com/ryanjgallagher/shifterator}
 \end{itemize}
 
+\fbox{\begin{minipage}{40em}
+		Code  is available at \href{https://github.com/ajbarrows/spiteful-allegory}{https://github.com/ajbarrows/spiteful-allegory}.
+		
+		See \texttt{/work/notebooks}
+\end{minipage}}
+
 
 \begin{enumerate}
 
@@ -91,7 +97,8 @@ For each story, also linked to below are the rank distributions of 1-grams by co
   using the labMT word list
   with the lexical lens:
   \begin{equation}
-    \typelens
+%    \typelens
+	\mathcal{L}
     =
     \left\{
     \elementsymbol
@@ -110,7 +117,25 @@ For each story, also linked to below are the rank distributions of 1-grams by co
   $\systemsymbol$ is the labMT lexicon
   and
   $\elementsymbol$ is a word in $\systemsymbol$.
-  
+
+\solutionstart
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{08_reporting/assign14_trunc_labMT_dist.png}
+	\label{fig:happiness_dist}
+	\caption{Happiness distribution with $\mathcal{L}$ removed.}
+\end{figure}
+
+\begin{tabular}{lll}
+	Text & $h_{avg}$ & $ h_{avg}$ weighted by word count \\
+	\hline
+	\textit{Pride and Prejudice} & 5.74 & 5.99 \\
+	\textit{Frankenstein} & 5.64 & 5.85 \\
+	\textit{Moby Dick} & 5.67 & 5.77
+\end{tabular}
+
+\solutionend
 
 \item (3 points each)
 
@@ -122,7 +147,8 @@ For each story, also linked to below are the rank distributions of 1-grams by co
   generate a collection of word shifts
   as described below.
 
-  Continue to use the same lexical lens $\typelens$ as above.
+%  Continue to use the same lexical lens $\typelens$ as above.
+  Continue to use the same lexical lens $\mathcal{L}$ as above.
 
   Pride and Prejudice:
 
@@ -142,11 +168,13 @@ For each story, also linked to below are the rank distributions of 1-grams by co
     $\Tcomp$ = 80\% to 90\% of the book.
   \end{itemize}
 
+
   \begin{enumerate} 
   \item 
     For each novel,
     produce word shifts comparing text $\Tcomp$ relative to text $\Tref$.
     Important: Use the average happiness of text $\Tref$ as the baseline (this is not the default in the Python package).
+
   \item 
     Interpret the word shifts. Does what you see make sense?
     Are there any surprises?
@@ -156,18 +184,60 @@ For each story, also linked to below are the rank distributions of 1-grams by co
     Reverse the comparison:
     Produce word shifts comparing text $\Tref$ relative to text $\Tcomp$.
     Now use the average happiness of text $\Tcomp$ as the baseline.
+    
   \item
     Comment on any asymmetries you see (the basic word shifts we use are asymmetric).
   \item
     Produce word shifts comparing text $\Tref$ relative to text $\Tcomp$.
     Now use 5 as the baseline reference score (neutral on the happiness-sadness spectrum of 1--9 for labMT).
+    
   \item
     Compared to your first word shifts, how interpretable are these ones?
   \end{enumerate}
 
   
    \solutionstart
+	
+	\begin{enumerate}
+		\item 
+		Happiness word shifts using average happiness of $T_{ref}$ as the baseline. I left off the cumulative and text size decorators. It would require a bit of code modification to get them in a subplot.
+		
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=\textwidth]{08_reporting/assign14a_wordshift}
+				\label{fig:wordshift}
+			\end{figure}
+	
+		\item 
+		
+		\item 
 
+			\begin{figure}[H]
+   				\centering
+   				\includegraphics[width=\textwidth]{08_reporting/assign14c_wordshift}
+   				\label{fig:wordshift_rev}
+   			\end{figure}
+	
+		
+		\item 
+		
+		\item 
+		Word shifts using 5 as the baseline reference score.
+		
+	      	\begin{figure}[H]
+		       	\centering
+		       	\includegraphics[width=\textwidth]{08_reporting/assign14e_wordshift}
+		       	\label{fig:wordshift_ref}
+	    	\end{figure}
+
+		
+		\item 
+		
+   
+		
+			
+
+	\end{enumerate}
    %% solution goes here
 
    \solutionend
