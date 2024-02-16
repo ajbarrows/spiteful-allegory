@@ -208,18 +208,24 @@ For each story, also linked to below are the rank distributions of 1-grams by co
 				\label{fig:wordshift}
 			\end{figure}
 	
-		\item 
+		\item
+		Each of these comparison texts happens to be the part of each respective book when the story's going poorly for the main character. Elizabeth's rejected Mr. Darcy, Mr. Darcy messed up a marriage proposal between Elizabeth's sister Jane, Elizabeth knows she felt strongly about Mr. Darcy, but he's \textit{gone}. Less talk of pleasure and happiness. More talk of family, but that's just what the story's about. The first 20\% of \textit{Frankenstein} is mostly Captain Walton's exploration of the North Pole and encounters with Victor Frankenstein. The last 10\% is probably when this expedition ends horribly, including the captain's speech about what miserable things the crew agreed to participate in. In \textit{Moby Dick}, Ishmael ends up floating in the ocean. 
+		
+		Selecting parts of texts known to be especially contrasting allows the word shift plots to pick up on large changes in sentiment easily. It would be tricky to tease out negation: `friends,' `sun,' `happiness,' and other positive words appear in a distinctly negative portion of \textit{Frankenstein}, suggesting those words might be preceded by `no,' or a similar negative context. 
+		
 		
 		\item 
-
+	
 			\begin{figure}[H]
-   				\centering
-   				\includegraphics[width=\textwidth]{08_reporting/assign14c_wordshift}
-   				\label{fig:wordshift_rev}
-   			\end{figure}
+	  				\centering
+	  				\includegraphics[width=\textwidth]{08_reporting/assign14c_wordshift}
+	  				\label{fig:wordshift_rev}
+	  			\end{figure}
 	
 		
 		\item 
+		
+		The scores are approximately the same, but positive words shift around in their ranking. `Hope' climbs above `killed' in \textit{Pride and Prejudice}, `me' above `miserable' in \textit{Frankenstein}, and `happiness' above `brutal' in \textit{Moby Dick}.
 		
 		\item 
 		Word shifts using 5 as the baseline reference score.
@@ -229,13 +235,13 @@ For each story, also linked to below are the rank distributions of 1-grams by co
 		       	\includegraphics[width=\textwidth]{08_reporting/assign14e_wordshift}
 		       	\label{fig:wordshift_ref}
 	    	\end{figure}
-
+	
 		
 		\item 
-		
+		Using a `neutral' reference score paints an entirely different picture, one from which you probably couldn't draw solid conclusions. With a neutral score, words are effectively evenly distributed, such that words used more (or less) frequently contribute equally, regardless of whether they're positive or negative in happiness score. We know this doesn't make sense. A more direct comparison has to be with reference to the comparison text's sentiment score -- this makes sense, now. Happiness is a relative thing; nothing (except chocolate) is `objectively' happy, perhaps.
    
 		
-			
+	
 
 	\end{enumerate}
    %% solution goes here
