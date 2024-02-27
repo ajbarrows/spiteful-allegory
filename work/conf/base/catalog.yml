@@ -37,3 +37,11 @@ gb_onegrams_moby_dick:
     sep: '\t'
     header:
     names: ['word', 'count']
+
+
+labMT:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/22040227-labMT_English.csv
+  load_args:
+    skiprows: 1 # supply column names, skip header
+    names: ['rank', 'word', 'english', 'happiness', 'std']
