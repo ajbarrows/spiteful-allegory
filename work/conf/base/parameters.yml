@@ -2,7 +2,7 @@ gutenberg_peter:
   narrative_ts:
     pride_prej: https://pdodds.w3.uvm.edu/permanent-share/pride_and_prejudice_narrativetimeseries.txt
     frankenstein: https://pdodds.w3.uvm.edu/permanent-share/frankenstein_narrativetimeseries.txt
-    moby_dick: https://pdodds.w3.uvm.edu/permanent-share/moby-dick_1grams.txt
+    moby_dick: https://pdodds.w3.uvm.edu/permanent-share/frankenstein_narrativetimeseries.txt
   onegrams:
     pride_prej: https://pdodds.w3.uvm.edu/permanent-share/pride_and_prejudice_1grams.txt
     frankenstein: https://pdodds.w3.uvm.edu/permanent-share/frankenstein_1grams.txt
