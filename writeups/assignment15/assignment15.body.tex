@@ -1,0 +1,133 @@
+\textbf{Name: Anthony Barrows} \\
+
+\medskip
+
+\textbf{Conspirators:} 
+
+\medskip
+\medskip
+
+\hrule
+
+\medskip
+
+
+\assignmentsonly{\pleasesubmitprojectdraft}
+
+\begin{itemize}
+\item 
+  Please use Overleaf for writing up your project.
+\item
+  Build your paper using:
+  \url{https://github.com/petersheridandodds/universal-paper-template}
+\item
+  Please use Github and Gitlab to share the code and data things you make.
+\item
+  For this first assignment, just getting the paper template up is enough.
+\end{itemize}
+
+\vspace{5mm}
+\input{../github.tex}
+
+
+\begin{enumerate}
+
+\item
+
+  Continue to explore the emotional content of Pride and Prejudice, Frankenstein, and Moby Dick.
+
+  Task: Compute emotional arcs by sliding a window of width $T$ 1-grams through each book
+  as described below.
+
+  
+  Reminder: The labMT word list was published with Ref.~\cite{dodds2011e} in 2011, and
+  has been occasionally upgraded when necessary to accommodate changes in language use.
+  
+  See \wordwikilink{https://hedonometer.org}{https://hedonometer.org}
+  and
+  \wordwikilink{https://storywrangling.org}{https://storywrangling.org}
+  for the current version.
+
+
+  \begin{enumerate}
+%%   \item
+%%     Done: Process (destroy) your text so that it is a simple text file with one 1-gram per line---a vector of 1-grams.
+%% 
+%%     To the extent possible, keep punctuation in as separate 1-grams. Periods, commas, semicolons, em dashes, ellipses, \ldots
+%% 
+%%     You can submit this is a separate file, but okay to just say you've succeeded.
+  \item (3$\times$3 = 9)
+    First use the full lexical lens provided by labMT ($\delta \havgfn = 0$).
+
+
+    Make a single figure containing a stacked set of 7 plots with text windows of size $T = [10^{\mu}]$
+    for $\mu$ = 1, 1.5, 2, 2.5, 3, 3.5, and 4.0.
+
+    Stacked here means separated and stacked vertically, as opposed to directly overlaid.
+    See examples for Moby Dick at the end of this assignment.
+
+    The notation $[ \cdot ]$ means round to the nearest integer.
+  \item (3$\times$3 = 9)
+    Choose a `good' text window from above, and repeat the analysis with lenses
+    which exclude the central words around the neutral point.
+    
+    The blocked words are $\havgfn \pm \delta \havgfn$
+    where $\delta \havgfn = 0.5, 1.0, 1.5, 2.0, 2.5, 3.0,$ and $3.5$.
+
+    By `good', we mean one that seems to you to produce a reasonable smoothing.
+    Not too choppy, not too washed out.
+    
+  \end{enumerate}
+
+  Notes:
+  \begin{itemize}
+  \item 
+    The horizontal axis is ``reading-experience time'' corresponding to 1-grams in the text,
+    running from 1 to $N$.
+  \item
+    The windows should overlap, sliding one word ahead each time.
+    This is a simple averaging filter.
+  \item
+    Points should be located above
+    the center of each window.
+  \item
+    So the point for the window running from
+    $n$ to $n+T-1$ ($T$ words) will be located at $n + (T-1)/2$.
+  \item
+    Do not pre-filter the text for any given lens.
+    Windows will contain variable numbers
+    of words with and without happiness scores.
+  \item
+    Only average 1-grams that are in the lexical lens---do not count all possible $T$ words for the normalization. 
+  \end{itemize}
+
+  Three example averaging windows for Moby Dick
+  with $\delta \havgfn = 2.0$:
+%  
+%  \includegraphics[width=\textwidth]{figemotion_in_books_timeseries001_moby_dick_021_002_noname.pdf}\\
+%  \includegraphics[width=\textwidth]{figemotion_in_books_timeseries001_moby_dick_021_003_noname.pdf}\\
+%  \includegraphics[width=\textwidth]{figemotion_in_books_timeseries001_moby_dick_021_004_noname.pdf}
+
+
+  
+   \solutionstart
+
+   %% solution goes here
+   	\begin{enumerate}
+   		\item 
+	   		\includegraphics[width=\textwidth]{08_reporting/assign15_compare-windows_Pride and Prejudice.png}
+	  		\includegraphics[width=\textwidth]{08_reporting/assign15_compare-windows_Frankenstein.png}
+			\includegraphics[width=\textwidth]{08_reporting/assign15_compare-windows_Moby Dick.png}
+ 		
+ 		\item
+ 			\includegraphics[width=\textwidth]{08_reporting/assign15_compare-happiness_Pride and Prejudice.png}
+ 			\includegraphics[width=\textwidth]{08_reporting/assign15_compare-happiness_Frankenstein.png}
+ 			\includegraphics[width=\textwidth]{08_reporting/assign15_compare-happiness_Moby Dick.png}
+   	\end{enumerate}
+
+   \solutionend
+
+  
+\end{enumerate}
+
+

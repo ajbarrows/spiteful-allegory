@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{0}%
+\begin{thebibliography}{5}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -50,4 +50,161 @@
 \providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
 \let\auto@bib@innerbib\@empty
 %</preamble>
+\bibitem [{\citenamefont {Marek}\ \emph {et~al.}(2022)\citenamefont {Marek},
+  \citenamefont {{Tervo-Clemmens}}, \citenamefont {Calabro}, \citenamefont
+  {Montez}, \citenamefont {Kay}, \citenamefont {Hatoum}, \citenamefont
+  {Donohue}, \citenamefont {Foran}, \citenamefont {Miller}, \citenamefont
+  {Hendrickson}, \citenamefont {Malone}, \citenamefont {Kandala}, \citenamefont
+  {Feczko}, \citenamefont {{Miranda-Dominguez}}, \citenamefont {Graham},
+  \citenamefont {Earl}, \citenamefont {Perrone}, \citenamefont {Cordova},
+  \citenamefont {Doyle}, \citenamefont {Moore}, \citenamefont {Conan},
+  \citenamefont {Uriarte}, \citenamefont {Snider}, \citenamefont {Lynch},
+  \citenamefont {Wilgenbusch}, \citenamefont {Pengo}, \citenamefont {Tam},
+  \citenamefont {Chen}, \citenamefont {Newbold}, \citenamefont {Zheng},
+  \citenamefont {Seider}, \citenamefont {Van}, \citenamefont {Metoki},
+  \citenamefont {Chauvin}, \citenamefont {Laumann}, \citenamefont {Greene},
+  \citenamefont {Petersen}, \citenamefont {Garavan}, \citenamefont {Thompson},
+  \citenamefont {Nichols}, \citenamefont {Yeo}, \citenamefont {Barch},
+  \citenamefont {Luna}, \citenamefont {Fair},\ and\ \citenamefont
+  {Dosenbach}}]{MarekEtAl2022}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Marek}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {{Tervo-Clemmens}}}, \bibinfo {author} {\bibfnamefont {F.~J.}\ \bibnamefont
+  {Calabro}}, \bibinfo {author} {\bibfnamefont {D.~F.}\ \bibnamefont {Montez}},
+  \bibinfo {author} {\bibfnamefont {B.~P.}\ \bibnamefont {Kay}}, \bibinfo
+  {author} {\bibfnamefont {A.~S.}\ \bibnamefont {Hatoum}}, \bibinfo {author}
+  {\bibfnamefont {M.~R.}\ \bibnamefont {Donohue}}, \bibinfo {author}
+  {\bibfnamefont {W.}~\bibnamefont {Foran}}, \bibinfo {author} {\bibfnamefont
+  {R.~L.}\ \bibnamefont {Miller}}, \bibinfo {author} {\bibfnamefont {T.~J.}\
+  \bibnamefont {Hendrickson}}, \bibinfo {author} {\bibfnamefont {S.~M.}\
+  \bibnamefont {Malone}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Kandala}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Feczko}},
+  \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {{Miranda-Dominguez}}},
+  \bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont {Graham}}, \bibinfo
+  {author} {\bibfnamefont {E.~A.}\ \bibnamefont {Earl}}, \bibinfo {author}
+  {\bibfnamefont {A.~J.}\ \bibnamefont {Perrone}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Cordova}}, \bibinfo {author} {\bibfnamefont
+  {O.}~\bibnamefont {Doyle}}, \bibinfo {author} {\bibfnamefont {L.~A.}\
+  \bibnamefont {Moore}}, \bibinfo {author} {\bibfnamefont {G.~M.}\ \bibnamefont
+  {Conan}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Uriarte}},
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Snider}}, \bibinfo
+  {author} {\bibfnamefont {B.~J.}\ \bibnamefont {Lynch}}, \bibinfo {author}
+  {\bibfnamefont {J.~C.}\ \bibnamefont {Wilgenbusch}}, \bibinfo {author}
+  {\bibfnamefont {T.}~\bibnamefont {Pengo}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Tam}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Chen}}, \bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont {Newbold}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Zheng}}, \bibinfo
+  {author} {\bibfnamefont {N.~A.}\ \bibnamefont {Seider}}, \bibinfo {author}
+  {\bibfnamefont {A.~N.}\ \bibnamefont {Van}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Metoki}}, \bibinfo {author} {\bibfnamefont {R.~J.}\
+  \bibnamefont {Chauvin}}, \bibinfo {author} {\bibfnamefont {T.~O.}\
+  \bibnamefont {Laumann}}, \bibinfo {author} {\bibfnamefont {D.~J.}\
+  \bibnamefont {Greene}}, \bibinfo {author} {\bibfnamefont {S.~E.}\
+  \bibnamefont {Petersen}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Garavan}}, \bibinfo {author} {\bibfnamefont {W.~K.}\ \bibnamefont
+  {Thompson}}, \bibinfo {author} {\bibfnamefont {T.~E.}\ \bibnamefont
+  {Nichols}}, \bibinfo {author} {\bibfnamefont {B.~T.~T.}\ \bibnamefont {Yeo}},
+  \bibinfo {author} {\bibfnamefont {D.~M.}\ \bibnamefont {Barch}}, \bibinfo
+  {author} {\bibfnamefont {B.}~\bibnamefont {Luna}}, \bibinfo {author}
+  {\bibfnamefont {D.~A.}\ \bibnamefont {Fair}},\ and\ \bibinfo {author}
+  {\bibfnamefont {N.~U.~F.}\ \bibnamefont {Dosenbach}},\ }\bibfield  {title}
+  {\bibinfo {title} {Reproducible brain-wide association studies require
+  thousands of individuals},\ }\href
+  {https://doi.org/10.1038/s41586-022-04492-9} {\bibfield  {journal} {\bibinfo
+  {journal} {Nature}\ }\textbf {\bibinfo {volume} {603}},\ \bibinfo {pages}
+  {654} (\bibinfo {year} {2022})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Yarkoni}\ \emph {et~al.}(2011)\citenamefont
+  {Yarkoni}, \citenamefont {Poldrack}, \citenamefont {Nichols}, \citenamefont
+  {Van~Essen},\ and\ \citenamefont {Wager}}]{YarkoniEtAl2011}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Yarkoni}}, \bibinfo {author} {\bibfnamefont {R.~A.}\ \bibnamefont
+  {Poldrack}}, \bibinfo {author} {\bibfnamefont {T.~E.}\ \bibnamefont
+  {Nichols}}, \bibinfo {author} {\bibfnamefont {D.~C.}\ \bibnamefont
+  {Van~Essen}},\ and\ \bibinfo {author} {\bibfnamefont {T.~D.}\ \bibnamefont
+  {Wager}},\ }\bibfield  {title} {\bibinfo {title} {Large-scale automated
+  synthesis of human functional neuroimaging data},\ }\href
+  {https://doi.org/10.1038/nmeth.1635} {\bibfield  {journal} {\bibinfo
+  {journal} {Nature Methods}\ }\textbf {\bibinfo {volume} {8}},\ \bibinfo
+  {pages} {665} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Owens}\ \emph {et~al.}(2021)\citenamefont {Owens},
+  \citenamefont {Potter}, \citenamefont {Hyatt}, \citenamefont {Albaugh},
+  \citenamefont {Thompson}, \citenamefont {Jernigan}, \citenamefont {Yuan},
+  \citenamefont {Hahn}, \citenamefont {Allgaier},\ and\ \citenamefont
+  {Garavan}}]{owensRecalibratingExpectationsEffect2021}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~M.}\ \bibnamefont
+  {Owens}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Potter}},
+  \bibinfo {author} {\bibfnamefont {C.~S.}\ \bibnamefont {Hyatt}}, \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Albaugh}}, \bibinfo {author}
+  {\bibfnamefont {W.~K.}\ \bibnamefont {Thompson}}, \bibinfo {author}
+  {\bibfnamefont {T.}~\bibnamefont {Jernigan}}, \bibinfo {author}
+  {\bibfnamefont {D.}~\bibnamefont {Yuan}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Hahn}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Allgaier}},\ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Garavan}},\ }\bibfield  {title} {\bibinfo {title} {Recalibrating
+  expectations about effect size: {{A}} multi-method survey of effect sizes in
+  the {{ABCD}} study},\ }\href {https://doi.org/10.1371/journal.pone.0257535}
+  {\bibfield  {journal} {\bibinfo  {journal} {PLOS ONE}\ }\textbf {\bibinfo
+  {volume} {16}},\ \bibinfo {pages} {e0257535} (\bibinfo {year}
+  {2021})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Salo}\ \emph {et~al.}(2022)\citenamefont {Salo},
+  \citenamefont {Yarkoni}, \citenamefont {Nichols}, \citenamefont {Poline},
+  \citenamefont {Kent}, \citenamefont {Gorgolewski}, \citenamefont {Glerean},
+  \citenamefont {Bottenhorn}, \citenamefont {Bilgel}, \citenamefont {Wright},
+  \citenamefont {Reeders}, \citenamefont {Kimbler}, \citenamefont {Nielson},
+  \citenamefont {Yanes}, \citenamefont {P{\'e}rez}, \citenamefont {Oudyk},
+  \citenamefont {Jarecka}, \citenamefont {Enge}, \citenamefont {Peraza},\ and\
+  \citenamefont {Laird}}]{SaloEtAl2022}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Salo}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Yarkoni}},
+  \bibinfo {author} {\bibfnamefont {T.~E.}\ \bibnamefont {Nichols}}, \bibinfo
+  {author} {\bibfnamefont {J.-B.}\ \bibnamefont {Poline}}, \bibinfo {author}
+  {\bibfnamefont {J.~D.}\ \bibnamefont {Kent}}, \bibinfo {author}
+  {\bibfnamefont {K.~J.}\ \bibnamefont {Gorgolewski}}, \bibinfo {author}
+  {\bibfnamefont {E.}~\bibnamefont {Glerean}}, \bibinfo {author} {\bibfnamefont
+  {K.~L.}\ \bibnamefont {Bottenhorn}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Bilgel}}, \bibinfo {author} {\bibfnamefont
+  {J.}~\bibnamefont {Wright}}, \bibinfo {author} {\bibfnamefont
+  {P.}~\bibnamefont {Reeders}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Kimbler}}, \bibinfo {author} {\bibfnamefont {D.~N.}\
+  \bibnamefont {Nielson}}, \bibinfo {author} {\bibfnamefont {J.~A.}\
+  \bibnamefont {Yanes}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {P{\'e}rez}}, \bibinfo {author} {\bibfnamefont {K.~M.}\ \bibnamefont
+  {Oudyk}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Jarecka}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Enge}}, \bibinfo {author}
+  {\bibfnamefont {J.~A.}\ \bibnamefont {Peraza}},\ and\ \bibinfo {author}
+  {\bibfnamefont {A.~R.}\ \bibnamefont {Laird}},\ }\href
+  {https://doi.org/10.5281/ZENODO.5826281} {\bibinfo {title}
+  {Neurostuff/{{NiMARE}}: 0.0.11}},\ \bibinfo {howpublished} {[object Object]}
+  (\bibinfo {year} {2022})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Salo}\ \emph {et~al.}(2023)\citenamefont {Salo},
+  \citenamefont {Yarkoni}, \citenamefont {Nichols}, \citenamefont {Poline},
+  \citenamefont {Bilgel}, \citenamefont {Bottenhorn}, \citenamefont {Jarecka},
+  \citenamefont {Kent}, \citenamefont {Kimbler}, \citenamefont {Nielson},
+  \citenamefont {Oudyk}, \citenamefont {Peraza}, \citenamefont {P{\'e}rez},
+  \citenamefont {Reeders}, \citenamefont {Yanes},\ and\ \citenamefont
+  {Laird}}]{SaloEtAl2023}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Salo}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Yarkoni}},
+  \bibinfo {author} {\bibfnamefont {T.~E.}\ \bibnamefont {Nichols}}, \bibinfo
+  {author} {\bibfnamefont {J.-B.}\ \bibnamefont {Poline}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Bilgel}}, \bibinfo {author} {\bibfnamefont
+  {K.~L.}\ \bibnamefont {Bottenhorn}}, \bibinfo {author} {\bibfnamefont
+  {D.}~\bibnamefont {Jarecka}}, \bibinfo {author} {\bibfnamefont {J.~D.}\
+  \bibnamefont {Kent}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Kimbler}}, \bibinfo {author} {\bibfnamefont {D.~M.}\ \bibnamefont
+  {Nielson}}, \bibinfo {author} {\bibfnamefont {K.~M.}\ \bibnamefont {Oudyk}},
+  \bibinfo {author} {\bibfnamefont {J.~A.}\ \bibnamefont {Peraza}}, \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {P{\'e}rez}}, \bibinfo {author}
+  {\bibfnamefont {P.~C.}\ \bibnamefont {Reeders}}, \bibinfo {author}
+  {\bibfnamefont {J.~A.}\ \bibnamefont {Yanes}},\ and\ \bibinfo {author}
+  {\bibfnamefont {A.~R.}\ \bibnamefont {Laird}},\ }\bibfield  {title} {\bibinfo
+  {title} {{{NiMARE}}: {{Neuroimaging Meta-Analysis Research Environment}}},\
+  }\bibfield  {journal} {\bibinfo  {journal} {Aperture Neuro}\ }\textbf
+  {\bibinfo {volume} {3}},\ \href {https://doi.org/10.52294/001c.87681}
+  {10.52294/001c.87681} (\bibinfo {year} {2023})\BibitemShut {NoStop}%
 \end{thebibliography}%
