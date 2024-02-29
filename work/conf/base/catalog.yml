@@ -45,3 +45,14 @@ labMT:
   load_args:
     skiprows: 1 # supply column names, skip header
     names: ['rank', 'word', 'english', 'happiness', 'std']
+
+
+
+############# project ###############
+
+neurosynth_text:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/neurosynth_text.csv
+neuroquery_text:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/neuroquery_text.csv
