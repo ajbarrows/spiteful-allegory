@@ -5,6 +5,7 @@ generated using Kedro 0.18.14
 
 import numpy as np
 import pandas as pd
+import re
 from collections import Counter
 
 
@@ -115,3 +116,80 @@ def filter_delta_h(df: pd.DataFrame, lens, set_point=5):
 
 
     return df[(df['happiness'] <= lens_min) | (df['happiness'] >= lens_max)]
+
+def make_size_rank_dist(text, fname=None, limit_top_n=None, write_file=True, 
+                        filepath = '../data/03_primary/gutenberg_size_rank/') -> list:
+
+    onegrams = text.split()
+    counts = Counter(onegrams)
+
+    # sort
+    if limit_top_n:
+        counts = counts.most_common(limit_top_n)
+    else:
+        counts = counts.most_common()
+
+    if write_file:
+        fpath = filepath + fname
+        with open(fpath, 'w') as file:
+            for k, v in counts:
+                file.write("{}\t{}\n".format(k, v))
+
+    return counts
+
+def make_dataframe_from_sizerank(sizerank) -> pd.DataFrame:
+
+    df = pd.DataFrame()
+
+    for k, v in sizerank.items():
+        tmp = pd.DataFrame(v, columns=['ngram', 'count'])
+        tmp.insert(0, 'source', k)
+        tmp = tmp.reset_index(names = ['rank'])
+
+        df = pd.concat([df, tmp])
+    
+    return df
+
+def parse_text(t):
+    '''Return text corpus separated into 1-grams.'''
+
+    # Frankenstein thing
+    t = re.sub(r'D--n', r'Damn', t)
+
+    # remove dashes with a period following
+    t = re.sub(r'—.', r'', t)
+
+    # separate punctuation
+    t = re.sub(r'(?=[.,!?:;])', r' ', t)
+
+    # deal with brackets and such
+    t = re.sub(r'(?<=[\(\[])', r' ', t)
+    t = re.sub(r'(?=[\)\]])', r' ', t)
+
+    # deal with quotes
+    t = re.sub(r'(?=[”])', r' ', t)
+    t = re.sub(r'(?<=[“\'])', r' ', t)
+    t = re.sub(r'\'s', ' \'s', t) # possession
+
+    # dash madness
+    t = re.sub(r'----', r' --- ', t)
+    t = re.sub(r'--', r' --- ', t)
+    t = re.sub(r';-', r' --- ', t)
+    t = re.sub(r'—', r' --- ', t)
+
+    ## TODO make this handle "Mr" and "Mrs" with no period
+    # handle specific salutations
+    t = re.sub(r'Mr .', r'Mr.', t)
+    t = re.sub(r'Mrs .', r'Mrs.', t)
+    t = re.sub(r'Dr .', r'Dr.', t)
+
+    # remove underscores used for emphasis
+    t = re.sub(r'_', r'', t)
+
+    # remove string control
+    t = re.sub(r'[\n\r\t]', ' ' , t)
+
+    # remove additional whitespaces
+    t = re.sub(r'\s+', ' ', t)
+
+    return t
