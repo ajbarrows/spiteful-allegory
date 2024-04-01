@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.30)  8 MAR 2024 14:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.30)  22 MAR 2024 16:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -779,16 +779,23 @@ Package xcolor Warning: Incompatible color definition on input line 181.
 
 Package xcolor Warning: Incompatible color definition on input line 209.
 
-) [2 <./figures/project/abstract_rankcount.png>]
-(./pocs2-project-ajb-revtex4.aux)
+) [2]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 113.
+
+
+Class revtex4-2 Warning: Deferred float stuck during \clearpage processing.
+
+[3 <./figures/project/abstract_rankcount.png>] (./pocs2-project-ajb-revtex4.aux
+)
 Package rerunfilecheck Info: File `pocs2-project-ajb-revtex4.out' has not chang
 ed.
 (rerunfilecheck)             Checksum: F14DD402D1CB93A62A5A9417733453BB;1373.
  ) 
 Here is how much of TeX's memory you used:
- 15497 strings out of 478268
- 243047 string characters out of 5846347
- 553078 words of memory out of 5000000
+ 15498 strings out of 478268
+ 243053 string characters out of 5846347
+ 554078 words of memory out of 5000000
  33406 multiletter control sequences out of 15000+600000
  479371 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -809,10 +816,10 @@ ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2
 022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on pocs2-project-ajb-revtex4.pdf (2 pages, 234346 bytes).
+Output written on pocs2-project-ajb-revtex4.pdf (3 pages, 235156 bytes).
 PDF statistics:
- 176 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
+ 180 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
  107 words of extra memory for PDF output out of 10000 (max. 10000000)
 

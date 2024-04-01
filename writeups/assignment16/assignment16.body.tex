@@ -1,0 +1,471 @@
+\textbf{Name:} \\
+
+\medskip
+
+\textbf{Conspirators:} 
+
+\medskip
+\medskip
+
+\hrule
+
+\medskip
+
+
+%% - power, danger, structure time series
+%% - punctuation
+%% - set up final project assignment
+
+%% ideas:
+%% 
+%% Punctuation plots.
+%% 
+%% Scene detection.
+%% 
+%% Character turnover.
+%% 
+%% Evolving temporal network of characters (that paper).
+%% 
+%% Characters in locations.
+%% 
+%% Automatically: Hatchings, matchings, dispatchings.
+%% 
+%% Kindle x-ray.
+%% 
+%% Pulp fiction article on story
+%% 
+%% In-story time versus story experience time
+%% 
+%% Diagesis?
+%% 
+%% Story model of court cases.
+
+
+Let's write some papers.
+
+This assignment is a guide for the projects which
+are to be worked on over the last part of the semester.
+
+This document may evolve in unpredictable ways.
+
+Below is a list of possible treatments for your corpus/corpora/corporuses.
+
+If you are not studying a corpus, then your path is elsewhere.
+
+Everything is optional.
+
+
+\clearpage
+
+
+\textbf{An incomplete document on writing:}
+
+``(Scientific) Writing: Ways, Guides, and True Unbreakable\footnote{Not really} Rules''
+
+\url{https://pdodds.w3.uvm.edu/permanent-share/notes-on-writing-essay.pdf}
+
+Covers both writing in general and writing with \LaTeX\ (which in itself helps writing in general).
+
+\textbf{Notes on Ousiometry:}
+
+Gitlab repository for ousiometry and telegnomics:
+
+\url{https://gitlab.com/petersheridandodds/ousiometry/}
+
+Please connect on Gitlab.
+
+Python shifterator package:
+
+\url{https://github.com/ryanjgallagher/shifterator}
+
+Notes:
+
+\begin{itemize}
+\item 
+  We will perform analyses using with the original NRC VAD lexicon (about 20,000 words)
+  as well as potentially one augmented with conjugations and plurals (about 32,000 words).
+\item 
+  Hopefully, the augmented lexicon---which simply covers more types---will perform well
+  and we can just use that in our papers.
+\item 
+  In the foundational paper~\cite{dodds2021b},
+  and as discussed in lectures,
+  we have determined that power-danger-structure is the framework of essential meaning.
+\item 
+  In the main data set, words are provided with scores
+  in the VAD, GES, and PDS frameworks. Some of the Matlab scripts
+  render VAD, GES, and PDS.
+  Going forward, we will use the PDS framework only.
+  Going forward, we will use the PDS framework only.
+\item
+  We will still use the GES scores but relabel the main dimensions as
+  Dangerous-Power (for Energy) and Safe-Power (SP, for Goodness).
+
+  As a reminder, in terms of Danger and Power, we have:
+  $
+  E
+  =
+  \frac{1}{\sqrt{2}}
+  \left(
+  D + P
+  \right)
+  $
+  and
+  $
+  G
+  =
+  \frac{1}{\sqrt{2}}
+  \left(
+  - D + P
+  \right).
+  $
+
+  But again, we will not speak of Energy and Goodness going forward.
+\item
+  We are using the compass of essential meaning with Danger as North, Power as East,
+  Dangerous-Power at Northeast, etc.
+\item
+  Some of this may be repeated below.
+\end{itemize}
+
+Notes on figures and captions and the Dr.\ Seuss method for writing a paper.
+\begin{itemize}
+\item 
+  Insert the figures you make into your paper and prepare a caption
+  and discussion for the main text.
+\item 
+  Captions should be informative and reasonably self-contained.
+  Some people will only look at figures in a paper, others will do
+  so before reading the whole paper. Paper reading is nonlinear.
+\item 
+  For captions, see the ousiometrics paper as a recent example:\\
+  \url{https://storylab.w3.uvm.edu/ousiometrics/}
+\item
+  For the main text, prepare one or more paragraphs.
+  The caption and main text should be distinct text.
+\end{itemize}
+
+\begin{enumerate}
+\item
+  Clone the paper template here:
+
+  \url{https://www.overleaf.com/read/hrkjxdbhvfrc\#c6c9d4}
+
+  Please read the README.
+
+  \begin{itemize}
+  \item 
+    The main file to edit is:\\
+    paper-template.body.tex\\
+    (the main body of manuscript)
+  \item
+    Some other files to edit:\\
+    paper-template.title.tex\\
+    paper-template.abs.tex (abstract)
+    paper-template.author.tex\\
+  \item
+    The (wrapper) file to compile is:\\
+    paper-template-revtex4.tex
+  \end{itemize}
+
+  Once set up, please 
+  share the project with Computational Story Lab (pdodds+compstorylab@uvm.edu).
+
+  Completely optional: If you work on a unix machine and are familiar with
+  the command line, you can download the paper template to your local unix machine
+  and follow below.
+
+  Download the template from the repository here:\\
+  \url{https://github.com/petersheridandodds/universal-paper-template}.
+
+  \begin{itemize}
+  \item 
+    See instructions in the README to make a
+    local version of the paper
+    (some of which may have been outlined in class).
+
+    Also optional: See Lecture \#46 in stories here:
+    \url{https://pdodds.w3.uvm.edu/teaching/courses/2021-2022principles-of-complex-systems/stories/}.
+  \item
+    Renaming ``paper-template'' to something meaningful is useful/important.
+
+    Example:
+
+    \ldots\\
+    telegnomics-of-pratchett-discworld-series.bib\\
+    telegnomics-of-pratchett-discworld-series.biblio.tex\\
+    telegnomics-of-pratchett-discworld-series.body.tex\\
+    telegnomics-of-pratchett-discworld-series.contributions.tex\\
+    telegnomics-of-pratchett-discworld-series.keywords.tex\\
+    \ldots\\
+
+    
+  \item
+    Run
+    make-name-match-settingsfile.pl
+    to adjust an internal reference to the base name.
+  \item
+    Run the make-zip-file-for-overleaf.sh script
+    to create overleaf.zip.
+  \item
+    Upload to your Overleaf account.
+  \item
+    Rename the project on Overleaf to match the naming convention. Prepend with YYYY-MM.
+
+    Example:
+    ``2022-03: Telegnomics-of-Pratchett-Discworld-Series''
+  \item
+    If desired, connect with the Overleaf version using Overleaf's git option.
+  \end{itemize}
+
+\item
+  For the paper's introduction, write up a description of the corpus you're studying.
+
+  \begin{itemize}
+  \item
+    Basics: Title, time frame, kind of corpus, number of authors (could be one, could be many).
+  \item
+    Place the corpus within a larger context of stories/media to which it belongs.
+  \item
+    Discuss to the extent to which this corpus has been studied by others.
+    Use Google Scholar to find papers.
+    Add bibtex entries from Google Scholar to the .bib file in yoru paper's repository.
+  \end{itemize}
+
+  For the paper's data section:
+  \begin{itemize}
+  \item
+    Describe how you obtained the corpus itself (note online locations explicitly)
+    and whatever data cleaning you and to perform.
+  \item
+    Record scale (number of 1-grams), units and number thereof
+    (e.g., chapters in a book, books in a series, television episodes and seasons),
+    and other basic overall quantifications.
+  \end{itemize}
+
+\item
+  Organize your corpora's derived data and contribute it to the Gitlab repository
+  for ousiometry.
+
+  Possible: Filtering a text through the ousiometric lexicon may be enough to make it non-reconstructible.
+
+  Important!: Do not share online any text that is under copyright. Hmmm.
+
+\item
+  Figure for paper + caption + discussion:
+
+  Ousiometric time series for your text corpora.
+
+  Plot five main time series that cover the
+  compass of power-danger and then the third dimension of structure.
+  \begin{itemize}
+  \item
+    Danger.
+  \item
+    Dangerous-Power (initially called Energy).
+  \item
+    Power.
+  \item
+    Safe-Power (initially called Goodness).
+  \item
+    Structure
+  \end{itemize}
+
+  Notes:
+  \begin{itemize}
+  \item
+    One book = five time series, one figure.
+  \item
+    If you have a small collection of books, plot panels each time series within one overall figure.
+
+    For example, for the 41 novels of the Discworld, a 7$\times$6 format would work.
+  \item
+    We will adjust depending on how the time series overlap.
+  \end{itemize}
+
+\item
+  Optional figure for paper + caption + discussion:
+
+  For large corpora, repeat the above at a natural intermediate scale, if possible.
+
+  For example, for Buffy the Vampire Slayer, there are 144 episodes over seven seasons.
+
+  We could plot
+  Power,
+  Danger,
+  Dangerous-Power,
+  and
+  Safe-Power
+  scores (and maybe structure)
+  as one long time series.
+
+  An alternate version---which shows the season structure---could be similar to that
+  of the Series Heat visualization, based on IMDB scores:
+
+  \begin{center}
+    % \includegraphics[width=0.4\textwidth]{series-heat-IMDB-buffy-the-vampire-slayer.jpg}
+  \end{center}
+
+  \url{https://vallandingham.me/seriesheat/#/?id=tt0118276}
+
+  For discussion:
+  \begin{itemize}
+  \item
+    What variation do you see? Does one dimension vary more than another?
+  \end{itemize}
+
+\item
+
+  If you want to compare rank distributions of $n$-grams for corpora,
+  use allotaxonometry.
+
+  Three flavors exist:
+
+  An in-browser app:
+
+  \href{https://allotaxp.vercel.app/}{https://allotaxp.vercel.app/}
+
+  Git repo:
+  
+  \href{https://github.com/jstonge/allotaxp}{https://github.com/jstonge/allotaxp}
+  
+  2. Observable:
+
+  \href{https://observablehq.com/@jstonge/allotaxonometer-4-all}{https://observablehq.com/@jstonge/allotaxonometer-4-all}
+
+  3. If you love/hate Matlab:
+  
+  \href{https://gitlab.com/compstorylab/allotaxonometer}{https://gitlab.com/compstorylab/allotaxonometer}.
+
+  Note that you will need to separately install the command epstopdf (which should be part of a well stocked unix system with \LaTeX).
+
+  
+\item
+  Optional analysis and figure for paper + caption + discussion:
+
+  If you have ratings/sales or any kind for your corpus,
+  connect Power, Danger, Dangerous-Power, Safe-Power, Structure scores
+  with those ratings.
+
+  Note: These time series should be measured relative to the base level of power and danger scores.
+
+  Run some simple analyses to see if there any correlations.  Report what you find.
+
+  Two possible figures for Buffy:
+  Power or danger on the horizontal axis and IMDB rating on the vertical.
+
+  It's important to report that there's no correlation if that's the case.
+
+\item
+
+  Figure(s) for paper + caption + discussion:
+
+  
+
+  Lexical calculus: Using word shifts, make comparisons of ousiometric scores for
+  parts of your corpora.
+
+  Possibilities:
+  \begin{itemize}
+  \item
+    Any comparisons that call out for investigation.
+  \item
+    Word shifts comparing each episode or chapter to the overall corpus.
+  \item
+    Comparison of major highs or lows with a reasonable reference text.
+  \end{itemize}
+
+  \begin{itemize}
+  \item 
+    Incorporate figures into your paper.
+  \item
+    For large sets of figures, organize them as supplementary material (e.g., separate PDF booklet).
+  \end{itemize}
+
+  Some inspiration for books:
+
+  \url{https://hedonometer.org/books/v1/?book=Pride%20and%20Prejudice&lens=[3,7]}
+  
+  
+\item
+  Figure for paper + caption + discussion:
+
+  Basic data: You will need Zipf distributions of word counts for your corpus.
+
+  Put together two kinds: Case sensitive and case insensitive.
+  
+  For your main text of interest, plot
+  ousiograms 
+  in the following ways:
+  \begin{enumerate}
+  \item
+    Three views: Power-Danger, Power-Structure, Structure-Danger.
+  \item
+    Types (lexicon only---ignore frequency of usage).
+  \item
+    Tokens (full text---incorporate frequency of usage).
+  \item
+    Use the ousiometric lexicon. See below for download.
+  \item
+    Choose a reasonable bin size, perhaps 0.1 or 0.1/$k$ where $k$ = 2, 3.
+  \item
+    Caption: Report the percentage of the ousiometric lexicon's words
+    that appear in your main text's lexicon.
+  \item
+    Caption and main text:
+    Comment on the basic form of the distributions you find
+    (symmetry, skew, and so on).
+  \item
+    For Matlab, use the script figousiometer9000.m for large ousiograms
+    and figousiometer9400.m for small ones.
+  \end{enumerate}
+
+
+
+%%  The full labMT dataset for English and 10 other languages
+%%  is available here:\\
+%%  \url{https://hedonometer.org/words/labMT-en-v2/}
+  
+  
+   \solutionstart
+
+   %% solution goes here
+
+   \solutionend
+
+\item
+
+  A good thing to do in general: Test which words in a corpus are missing from the lenses you use.
+
+  \begin{enumerate}
+  \item
+    Type level: What fraction of unique words (the lexicon) in a corpus are covered by the lens.
+  \item
+    Token level: What fraction of all words (tokens) in a corpus are covered by the lens.
+  \item
+    Token level: For the words not in the lens, what does their count-rank distribution look like?
+    Are the missing words problematic?
+  \end{enumerate}
+
+  
+
+\item
+  To contemplate:
+
+  Read through the following paper, and start to think about how you might be able
+  to extract character networks for your text:
+
+  ``Extraction and Analysis of Fictional Character Networks: A Survey''
+  \url{https://arxiv.org/abs/1907.02704}
+
+\item
+  Again, the preceding are potential analyses from the course, you may bring any method you wish to
+  bear on your corpus.
+
+  LLM tools continue to evolve.
+
+  Important: Whatever you find, you must be able to explain
+  
+\end{enumerate}
+
+
