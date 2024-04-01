@@ -50,6 +50,14 @@ labMT:
 
 ############# project ###############
 
+neurosynth_ds:
+  type: pickle.PickleDataSet
+  filepath: data/01_raw/neuro-text/neurosynth_dataset_with_abstracts.pkl.gz
+  backend: joblib
+neuroquery_ds:
+  type: pickle.PickleDataSet
+  filepath: data/01_raw/neuro-text/neuroquery_dataset_with_abstracts.pkl.gz
+
 neurosynth_text:
   type: pandas.CSVDataSet
   filepath: data/02_intermediate/neurosynth_text.csv

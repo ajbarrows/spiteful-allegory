@@ -11,6 +11,15 @@ def establish_download_directory(fpath="data/01_raw/neuro-text/"):
 
     return out_dir
 
+def _join_metadata(texts, metadata):
+
+    idx = ['id', 'study_id', 'contrast_id']
+    return (texts
+            .set_index(idx)
+            .join(metadata.set_index(idx))
+            .reset_index()
+        )
+
 def download_and_convert_neurodata(out_dir, dataset:str, email="example@example.edu"):
     '''Save full dataset but return abstracts.'''
 
@@ -44,4 +53,7 @@ def download_and_convert_neurodata(out_dir, dataset:str, email="example@example.
     fname = f"{dataset}_dataset_with_abstracts.pkl.gz"
     n_dset.save(os.path.join(out_dir, fname))
 
-    return n_dset.texts
+    # assemble full article info
+    out = _join_metadata(n_dset.texts, n_dset.metadata)
+
+    return out
