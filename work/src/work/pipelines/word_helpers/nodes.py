@@ -193,3 +193,12 @@ def parse_text(t):
     t = re.sub(r'\s+', ' ', t)
 
     return t
+
+
+def generic_sizerank_df(text: str) -> pd.DataFrame:
+
+    parsed = parse_text(text)
+    sizerank = make_size_rank_dist(parsed, write_file=False)
+
+    df = pd.DataFrame(sizerank, columns=['ngram', 'count'])
+    return df.reset_index(names=['rank'])
