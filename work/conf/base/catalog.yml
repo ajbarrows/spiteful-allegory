@@ -57,6 +57,7 @@ neurosynth_ds:
 neuroquery_ds:
   type: pickle.PickleDataSet
   filepath: data/01_raw/neuro-text/neuroquery_dataset_with_abstracts.pkl.gz
+  backend: joblib
 
 neurosynth_text:
   type: pandas.CSVDataSet
@@ -64,3 +65,11 @@ neurosynth_text:
 neuroquery_text:
   type: pandas.CSVDataSet
   filepath: data/02_intermediate/neuroquery_text.csv
+
+nq_cite:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/nq_citations.csv
+
+combined_text:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/combined_neuro_text.parquet

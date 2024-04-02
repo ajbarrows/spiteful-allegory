@@ -8,6 +8,7 @@ from .pipelines.project.pipeline import *
 def register_pipelines() -> dict[str, Pipeline]:
     
     pipelines = {
-        'download_data': download_data
+        'download_data': download_data,
+        'process_data': merge_neurodata
     }
     return pipelines
