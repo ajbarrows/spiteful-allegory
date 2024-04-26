@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import requests
 import xmltodict
+import nltk
 
 from nimare.extract import download_abstracts, fetch_neuroquery, fetch_neurosynth
 from nimare.io import convert_neurosynth_to_dataset
@@ -144,3 +145,15 @@ def combine_texts(ns: pd.DataFrame, nq: pd.DataFrame):
     nq['source'] = 'neuroquery'
 
     return pd.concat([ns, nq])
+
+
+def add_nltk_pos(df: pd.DataFrame) -> pd.DataFrame:
+
+    tags = nltk.pos_tag(df['ngram'], tagset='universal')
+    pos = []
+    for t in tags:
+        pos.append(t[1])
+
+    df['pos'] = pos
+
+    return df

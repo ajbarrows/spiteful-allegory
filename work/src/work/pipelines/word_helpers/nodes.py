@@ -142,7 +142,7 @@ def make_dataframe_from_sizerank(sizerank) -> pd.DataFrame:
     df = pd.DataFrame()
 
     for k, v in sizerank.items():
-        tmp = pd.DataFrame(v, columns=['ngram', 'count'])
+        tmp = pd.DataFrame(v,)
         tmp.insert(0, 'source', k)
         tmp = tmp.reset_index(names = ['rank'])
 
