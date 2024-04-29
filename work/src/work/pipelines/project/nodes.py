@@ -218,8 +218,11 @@ def detect_corpus_in_sentences(text: tuple, corpus: dict, skip_words: set):
 
     ps = PorterStemmer()
 
-    # turn abstract into sentences
-    sentences = nltk.sent_tokenize(abstract)
+    try:
+        # turn abstract into sentences
+        sentences = nltk.sent_tokenize(abstract)
+    except:
+        return {study_id: 'invalid_abstract'}
 
     # drop first and last sentence (!!)
     sentences = sentences[1:-1]
