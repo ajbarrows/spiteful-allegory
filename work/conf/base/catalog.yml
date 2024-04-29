@@ -75,9 +75,23 @@ combined_text:
   filepath: data/03_primary/combined_neuro_text.parquet
 
 
+# reproducible set of randomly-selected texts
+random_abstracts:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/random_abstracts.csv
+
+
 rankcount:
   type: pandas.ParquetDataset
   filepath: data/03_primary/rankcount.parquet
 rankcount_pos:
   type: pandas.ParquetDataSet
   filepath: data/03_primary/rankcount_pos.parquet
+
+methods_corpus:
+  type: text.TextDataSet
+  filepath: data/04_feature/methods_corpus.txt
+
+detected_text:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/detected_text.parquet

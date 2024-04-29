@@ -14,3 +14,4 @@ simple_verbs: [
   'is', 'are', 'am',
   'were', 'was'
 ]
+skip_words: ['results', 'conclusions', 'significance statment']

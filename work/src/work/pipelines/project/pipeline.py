@@ -85,21 +85,53 @@ merge_neurodata = pipeline(
 
 
 process_text = pipeline(
-    [
+    [   
         node(
-            rankcount_from_abstracts,
+            select_random_abstracts,
             inputs='neurosynth_text',
-            outputs=['parsed', 'rankcount']
+            outputs='random_abstracts'
         ),
         node(
-            add_nltk_pos,
-            inputs=[
-                'rankcount',
-                'params:pos_to_keep',
-                'params:simple_verbs'
-            ],
-            outputs='rankcount_pos'
+            load_methods_corpus,
+            inputs='methods_corpus',
+            outputs='corpus'
+        ),
+        node(
+            load_skip_words,
+            inputs='params:skip_words',
+            outputs='skip_words'
+        ),
+        node(
+            text_to_dict,
+            inputs='neurosynth_text',
+            outputs='text'
+        ),
+        node(
+            run_detect_parallel,
+            inputs=['text', 'corpus', 'skip_words'],
+            outputs='text_detect_list'
+        ),
+        node(
+            gather_detected_output,
+            inputs=['neurosynth_text', 'text_detect_list'],
+            outputs='detected_text'
         )
+
+
+        # node(
+        #     rankcount_from_abstracts,
+        #     inputs='neurosynth_text',
+        #     outputs=['parsed', 'rankcount']
+        # ),
+        # node(
+        #     add_nltk_pos,
+        #     inputs=[
+        #         'rankcount',
+        #         'params:pos_to_keep',
+        #         'params:simple_verbs'
+        #     ],
+        #     outputs='rankcount_pos'
+        # )
     ]
 )
 

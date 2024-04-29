@@ -5,6 +5,8 @@ import numpy as np
 import requests
 import xmltodict
 import nltk
+from nltk.stem import PorterStemmer
+from joblib import Parallel, delayed, cpu_count
 
 from nimare.extract import download_abstracts, fetch_neuroquery, fetch_neurosynth
 from nimare.io import convert_neurosynth_to_dataset
@@ -188,4 +190,95 @@ def add_nltk_pos(df: pd.DataFrame, pos_to_keep: list, simple_verbs: list) -> pd.
     return df
 
 
+def select_random_abstracts(df, n_random=50, random_state=42):
+    rnd = df.sample(n=n_random, random_state=random_state)
+    return rnd[['study_id', 'abstract']]
 
+
+def load_methods_corpus(text):
+    ps = PorterStemmer()
+    corpus = text.split('\n')
+    stems = [ps.stem(word) for word in corpus]
+   
+    return dict(zip(corpus, stems))
+
+def load_skip_words(skip_words: list):
+    ps = PorterStemmer()
+    skip = set(ps.stem(s) for s in skip_words)
+
+    return skip
+
+def text_to_dict(df):
+    return dict(zip(df['study_id'], df['abstract']))
+
+def detect_corpus_in_sentences(text: tuple, corpus: dict, skip_words: set):
+
+    study_id = text[0]
+    abstract = text[1]
+
+    ps = PorterStemmer()
+
+    # turn abstract into sentences
+    sentences = nltk.sent_tokenize(abstract)
+
+    # drop first and last sentence (!!)
+    sentences = sentences[1:-1]
+
+    corp = set(corpus.values())
+
+    detected = []
+    for sentence in sentences:
+
+        # turn sentences into tokens
+        parsed = parse_text(sentence)
+        tokens = parsed.split()
+
+        # turn tokens into stems
+        stems = set([ps.stem(t) for t in tokens])
+        
+        # stop if a break word comes up
+        if any(s in skip_words for s in stems):
+            break
+        
+        # detect corpus words in sentence
+        overlap = stems.intersection(corp)
+
+        if len(overlap) > 0:
+
+            # keywords = []
+            # for word in overlap:
+            #     for k, v in corpus.items():
+            #         if v == word:
+            #             keywords.append(k)
+            
+            # detected[sentence] = keywords
+            detected.append(sentence)
+
+    return {study_id: "".join(detected)}
+
+def run_detect_parallel(abstract_dict, methods_corpus, skip_words):
+
+    n_cpus = cpu_count()
+
+    r = Parallel(n_jobs=n_cpus)(
+        delayed(detect_corpus_in_sentences)(item, methods_corpus, skip_words) for item in abstract_dict.items()
+    )
+
+    return r
+
+def gather_detected_output(df: pd.DataFrame, res: list):
+
+    out = {k: v for d in res for k, v in d.items()}
+
+    detected = pd.DataFrame()
+
+    detected['study_id'] = out.keys()
+    detected['det_sentences'] = out.values()
+
+    df = (df
+          .set_index('study_id')
+          .join(detected.set_index('study_id'))
+          .reset_index()
+          )
+
+    return df
