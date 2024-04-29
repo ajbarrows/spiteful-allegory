@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{5}%
+\begin{thebibliography}{13}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -50,6 +50,88 @@
 \providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
 \let\auto@bib@innerbib\@empty
 %</preamble>
+\bibitem [{\citenamefont {Olivetti}\ \emph {et~al.}(2020)\citenamefont
+  {Olivetti}, \citenamefont {Cole}, \citenamefont {Kim}, \citenamefont
+  {Kononova}, \citenamefont {Ceder}, \citenamefont {Han},\ and\ \citenamefont
+  {Hiszpanski}}]{OlivettiEtAl2020}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.~A.}\ \bibnamefont
+  {Olivetti}}, \bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont {Cole}},
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Kim}}, \bibinfo {author}
+  {\bibfnamefont {O.}~\bibnamefont {Kononova}}, \bibinfo {author}
+  {\bibfnamefont {G.}~\bibnamefont {Ceder}}, \bibinfo {author} {\bibfnamefont
+  {T.~Y.-J.}\ \bibnamefont {Han}},\ and\ \bibinfo {author} {\bibfnamefont
+  {A.~M.}\ \bibnamefont {Hiszpanski}},\ }\bibfield  {title} {\bibinfo {title}
+  {Data-driven materials research enabled by natural language processing and
+  information extraction},\ }\href {https://doi.org/10.1063/5.0021106}
+  {\bibfield  {journal} {\bibinfo  {journal} {Applied Physics Reviews}\
+  }\textbf {\bibinfo {volume} {7}},\ \bibinfo {pages} {041317} (\bibinfo {year}
+  {2020})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Polak}\ \emph {et~al.}(2023)\citenamefont {Polak},
+  \citenamefont {Modi}, \citenamefont {Latosinska}, \citenamefont {Zhang},
+  \citenamefont {Wang}, \citenamefont {Wang}, \citenamefont {Hazra},\ and\
+  \citenamefont {Morgan}}]{PolakEtAl2023}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~P.}\ \bibnamefont
+  {Polak}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Modi}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Latosinska}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Zhang}}, \bibinfo {author}
+  {\bibfnamefont {C.-W.}\ \bibnamefont {Wang}}, \bibinfo {author}
+  {\bibfnamefont {S.}~\bibnamefont {Wang}}, \bibinfo {author} {\bibfnamefont
+  {A.~D.}\ \bibnamefont {Hazra}},\ and\ \bibinfo {author} {\bibfnamefont
+  {D.}~\bibnamefont {Morgan}},\ }\bibfield  {title} {\bibinfo {title}
+  {Flexible, {{Model-Agnostic Method}} for {{Materials Data Extraction}} from
+  {{Text Using General Purpose Language Models}}}\ }\href
+  {https://doi.org/10.48550/ARXIV.2302.04914} {10.48550/ARXIV.2302.04914}
+  (\bibinfo {year} {2023})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dunn}\ \emph {et~al.}(2022)\citenamefont {Dunn},
+  \citenamefont {Dagdelen}, \citenamefont {Walker}, \citenamefont {Lee},
+  \citenamefont {Rosen}, \citenamefont {Ceder}, \citenamefont {Persson},\ and\
+  \citenamefont {Jain}}]{DunnEtAl2022}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Dunn}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Dagdelen}},
+  \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Walker}}, \bibinfo
+  {author} {\bibfnamefont {S.}~\bibnamefont {Lee}}, \bibinfo {author}
+  {\bibfnamefont {A.~S.}\ \bibnamefont {Rosen}}, \bibinfo {author}
+  {\bibfnamefont {G.}~\bibnamefont {Ceder}}, \bibinfo {author} {\bibfnamefont
+  {K.}~\bibnamefont {Persson}},\ and\ \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Jain}},\ }\bibfield  {title} {\bibinfo {title} {Structured
+  information extraction from complex scientific text with fine-tuned large
+  language models}\ }\href {https://doi.org/10.48550/ARXIV.2212.05238}
+  {10.48550/ARXIV.2212.05238} (\bibinfo {year} {2022})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Du}\ \emph {et~al.}(2019)\citenamefont {Du},
+  \citenamefont {Liu},\ and\ \citenamefont {Hu}}]{DuEtAl2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Du}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Liu}},\ and\
+  \bibinfo {author} {\bibfnamefont {X.}~\bibnamefont {Hu}},\ }\bibfield
+  {title} {\bibinfo {title} {Techniques for interpretable machine learning},\
+  }\href {https://doi.org/10.1145/3359786} {\bibfield  {journal} {\bibinfo
+  {journal} {Communications of the ACM}\ }\textbf {\bibinfo {volume} {63}},\
+  \bibinfo {pages} {68} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {{Doshi-Velez}}\ and\ \citenamefont
+  {Kim}(2017)}]{Doshi-VelezKim2017}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {{Doshi-Velez}}}\ and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Kim}},\ }\bibfield  {title} {\bibinfo {title} {Towards {{A Rigorous
+  Science}} of {{Interpretable Machine Learning}}}\ }\href
+  {https://doi.org/10.48550/ARXIV.1702.08608} {10.48550/ARXIV.1702.08608}
+  (\bibinfo {year} {2017})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zhao}\ \emph {et~al.}(2024)\citenamefont {Zhao},
+  \citenamefont {Yang}, \citenamefont {Shen}, \citenamefont {Lakkaraju},\ and\
+  \citenamefont {Du}}]{ZhaoEtAl2024}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Zhao}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Yang}}, \bibinfo
+  {author} {\bibfnamefont {B.}~\bibnamefont {Shen}}, \bibinfo {author}
+  {\bibfnamefont {H.}~\bibnamefont {Lakkaraju}},\ and\ \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Du}},\ }\bibfield  {title} {\bibinfo
+  {title} {Towards {{Uncovering How Large Language Model Works}}: {{An
+  Explainability Perspective}}}\ }\href
+  {https://doi.org/10.48550/ARXIV.2402.10688} {10.48550/ARXIV.2402.10688}
+  (\bibinfo {year} {2024})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Marek}\ \emph {et~al.}(2022)\citenamefont {Marek},
   \citenamefont {{Tervo-Clemmens}}, \citenamefont {Calabro}, \citenamefont
   {Montez}, \citenamefont {Kay}, \citenamefont {Hatoum}, \citenamefont
@@ -128,27 +210,295 @@
   {https://doi.org/10.1038/nmeth.1635} {\bibfield  {journal} {\bibinfo
   {journal} {Nature Methods}\ }\textbf {\bibinfo {volume} {8}},\ \bibinfo
   {pages} {665} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Owens}\ \emph {et~al.}(2021)\citenamefont {Owens},
-  \citenamefont {Potter}, \citenamefont {Hyatt}, \citenamefont {Albaugh},
-  \citenamefont {Thompson}, \citenamefont {Jernigan}, \citenamefont {Yuan},
-  \citenamefont {Hahn}, \citenamefont {Allgaier},\ and\ \citenamefont
-  {Garavan}}]{owensRecalibratingExpectationsEffect2021}%
+\bibitem [{\citenamefont {Poldrack}\ \emph {et~al.}(2008)\citenamefont
+  {Poldrack}, \citenamefont {Fletcher}, \citenamefont {Henson}, \citenamefont
+  {Worsley}, \citenamefont {Brett},\ and\ \citenamefont
+  {Nichols}}]{PoldrackEtAl2008}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~M.}\ \bibnamefont
-  {Owens}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Potter}},
-  \bibinfo {author} {\bibfnamefont {C.~S.}\ \bibnamefont {Hyatt}}, \bibinfo
-  {author} {\bibfnamefont {M.}~\bibnamefont {Albaugh}}, \bibinfo {author}
-  {\bibfnamefont {W.~K.}\ \bibnamefont {Thompson}}, \bibinfo {author}
-  {\bibfnamefont {T.}~\bibnamefont {Jernigan}}, \bibinfo {author}
-  {\bibfnamefont {D.}~\bibnamefont {Yuan}}, \bibinfo {author} {\bibfnamefont
-  {S.}~\bibnamefont {Hahn}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
-  {Allgaier}},\ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
-  {Garavan}},\ }\bibfield  {title} {\bibinfo {title} {Recalibrating
-  expectations about effect size: {{A}} multi-method survey of effect sizes in
-  the {{ABCD}} study},\ }\href {https://doi.org/10.1371/journal.pone.0257535}
-  {\bibfield  {journal} {\bibinfo  {journal} {PLOS ONE}\ }\textbf {\bibinfo
-  {volume} {16}},\ \bibinfo {pages} {e0257535} (\bibinfo {year}
-  {2021})}\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~A.}\ \bibnamefont
+  {Poldrack}}, \bibinfo {author} {\bibfnamefont {P.~C.}\ \bibnamefont
+  {Fletcher}}, \bibinfo {author} {\bibfnamefont {R.~N.}\ \bibnamefont
+  {Henson}}, \bibinfo {author} {\bibfnamefont {K.~J.}\ \bibnamefont {Worsley}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Brett}},\ and\ \bibinfo
+  {author} {\bibfnamefont {T.~E.}\ \bibnamefont {Nichols}},\ }\bibfield
+  {title} {\bibinfo {title} {Guidelines for reporting an {{fMRI}} study},\
+  }\href {https://doi.org/10.1016/j.neuroimage.2007.11.048} {\bibfield
+  {journal} {\bibinfo  {journal} {NeuroImage}\ }\textbf {\bibinfo {volume}
+  {40}},\ \bibinfo {pages} {409} (\bibinfo {year} {2008})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {{Botvinik-Nezer}}\ \emph {et~al.}(2020)\citenamefont
+  {{Botvinik-Nezer}}, \citenamefont {Holzmeister}, \citenamefont {Camerer},
+  \citenamefont {Dreber}, \citenamefont {Huber}, \citenamefont {Johannesson},
+  \citenamefont {Kirchler}, \citenamefont {Iwanir}, \citenamefont {Mumford},
+  \citenamefont {Adcock}, \citenamefont {Avesani}, \citenamefont {Baczkowski},
+  \citenamefont {Bajracharya}, \citenamefont {Bakst}, \citenamefont {Ball},
+  \citenamefont {Barilari}, \citenamefont {Bault}, \citenamefont {Beaton},
+  \citenamefont {Beitner}, \citenamefont {Benoit}, \citenamefont {Berkers},
+  \citenamefont {Bhanji}, \citenamefont {Biswal}, \citenamefont
+  {{Bobadilla-Suarez}}, \citenamefont {Bortolini}, \citenamefont {Bottenhorn},
+  \citenamefont {Bowring}, \citenamefont {Braem}, \citenamefont {Brooks},
+  \citenamefont {Brudner}, \citenamefont {Calderon}, \citenamefont {Camilleri},
+  \citenamefont {Castrellon}, \citenamefont {Cecchetti}, \citenamefont
+  {Cieslik}, \citenamefont {Cole}, \citenamefont {Collignon}, \citenamefont
+  {Cox}, \citenamefont {Cunningham}, \citenamefont {Czoschke}, \citenamefont
+  {Dadi}, \citenamefont {Davis}, \citenamefont {Luca}, \citenamefont {Delgado},
+  \citenamefont {Demetriou}, \citenamefont {Dennison}, \citenamefont {Di},
+  \citenamefont {Dickie}, \citenamefont {Dobryakova}, \citenamefont {Donnat},
+  \citenamefont {Dukart}, \citenamefont {Duncan}, \citenamefont {Durnez},
+  \citenamefont {Eed}, \citenamefont {Eickhoff}, \citenamefont {Erhart},
+  \citenamefont {Fontanesi}, \citenamefont {Fricke}, \citenamefont {Fu},
+  \citenamefont {Galv{\'a}n}, \citenamefont {Gau}, \citenamefont {Genon},
+  \citenamefont {Glatard}, \citenamefont {Glerean}, \citenamefont {Goeman},
+  \citenamefont {Golowin}, \citenamefont {{Gonz{\'a}lez-Garc{\'i}a}},
+  \citenamefont {Gorgolewski}, \citenamefont {Grady}, \citenamefont {Green},
+  \citenamefont {Guassi~Moreira}, \citenamefont {Guest}, \citenamefont
+  {Hakimi}, \citenamefont {Hamilton}, \citenamefont {Hancock}, \citenamefont
+  {Handjaras}, \citenamefont {Harry}, \citenamefont {Hawco}, \citenamefont
+  {Herholz}, \citenamefont {Herman}, \citenamefont {Heunis}, \citenamefont
+  {Hoffstaedter}, \citenamefont {Hogeveen}, \citenamefont {Holmes},
+  \citenamefont {Hu}, \citenamefont {Huettel}, \citenamefont {Hughes},
+  \citenamefont {Iacovella}, \citenamefont {Iordan}, \citenamefont {Isager},
+  \citenamefont {Isik}, \citenamefont {Jahn}, \citenamefont {Johnson},
+  \citenamefont {Johnstone}, \citenamefont {Joseph}, \citenamefont {Juliano},
+  \citenamefont {Kable}, \citenamefont {Kassinopoulos}, \citenamefont {Koba},
+  \citenamefont {Kong}, \citenamefont {Koscik}, \citenamefont {Kucukboyaci},
+  \citenamefont {Kuhl}, \citenamefont {Kupek}, \citenamefont {Laird},
+  \citenamefont {Lamm}, \citenamefont {Langner}, \citenamefont
+  {Lauharatanahirun}, \citenamefont {Lee}, \citenamefont {Lee}, \citenamefont
+  {Leemans}, \citenamefont {Leo}, \citenamefont {Lesage}, \citenamefont {Li},
+  \citenamefont {Li}, \citenamefont {Lim}, \citenamefont {Lintz}, \citenamefont
+  {Liphardt}, \citenamefont {Losecaat~Vermeer}, \citenamefont {Love},
+  \citenamefont {Mack}, \citenamefont {Malpica}, \citenamefont {Marins},
+  \citenamefont {Maumet}, \citenamefont {McDonald}, \citenamefont {McGuire},
+  \citenamefont {Melero}, \citenamefont {M{\'e}ndez~Leal}, \citenamefont
+  {Meyer}, \citenamefont {Meyer}, \citenamefont {Mihai}, \citenamefont
+  {Mitsis}, \citenamefont {Moll}, \citenamefont {Nielson}, \citenamefont
+  {Nilsonne}, \citenamefont {Notter}, \citenamefont {Olivetti}, \citenamefont
+  {Onicas}, \citenamefont {Papale}, \citenamefont {Patil}, \citenamefont
+  {Peelle}, \citenamefont {P{\'e}rez}, \citenamefont {Pischedda}, \citenamefont
+  {Poline}, \citenamefont {Prystauka}, \citenamefont {Ray}, \citenamefont
+  {{Reuter-Lorenz}}, \citenamefont {Reynolds}, \citenamefont {Ricciardi},
+  \citenamefont {Rieck}, \citenamefont {{Rodriguez-Thompson}}, \citenamefont
+  {Romyn}, \citenamefont {Salo}, \citenamefont {{Samanez-Larkin}},
+  \citenamefont {{Sanz-Morales}}, \citenamefont {Schlichting}, \citenamefont
+  {Schultz}, \citenamefont {Shen}, \citenamefont {Sheridan}, \citenamefont
+  {Silvers}, \citenamefont {Skagerlund}, \citenamefont {Smith}, \citenamefont
+  {Smith}, \citenamefont {{Sokol-Hessner}}, \citenamefont {Steinkamp},
+  \citenamefont {Tashjian}, \citenamefont {Thirion}, \citenamefont {Thorp},
+  \citenamefont {Tingh{\"o}g}, \citenamefont {Tisdall}, \citenamefont
+  {Tompson}, \citenamefont {{Toro-Serey}}, \citenamefont {Torre~Tresols},
+  \citenamefont {Tozzi}, \citenamefont {Truong}, \citenamefont {Turella},
+  \citenamefont {Van `T~Veer}, \citenamefont {Verguts}, \citenamefont {Vettel},
+  \citenamefont {Vijayarajah}, \citenamefont {Vo}, \citenamefont {Wall},
+  \citenamefont {Weeda}, \citenamefont {Weis}, \citenamefont {White},
+  \citenamefont {Wisniewski}, \citenamefont {{Xifra-Porxas}}, \citenamefont
+  {Yearling}, \citenamefont {Yoon}, \citenamefont {Yuan}, \citenamefont {Yuen},
+  \citenamefont {Zhang}, \citenamefont {Zhang}, \citenamefont {Zosky},
+  \citenamefont {Nichols}, \citenamefont {Poldrack},\ and\ \citenamefont
+  {Schonberg}}]{Botvinik-NezerEtAl2020}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {{Botvinik-Nezer}}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Holzmeister}}, \bibinfo {author} {\bibfnamefont {C.~F.}\ \bibnamefont
+  {Camerer}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Dreber}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Huber}}, \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Johannesson}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Kirchler}}, \bibinfo {author}
+  {\bibfnamefont {R.}~\bibnamefont {Iwanir}}, \bibinfo {author} {\bibfnamefont
+  {J.~A.}\ \bibnamefont {Mumford}}, \bibinfo {author} {\bibfnamefont {R.~A.}\
+  \bibnamefont {Adcock}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Avesani}}, \bibinfo {author} {\bibfnamefont {B.~M.}\ \bibnamefont
+  {Baczkowski}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Bajracharya}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Bakst}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Ball}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Barilari}}, \bibinfo {author}
+  {\bibfnamefont {N.}~\bibnamefont {Bault}}, \bibinfo {author} {\bibfnamefont
+  {D.}~\bibnamefont {Beaton}}, \bibinfo {author} {\bibfnamefont
+  {J.}~\bibnamefont {Beitner}}, \bibinfo {author} {\bibfnamefont {R.~G.}\
+  \bibnamefont {Benoit}}, \bibinfo {author} {\bibfnamefont {R.~M. W.~J.}\
+  \bibnamefont {Berkers}}, \bibinfo {author} {\bibfnamefont {J.~P.}\
+  \bibnamefont {Bhanji}}, \bibinfo {author} {\bibfnamefont {B.~B.}\
+  \bibnamefont {Biswal}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {{Bobadilla-Suarez}}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Bortolini}}, \bibinfo {author} {\bibfnamefont {K.~L.}\ \bibnamefont
+  {Bottenhorn}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Bowring}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Braem}}, \bibinfo
+  {author} {\bibfnamefont {H.~R.}\ \bibnamefont {Brooks}}, \bibinfo {author}
+  {\bibfnamefont {E.~G.}\ \bibnamefont {Brudner}}, \bibinfo {author}
+  {\bibfnamefont {C.~B.}\ \bibnamefont {Calderon}}, \bibinfo {author}
+  {\bibfnamefont {J.~A.}\ \bibnamefont {Camilleri}}, \bibinfo {author}
+  {\bibfnamefont {J.~J.}\ \bibnamefont {Castrellon}}, \bibinfo {author}
+  {\bibfnamefont {L.}~\bibnamefont {Cecchetti}}, \bibinfo {author}
+  {\bibfnamefont {E.~C.}\ \bibnamefont {Cieslik}}, \bibinfo {author}
+  {\bibfnamefont {Z.~J.}\ \bibnamefont {Cole}}, \bibinfo {author}
+  {\bibfnamefont {O.}~\bibnamefont {Collignon}}, \bibinfo {author}
+  {\bibfnamefont {R.~W.}\ \bibnamefont {Cox}}, \bibinfo {author} {\bibfnamefont
+  {W.~A.}\ \bibnamefont {Cunningham}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Czoschke}}, \bibinfo {author} {\bibfnamefont
+  {K.}~\bibnamefont {Dadi}}, \bibinfo {author} {\bibfnamefont {C.~P.}\
+  \bibnamefont {Davis}}, \bibinfo {author} {\bibfnamefont {A.~D.}\ \bibnamefont
+  {Luca}}, \bibinfo {author} {\bibfnamefont {M.~R.}\ \bibnamefont {Delgado}},
+  \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Demetriou}}, \bibinfo
+  {author} {\bibfnamefont {J.~B.}\ \bibnamefont {Dennison}}, \bibinfo {author}
+  {\bibfnamefont {X.}~\bibnamefont {Di}}, \bibinfo {author} {\bibfnamefont
+  {E.~W.}\ \bibnamefont {Dickie}}, \bibinfo {author} {\bibfnamefont
+  {E.}~\bibnamefont {Dobryakova}}, \bibinfo {author} {\bibfnamefont {C.~L.}\
+  \bibnamefont {Donnat}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Dukart}}, \bibinfo {author} {\bibfnamefont {N.~W.}\ \bibnamefont {Duncan}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Durnez}}, \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Eed}}, \bibinfo {author}
+  {\bibfnamefont {S.~B.}\ \bibnamefont {Eickhoff}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Erhart}}, \bibinfo {author} {\bibfnamefont
+  {L.}~\bibnamefont {Fontanesi}}, \bibinfo {author} {\bibfnamefont {G.~M.}\
+  \bibnamefont {Fricke}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Fu}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Galv{\'a}n}},
+  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Gau}}, \bibinfo {author}
+  {\bibfnamefont {S.}~\bibnamefont {Genon}}, \bibinfo {author} {\bibfnamefont
+  {T.}~\bibnamefont {Glatard}}, \bibinfo {author} {\bibfnamefont
+  {E.}~\bibnamefont {Glerean}}, \bibinfo {author} {\bibfnamefont {J.~J.}\
+  \bibnamefont {Goeman}}, \bibinfo {author} {\bibfnamefont {S.~A.~E.}\
+  \bibnamefont {Golowin}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {{Gonz{\'a}lez-Garc{\'i}a}}}, \bibinfo {author} {\bibfnamefont {K.~J.}\
+  \bibnamefont {Gorgolewski}}, \bibinfo {author} {\bibfnamefont {C.~L.}\
+  \bibnamefont {Grady}}, \bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont
+  {Green}}, \bibinfo {author} {\bibfnamefont {J.~F.}\ \bibnamefont
+  {Guassi~Moreira}}, \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Guest}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Hakimi}},
+  \bibinfo {author} {\bibfnamefont {J.~P.}\ \bibnamefont {Hamilton}}, \bibinfo
+  {author} {\bibfnamefont {R.}~\bibnamefont {Hancock}}, \bibinfo {author}
+  {\bibfnamefont {G.}~\bibnamefont {Handjaras}}, \bibinfo {author}
+  {\bibfnamefont {B.~B.}\ \bibnamefont {Harry}}, \bibinfo {author}
+  {\bibfnamefont {C.}~\bibnamefont {Hawco}}, \bibinfo {author} {\bibfnamefont
+  {P.}~\bibnamefont {Herholz}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Herman}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Heunis}}, \bibinfo {author} {\bibfnamefont
+  {F.}~\bibnamefont {Hoffstaedter}}, \bibinfo {author} {\bibfnamefont
+  {J.}~\bibnamefont {Hogeveen}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Holmes}}, \bibinfo {author} {\bibfnamefont {C.-P.}\
+  \bibnamefont {Hu}}, \bibinfo {author} {\bibfnamefont {S.~A.}\ \bibnamefont
+  {Huettel}}, \bibinfo {author} {\bibfnamefont {M.~E.}\ \bibnamefont {Hughes}},
+  \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Iacovella}}, \bibinfo
+  {author} {\bibfnamefont {A.~D.}\ \bibnamefont {Iordan}}, \bibinfo {author}
+  {\bibfnamefont {P.~M.}\ \bibnamefont {Isager}}, \bibinfo {author}
+  {\bibfnamefont {A.~I.}\ \bibnamefont {Isik}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Jahn}}, \bibinfo {author} {\bibfnamefont
+  {M.~R.}\ \bibnamefont {Johnson}}, \bibinfo {author} {\bibfnamefont
+  {T.}~\bibnamefont {Johnstone}}, \bibinfo {author} {\bibfnamefont {M.~J.~E.}\
+  \bibnamefont {Joseph}}, \bibinfo {author} {\bibfnamefont {A.~C.}\
+  \bibnamefont {Juliano}}, \bibinfo {author} {\bibfnamefont {J.~W.}\
+  \bibnamefont {Kable}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Kassinopoulos}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Koba}},
+  \bibinfo {author} {\bibfnamefont {X.-Z.}\ \bibnamefont {Kong}}, \bibinfo
+  {author} {\bibfnamefont {T.~R.}\ \bibnamefont {Koscik}}, \bibinfo {author}
+  {\bibfnamefont {N.~E.}\ \bibnamefont {Kucukboyaci}}, \bibinfo {author}
+  {\bibfnamefont {B.~A.}\ \bibnamefont {Kuhl}}, \bibinfo {author}
+  {\bibfnamefont {S.}~\bibnamefont {Kupek}}, \bibinfo {author} {\bibfnamefont
+  {A.~R.}\ \bibnamefont {Laird}}, \bibinfo {author} {\bibfnamefont
+  {C.}~\bibnamefont {Lamm}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Langner}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Lauharatanahirun}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Lee}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Lee}}, \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Leemans}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Leo}}, \bibinfo {author} {\bibfnamefont
+  {E.}~\bibnamefont {Lesage}}, \bibinfo {author} {\bibfnamefont
+  {F.}~\bibnamefont {Li}}, \bibinfo {author} {\bibfnamefont {M.~Y.~C.}\
+  \bibnamefont {Li}}, \bibinfo {author} {\bibfnamefont {P.~C.}\ \bibnamefont
+  {Lim}}, \bibinfo {author} {\bibfnamefont {E.~N.}\ \bibnamefont {Lintz}},
+  \bibinfo {author} {\bibfnamefont {S.~W.}\ \bibnamefont {Liphardt}}, \bibinfo
+  {author} {\bibfnamefont {A.~B.}\ \bibnamefont {Losecaat~Vermeer}}, \bibinfo
+  {author} {\bibfnamefont {B.~C.}\ \bibnamefont {Love}}, \bibinfo {author}
+  {\bibfnamefont {M.~L.}\ \bibnamefont {Mack}}, \bibinfo {author}
+  {\bibfnamefont {N.}~\bibnamefont {Malpica}}, \bibinfo {author} {\bibfnamefont
+  {T.}~\bibnamefont {Marins}}, \bibinfo {author} {\bibfnamefont
+  {C.}~\bibnamefont {Maumet}}, \bibinfo {author} {\bibfnamefont
+  {K.}~\bibnamefont {McDonald}}, \bibinfo {author} {\bibfnamefont {J.~T.}\
+  \bibnamefont {McGuire}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Melero}}, \bibinfo {author} {\bibfnamefont {A.~S.}\ \bibnamefont
+  {M{\'e}ndez~Leal}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Meyer}}, \bibinfo {author} {\bibfnamefont {K.~N.}\ \bibnamefont {Meyer}},
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Mihai}}, \bibinfo
+  {author} {\bibfnamefont {G.~D.}\ \bibnamefont {Mitsis}}, \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Moll}}, \bibinfo {author} {\bibfnamefont
+  {D.~M.}\ \bibnamefont {Nielson}}, \bibinfo {author} {\bibfnamefont
+  {G.}~\bibnamefont {Nilsonne}}, \bibinfo {author} {\bibfnamefont {M.~P.}\
+  \bibnamefont {Notter}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Olivetti}}, \bibinfo {author} {\bibfnamefont {A.~I.}\ \bibnamefont
+  {Onicas}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Papale}},
+  \bibinfo {author} {\bibfnamefont {K.~R.}\ \bibnamefont {Patil}}, \bibinfo
+  {author} {\bibfnamefont {J.~E.}\ \bibnamefont {Peelle}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {P{\'e}rez}}, \bibinfo {author}
+  {\bibfnamefont {D.}~\bibnamefont {Pischedda}}, \bibinfo {author}
+  {\bibfnamefont {J.-B.}\ \bibnamefont {Poline}}, \bibinfo {author}
+  {\bibfnamefont {Y.}~\bibnamefont {Prystauka}}, \bibinfo {author}
+  {\bibfnamefont {S.}~\bibnamefont {Ray}}, \bibinfo {author} {\bibfnamefont
+  {P.~A.}\ \bibnamefont {{Reuter-Lorenz}}}, \bibinfo {author} {\bibfnamefont
+  {R.~C.}\ \bibnamefont {Reynolds}}, \bibinfo {author} {\bibfnamefont
+  {E.}~\bibnamefont {Ricciardi}}, \bibinfo {author} {\bibfnamefont {J.~R.}\
+  \bibnamefont {Rieck}}, \bibinfo {author} {\bibfnamefont {A.~M.}\ \bibnamefont
+  {{Rodriguez-Thompson}}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Romyn}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Salo}},
+  \bibinfo {author} {\bibfnamefont {G.~R.}\ \bibnamefont {{Samanez-Larkin}}},
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {{Sanz-Morales}}},
+  \bibinfo {author} {\bibfnamefont {M.~L.}\ \bibnamefont {Schlichting}},
+  \bibinfo {author} {\bibfnamefont {D.~H.}\ \bibnamefont {Schultz}}, \bibinfo
+  {author} {\bibfnamefont {Q.}~\bibnamefont {Shen}}, \bibinfo {author}
+  {\bibfnamefont {M.~A.}\ \bibnamefont {Sheridan}}, \bibinfo {author}
+  {\bibfnamefont {J.~A.}\ \bibnamefont {Silvers}}, \bibinfo {author}
+  {\bibfnamefont {K.}~\bibnamefont {Skagerlund}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Smith}}, \bibinfo {author} {\bibfnamefont
+  {D.~V.}\ \bibnamefont {Smith}}, \bibinfo {author} {\bibfnamefont
+  {P.}~\bibnamefont {{Sokol-Hessner}}}, \bibinfo {author} {\bibfnamefont
+  {S.~R.}\ \bibnamefont {Steinkamp}}, \bibinfo {author} {\bibfnamefont {S.~M.}\
+  \bibnamefont {Tashjian}}, \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Thirion}}, \bibinfo {author} {\bibfnamefont {J.~N.}\ \bibnamefont {Thorp}},
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Tingh{\"o}g}}, \bibinfo
+  {author} {\bibfnamefont {L.}~\bibnamefont {Tisdall}}, \bibinfo {author}
+  {\bibfnamefont {S.~H.}\ \bibnamefont {Tompson}}, \bibinfo {author}
+  {\bibfnamefont {C.}~\bibnamefont {{Toro-Serey}}}, \bibinfo {author}
+  {\bibfnamefont {J.~J.}\ \bibnamefont {Torre~Tresols}}, \bibinfo {author}
+  {\bibfnamefont {L.}~\bibnamefont {Tozzi}}, \bibinfo {author} {\bibfnamefont
+  {V.}~\bibnamefont {Truong}}, \bibinfo {author} {\bibfnamefont
+  {L.}~\bibnamefont {Turella}}, \bibinfo {author} {\bibfnamefont {A.~E.}\
+  \bibnamefont {Van `T~Veer}}, \bibinfo {author} {\bibfnamefont
+  {T.}~\bibnamefont {Verguts}}, \bibinfo {author} {\bibfnamefont {J.~M.}\
+  \bibnamefont {Vettel}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Vijayarajah}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Vo}},
+  \bibinfo {author} {\bibfnamefont {M.~B.}\ \bibnamefont {Wall}}, \bibinfo
+  {author} {\bibfnamefont {W.~D.}\ \bibnamefont {Weeda}}, \bibinfo {author}
+  {\bibfnamefont {S.}~\bibnamefont {Weis}}, \bibinfo {author} {\bibfnamefont
+  {D.~J.}\ \bibnamefont {White}}, \bibinfo {author} {\bibfnamefont
+  {D.}~\bibnamefont {Wisniewski}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {{Xifra-Porxas}}}, \bibinfo {author} {\bibfnamefont
+  {E.~A.}\ \bibnamefont {Yearling}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Yoon}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Yuan}}, \bibinfo {author} {\bibfnamefont {K.~S.~L.}\ \bibnamefont {Yuen}},
+  \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Zhang}}, \bibinfo
+  {author} {\bibfnamefont {X.}~\bibnamefont {Zhang}}, \bibinfo {author}
+  {\bibfnamefont {J.~E.}\ \bibnamefont {Zosky}}, \bibinfo {author}
+  {\bibfnamefont {T.~E.}\ \bibnamefont {Nichols}}, \bibinfo {author}
+  {\bibfnamefont {R.~A.}\ \bibnamefont {Poldrack}},\ and\ \bibinfo {author}
+  {\bibfnamefont {T.}~\bibnamefont {Schonberg}},\ }\bibfield  {title} {\bibinfo
+  {title} {Variability in the analysis of a single neuroimaging dataset by many
+  teams},\ }\href {https://doi.org/10.1038/s41586-020-2314-9} {\bibfield
+  {journal} {\bibinfo  {journal} {Nature}\ }\textbf {\bibinfo {volume} {582}},\
+  \bibinfo {pages} {84} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Yuan}\ \emph {et~al.}(2023)\citenamefont {Yuan},
+  \citenamefont {Hahn}, \citenamefont {Allgaier}, \citenamefont {Owens},
+  \citenamefont {Chaarani}, \citenamefont {Potter},\ and\ \citenamefont
+  {Garavan}}]{YuanEtAl2023}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Yuan}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Hahn}}, \bibinfo
+  {author} {\bibfnamefont {N.}~\bibnamefont {Allgaier}}, \bibinfo {author}
+  {\bibfnamefont {M.~M.}\ \bibnamefont {Owens}}, \bibinfo {author}
+  {\bibfnamefont {B.}~\bibnamefont {Chaarani}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Potter}},\ and\ \bibinfo {author}
+  {\bibfnamefont {H.}~\bibnamefont {Garavan}},\ }\bibfield  {title} {\bibinfo
+  {title} {Machine learning approaches linking brain function to behavior in
+  the {{{\textsc{ABCD STOP}}}} task},\ }\href
+  {https://doi.org/10.1002/hbm.26172} {\bibfield  {journal} {\bibinfo
+  {journal} {Human Brain Mapping}\ }\textbf {\bibinfo {volume} {44}},\ \bibinfo
+  {pages} {1751} (\bibinfo {year} {2023})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Salo}\ \emph {et~al.}(2022)\citenamefont {Salo},
   \citenamefont {Yarkoni}, \citenamefont {Nichols}, \citenamefont {Poline},
   \citenamefont {Kent}, \citenamefont {Gorgolewski}, \citenamefont {Glerean},

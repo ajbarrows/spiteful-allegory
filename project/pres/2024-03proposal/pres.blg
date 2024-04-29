@@ -5,45 +5,45 @@ The style file: unsrtabbrv.bst
 Database file #1: zotero.bib
 Warning--empty journal in Nuzzo
 Warning--empty year in Nuzzo
-You've used 6 entries,
+You've used 8 entries,
             1795 wiz_defined-function locations,
-            490 strings with 9498 characters,
-and the built_in function-call counts, 4379 in all, are:
-= -- 114
-> -- 762
-< -- 0
-+ -- 257
-- -- 251
-* -- 587
-:= -- 926
-add.period$ -- 17
-call.type$ -- 6
-change.case$ -- 6
+            504 strings with 9832 characters,
+and the built_in function-call counts, 4833 in all, are:
+= -- 150
+> -- 789
+< -- 1
++ -- 267
+- -- 259
+* -- 627
+:= -- 1001
+add.period$ -- 23
+call.type$ -- 8
+change.case$ -- 7
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 53
-empty$ -- 127
-format.name$ -- 251
-if$ -- 744
+cite$ -- 10
+duplicate$ -- 73
+empty$ -- 168
+format.name$ -- 259
+if$ -- 840
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 6
-newline$ -- 32
-num.names$ -- 6
-pop$ -- 11
+int.to.str$ -- 8
+missing$ -- 9
+newline$ -- 42
+num.names$ -- 8
+pop$ -- 17
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 18
+skip$ -- 23
 stack$ -- 0
-substring$ -- 97
-swap$ -- 5
-text.length$ -- 0
+substring$ -- 116
+swap$ -- 9
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 15
-width$ -- 7
-write$ -- 64
+while$ -- 19
+width$ -- 9
+write$ -- 87
 (There were 2 warnings)

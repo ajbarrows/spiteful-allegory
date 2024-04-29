@@ -10,24 +10,23 @@
 \section{Introduction}
 \label{sec:papertag.introduction}
 
+The emergence of ``big data'' and analysis techniques built to suit have prompted efforts toward building increasingly large data sets with the goal of uncovering new insights. Many such efforts focus on extracting numerical information from published works using automated methods \cite{OlivettiEtAl2020}. The emergence of large language models (LLMs) has, at least in some cases, accelerated the pace with which these data sets are compiled, as even general-purpose LLMs are shown to be remarkably effective at extracting relevant information \cite{PolakEtAl2023, DunnEtAl2022}. However, machine learning methods have been generally criticized for their lack of explainability, requiring novel and fairly complex solutions to build models which offer reproducible results \cite{DuEtAl2019, Doshi-VelezKim2017}. This is especially true for LLMs whose ability to perform well under a diversity of new conditions is unlike that of any traditional machine learning algorithm \cite{ZhaoEtAl2024}. It is therefore especially important that methods used to obtain information from previously-published work are transparent, with any implementation of machine learning-based automated extraction methods carefully justified and documented.
 
-The field of neuroimaging suffers from a crisis of reproducibility, best documented in \cite{MarekEtAl2022}, which demonstrated that resolving individual differences when effect sizes are small often requires thousands of participants. Pioneers in the field have built fantastic tools like \href{https://neurosynth.org/}{\texttt{Neurosynth}} \cite{YarkoniEtAl2011} to extract relevant information from each paper in their vast database of neuroimaging studies. By the authors' own admission, this technique is crude, and risks erroneously connecting psychological constructs by identifying terms (e.g., attention, ADHD, depression) and functional magnetic resonance imaging (fMRI) image coordinates that appear in the same paper. This approach is unprecedented and could lead to transformative work, but it also presents several key drawbacks:
+\subsection{Neuroimaging Methods}
 
-\begin{itemize}
-	\item Methods for processing analyzing MRI scans are far from harmonized.
-	\item \cite{owensRecalibratingExpectationsEffect2021} showed that even \textit{with} large-scale imaging efforts effect sizes remain small, suggesting that under-powered studies reporting large effects may involve spurious associations
-	\item Neurosynth relies on word associations that may not represent psychological constructs, and fails to assign meaning to brain map coordinates (e.g., ``activation'' vs. ``deactivation''). 
-	\item For various reasons (some more principled than others), not all papers report coordinates.
-\end{itemize}
+The field of neuroimaging suffers from a crisis of reproducibility, best documented in \cite{MarekEtAl2022}, which demonstrated that resolving individual differences when effect sizes are small often requires thousands of participants. Authors have built groundbreaking automated meta-analytic tools like \href{https://neurosynth.org/}{\texttt{Neurosynth}} \cite{YarkoniEtAl2011} to extract relevant information from each paper in their vast database of neuroimaging studies in order to make inferences about relationships between brain function and behavior. While a massive effort by any account, this technique is relatively simplistic, and risks erroneously connecting psychological constructs by identifying terms (e.g., attention, ADHD, depression) and functional magnetic resonance imaging (fMRI) image coordinates that appear in the same paper. This approach has the potential to lead to transformative work, but it also presents several key drawbacks. First, despite clear, published guidelines for reporting fMRI studies \cite{PoldrackEtAl2008}, fMRI analytical methods are far from harmonized, which could lead to large discrepancies in results \cite{Botvinik-NezerEtAl2020} all effects in analysis of brain-behavior associations, which suggests that many studies included in automated meta-analysis datasets may include spurious correlations. Third, although most brain-behavior fMRI studies to date employ mass univariate analyses in which each imaging unit of interest is independently assessed for evidence of task-related activation, authors are beginning to undertake multivariate analysis using brain activation as a predictor of behavior \cite[e.g.,][]{YuanEtAl2023}. Results from machine learning-based multivariate predictive models may not be easily represented on the cortical surface. 	
 
-\begin{figure}[tp!]
+The present work leverages the comprehensive set of fMRI-related publications compiled for use in \texttt{Neurosynth} \cite{YarkoniEtAl2011} to generate a comprehensive view of methods used in fMRI research.If successful, this approach could (1) inform which analytical strategies (e.g., pre-processing, variable and model selection, external validity estimates) are most often used, and under which conditions, and (2) identify which of these strategies are most effective. 
+
+
+\begin{figure*}[tp!]
   \centering	
-    \includegraphics[width=\columnwidth]{figures/localized/null.pdf}  
+    \includegraphics[width=\textwidth]{figures/project/rankcount.pdf}  
   \caption{
     \todo{Add caption}
   }
   \label{fig:papertag.}
-\end{figure}
+\end{figure*}
 
 \section{Description of data sets}
 \label{sec:papertag.data}
@@ -55,26 +54,17 @@ Abstracts for all texts contained in the most recent Neurosynth and Neuroquery d
 
 All code is available at \href{https://github.com/ajbarrows/spiteful-allegory}{https://github.com/ajbarrows/spiteful-allegory}.
 
-\subsection{Proposed Approach}
-
-Instead of focusing solely on results (i.e., brain-behavior associations), I propose to focus on common methods. \textbf{Goal: Use existing literature to produce a basic description of neuroimaging analysis strategies used to model various brain-behavior relationships.} 
-
-If successful, this approach could:
-\begin{itemize}
-	\item Inform which analytical strategies (e.g., pre-processing, variable and model selection, external validity estimates) are most often used, and under which conditions
-	\item Identify which strategies are most effective (\textit{or at least lay the groundwork})
-\end{itemize}
-
-
 \todo{Add methods.}
 
+%
+%\section{Scratch}
+%\begin{figure}
+%	\includegraphics[width=\columnwidth]{figures/project/abstract_rankcount}
+%	\caption{Rank-count distribution for word frequencies in all Neurosynth and Neuroquery abstracts.}
+%\end{figure}
+%
+%Having a bit of a challenge pulling together abstracts with some metadata. Theoretically, things in the \texttt{Neurosynth} and \texttt{Neuroquery} datasets are identified by their PubMed IDs, but when I try to request metadata on those PubMed IDs, many entries come back empty. A bit head scratching. In any case, I think some ordering is important. I'll keep at it.
 
-\section{Scratch}
-\begin{figure}
-	\includegraphics[width=\columnwidth]{figures/project/abstract_rankcount}
-	\caption{Rank-count distribution for word frequencies in all Neurosynth and Neuroquery abstracts.}
-\end{figure}
 
-Having a bit of a challenge pulling together abstracts with some metadata. Theoretically, things in the \texttt{Neurosynth} and \texttt{Neuroquery} datasets are identified by their PubMed IDs, but when I try to request metadata on those PubMed IDs, many entries come back empty. A bit head scratching. In any case, I think some ordering is important. I'll keep at it.
-
+%\bibliography{pocs2-project-ajb}
 

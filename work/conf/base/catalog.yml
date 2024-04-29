@@ -73,3 +73,11 @@ nq_cite:
 combined_text:
   type: pandas.ParquetDataSet
   filepath: data/03_primary/combined_neuro_text.parquet
+
+
+rankcount:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/rankcount.parquet
+rankcount_pos:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/rankcount_pos.parquet

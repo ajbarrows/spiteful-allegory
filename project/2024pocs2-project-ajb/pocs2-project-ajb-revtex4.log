@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.30)  22 MAR 2024 16:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.30)  26 APR 2024 10:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -712,114 +712,148 @@ Package xcolor Warning: Incompatible color definition on input line 89.
 
 (./pocs2-project-ajb.body.tex
 
-Package xcolor Warning: Incompatible color definition on input line 14.
+Package xcolor Warning: Incompatible color definition on input line 13.
 
 
-Package xcolor Warning: Incompatible color definition on input line 14.
+Package xcolor Warning: Incompatible color definition on input line 13.
 
 
-Package xcolor Warning: Incompatible color definition on input line 14.
+Package xcolor Warning: Incompatible color definition on input line 13.
 
 
-Package xcolor Warning: Incompatible color definition on input line 18.
-
-<figures/localized/null.pdf, id=58, 254.9525pt x 254.9525pt>
-File: figures/localized/null.pdf Graphic file (type pdf)
-<use figures/localized/null.pdf>
-Package pdftex.def Info: figures/localized/null.pdf  used on input line 25.
-(pdftex.def)             Requested size: 246.0pt x 246.01204pt.
-
-Package xcolor Warning: Incompatible color definition on input line 28.
+Package xcolor Warning: Incompatible color definition on input line 13.
 
 
-Package xcolor Warning: Incompatible color definition on input line 36.
+Package xcolor Warning: Incompatible color definition on input line 13.
 
 
-Package xcolor Warning: Incompatible color definition on input line 38.
+Package xcolor Warning: Incompatible color definition on input line 13.
 
 
-Package xcolor Warning: Incompatible color definition on input line 38.
+Package xcolor Warning: Incompatible color definition on input line 17.
 
 
-Package xcolor Warning: Incompatible color definition on input line 46.
+Package xcolor Warning: Incompatible color definition on input line 17.
 
 
-Package xcolor Warning: Incompatible color definition on input line 51.
-
-[1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./fig
-ures/localized/null.pdf>]
-
-Package xcolor Warning: Incompatible color definition on input line 56.
+Package xcolor Warning: Incompatible color definition on input line 17.
 
 
-Package xcolor Warning: Incompatible color definition on input line 69.
+Package xcolor Warning: Incompatible color definition on input line 17.
 
-<figures/project/abstract_rankcount.png, id=89, 398.6895pt x 313.8927pt>
-File: figures/project/abstract_rankcount.png Graphic file (type png)
-<use figures/project/abstract_rankcount.png>
-Package pdftex.def Info: figures/project/abstract_rankcount.png  used on input 
-line 74.
-(pdftex.def)             Requested size: 246.0pt x 193.67747pt.
+
+Package xcolor Warning: Incompatible color definition on input line 17.
+
+
+Package xcolor Warning: Incompatible color definition on input line 17.
+
+
+Package xcolor Warning: Incompatible color definition on input line 19.
+
+<figures/project/rankcount.pdf, id=63, 527.08919pt x 376.52669pt>
+File: figures/project/rankcount.pdf Graphic file (type pdf)
+<use figures/project/rankcount.pdf>
+Package pdftex.def Info: figures/project/rankcount.pdf  used on input line 24.
+(pdftex.def)             Requested size: 510.0pt x 364.33417pt.
+
+Package xcolor Warning: Incompatible color definition on input line 27.
+
+
+Package xcolor Warning: Incompatible color definition on input line 35.
+
+
+Package xcolor Warning: Incompatible color definition on input line 37.
+
+
+Package xcolor Warning: Incompatible color definition on input line 37.
+
+
+Package xcolor Warning: Incompatible color definition on input line 45.
+
+[1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+Package xcolor Warning: Incompatible color definition on input line 50.
+
+
+Package xcolor Warning: Incompatible color definition on input line 55.
+
+
+Package xcolor Warning: Incompatible color definition on input line 57.
+
 ) (./pocs2-project-ajb.acknowledgments.tex) (./pocs2-project-ajb-revtex4.bbl
 
 Package xcolor Warning: Incompatible color definition on input line 9.
 
 
-Package xcolor Warning: Incompatible color definition on input line 116.
+Package xcolor Warning: Incompatible color definition on input line 69.
 
 
-Package xcolor Warning: Incompatible color definition on input line 130.
+Package xcolor Warning: Incompatible color definition on input line 85.
 
 
-Package xcolor Warning: Incompatible color definition on input line 151.
+Package xcolor Warning: Incompatible color definition on input line 102.
+
+[2 <./figures/project/rankcount.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 112.
 
 
-Package xcolor Warning: Incompatible color definition on input line 181.
+Package xcolor Warning: Incompatible color definition on input line 120.
 
 
-Package xcolor Warning: Incompatible color definition on input line 209.
-
-) [2]
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 113.
+Package xcolor Warning: Incompatible color definition on input line 133.
 
 
-Class revtex4-2 Warning: Deferred float stuck during \clearpage processing.
+Package xcolor Warning: Incompatible color definition on input line 198.
 
-[3 <./figures/project/abstract_rankcount.png>] (./pocs2-project-ajb-revtex4.aux
-)
+
+Package xcolor Warning: Incompatible color definition on input line 212.
+
+
+Package xcolor Warning: Incompatible color definition on input line 227.
+
+
+Package xcolor Warning: Incompatible color definition on input line 484.
+
+
+Package xcolor Warning: Incompatible color definition on input line 501.
+
+
+Package xcolor Warning: Incompatible color definition on input line 531.
+
+
+Package xcolor Warning: Incompatible color definition on input line 559.
+
+) [3] (./pocs2-project-ajb-revtex4.aux)
 Package rerunfilecheck Info: File `pocs2-project-ajb-revtex4.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: F14DD402D1CB93A62A5A9417733453BB;1373.
+(rerunfilecheck)             Checksum: 05926F34B4CD7268D34A636FF7B05103;1299.
  ) 
 Here is how much of TeX's memory you used:
- 15498 strings out of 478268
- 243053 string characters out of 5846347
- 554078 words of memory out of 5000000
- 33406 multiletter control sequences out of 15000+600000
- 479371 words of font info for 68 fonts, out of 8000000 for 9000
+ 15513 strings out of 478268
+ 243131 string characters out of 5846347
+ 574744 words of memory out of 5000000
+ 33419 multiletter control sequences out of 15000+600000
+ 478683 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,8n,95p,926b,425s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
-sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/lo
-cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
-xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
-ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
-/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
-22/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2022
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on pocs2-project-ajb-revtex4.pdf (3 pages, 235156 bytes).
+ 99i,8n,95p,1965b,525s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/tex
+live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texli
+ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive
+/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2
+022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/20
+22/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on pocs2-project-ajb-revtex4.pdf (3 pages, 677815 bytes).
 PDF statistics:
- 180 PDF objects out of 1000 (max. 8388607)
- 139 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 107 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 210 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 94 words of extra memory for PDF output out of 10000 (max. 10000000)
 

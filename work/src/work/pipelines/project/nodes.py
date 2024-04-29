@@ -9,6 +9,8 @@ import nltk
 from nimare.extract import download_abstracts, fetch_neuroquery, fetch_neurosynth
 from nimare.io import convert_neurosynth_to_dataset
 
+from work.pipelines.word_helpers.nodes import *
+
 def establish_download_directory(fpath="data/01_raw/neuro-text/"):
 
     out_dir = os.path.abspath(fpath)
@@ -146,8 +148,33 @@ def combine_texts(ns: pd.DataFrame, nq: pd.DataFrame):
 
     return pd.concat([ns, nq])
 
+def rankcount_from_abstracts(df: pd.DataFrame):
 
-def add_nltk_pos(df: pd.DataFrame) -> pd.DataFrame:
+    # turn abstracts into single string, parse
+    abs = df['abstract'].str.cat()
+    parsed = parse_text(abs)
+    rankcount = generic_sizerank_df(parsed)
+
+    return parsed, rankcount
+
+
+def _filter_pos(df, pos_to_keep: list, simple_verbs: list):
+
+    df = df.drop(columns='rank')
+    df = df[df['pos'].isin(pos_to_keep)]
+    df = df[~df['ngram'].isin(simple_verbs)]
+
+    df = (df
+     .reset_index(drop=True)
+     .reset_index(names='rank')
+    )
+    # reindex rank
+    df['rank'] = df['rank'] + 1
+
+    return df
+
+
+def add_nltk_pos(df: pd.DataFrame, pos_to_keep: list, simple_verbs: list) -> pd.DataFrame:
 
     tags = nltk.pos_tag(df['ngram'], tagset='universal')
     pos = []
@@ -156,5 +183,9 @@ def add_nltk_pos(df: pd.DataFrame) -> pd.DataFrame:
 
     df['pos'] = pos
 
+    df = _filter_pos(df, pos_to_keep, simple_verbs)
+
     return df
+
+
 

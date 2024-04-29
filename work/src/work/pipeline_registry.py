@@ -9,7 +9,8 @@ def register_pipelines() -> dict[str, Pipeline]:
     
     pipelines = {
         'download_data': download_data,
-        'process_data': merge_neurodata,
+        # 'process_data': merge_neurodata
+        'process_data': process_text,
         'generate_plots': generate_plots
     }
     return pipelines

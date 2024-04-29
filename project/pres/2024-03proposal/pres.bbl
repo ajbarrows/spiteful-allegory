@@ -1,5 +1,12 @@
 \begin{thebibliography}{1}
 
+\bibitem{Siden2020}
+P.~Sid{\'e}n.
+\newblock {\em Scalable {{Bayesian}} Spatial Analysis with {{Gaussian Markov}}
+  Random Fields}, volume~15 of {\em Link{\"o}ping {{Studies}} in
+  {{Statistics}}}.
+\newblock Link{\"o}ping University Electronic Press, Link{\"o}ping, Sept. 2020.
+
 \bibitem{MarekEtAl2022}
 S.~Marek, B.~{Tervo-Clemmens}, F.~J. Calabro, D.~F. Montez, B.~P. Kay, A.~S.
   Hatoum, M.~R. Donohue, W.~Foran, R.~L. Miller, T.~J. Hendrickson, S.~M.
@@ -72,11 +79,16 @@ R.~{Botvinik-Nezer}, F.~Holzmeister, C.~F. Camerer, A.~Dreber, J.~Huber,
   teams.
 \newblock {\em Nature}, 582(7810):84--88, June 2020.
 
-\bibitem{VassalEtAl2016}
-F.~Vassal, F.~Schneider, C.~Boutet, B.~Jean, A.~Sontheimer, and J.-J. Lemaire.
-\newblock Combined {{DTI Tractography}} and {{Functional MRI Study}} of the
-  {{Language Connectome}} in {{Healthy Volunteers}}: {{Extensive Mapping}} of
-  {{White Matter Fascicles}} and {{Cortical Activations}}.
-\newblock {\em PLOS ONE}, 11(3):e0152614, Mar. 2016.
+\bibitem{YarkoniEtAl2011}
+T.~Yarkoni, R.~A. Poldrack, T.~E. Nichols, D.~C. Van~Essen, and T.~D. Wager.
+\newblock Large-scale automated synthesis of human functional neuroimaging
+  data.
+\newblock {\em Nature Methods}, 8(8):665--670, Aug. 2011.
+
+\bibitem{DockesEtAl2020}
+J.~Dock{\`e}s, R.~A. Poldrack, R.~Primet, H.~G{\"o}z{\"u}kan, T.~Yarkoni,
+  F.~Suchanek, B.~Thirion, and G.~Varoquaux.
+\newblock {{NeuroQuery}}, comprehensive meta-analysis of human brain mapping.
+\newblock {\em eLife}, 9:e53385, Mar. 2020.
 
 \end{thebibliography}

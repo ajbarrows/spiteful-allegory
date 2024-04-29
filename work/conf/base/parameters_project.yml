@@ -7,3 +7,10 @@
 neurosynth: neurosynth
 neuroquery: neuroquery
 email: ajbarrow@uvm.edu
+
+
+pos_to_keep: ['NOUN', 'ADJ', 'VERB']
+simple_verbs: [
+  'is', 'are', 'am',
+  'were', 'was'
+]
