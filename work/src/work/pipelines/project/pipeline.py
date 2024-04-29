@@ -5,6 +5,7 @@ generated using Kedro 0.18.14
 
 from kedro.pipeline import Pipeline, node, pipeline
 from .nodes import *
+from .plotting import *
 
 # def create_pipeline(**kwargs) -> Pipeline:
 #     return pipeline([])
@@ -80,4 +81,15 @@ merge_neurodata = pipeline(
             outputs='combined_text'
         )
     ]
+)
+
+generate_plots = pipeline(
+    [
+        node(
+            plot_pubcounts,
+            inputs='neurosynth_text',
+            outputs=None
+        )
+    ]
+
 )
