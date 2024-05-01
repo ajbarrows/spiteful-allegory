@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.30)  26 APR 2024 10:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.30)  1 MAY 2024 14:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -613,7 +613,59 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count313
 \l__pdf_internal_box=\box84
 )
-(./pocs2-project-ajb-revtex4.aux)
+(./pocs2-project-ajb-revtex4.aux
+
+Package natbib Warning: Citation `OlivettiEtAl2020' multiply defined.
+
+
+Package natbib Warning: Citation `PolakEtAl2023' multiply defined.
+
+
+Package natbib Warning: Citation `DunnEtAl2022' multiply defined.
+
+
+Package natbib Warning: Citation `DuEtAl2019' multiply defined.
+
+
+Package natbib Warning: Citation `Doshi-VelezKim2017' multiply defined.
+
+
+Package natbib Warning: Citation `ZhaoEtAl2024' multiply defined.
+
+
+Package natbib Warning: Citation `MarekEtAl2022' multiply defined.
+
+
+Package natbib Warning: Citation `YarkoniEtAl2011' multiply defined.
+
+
+Package natbib Warning: Citation `PoldrackEtAl2008' multiply defined.
+
+
+Package natbib Warning: Citation `Botvinik-NezerEtAl2020' multiply defined.
+
+
+Package natbib Warning: Citation `YuanEtAl2023' multiply defined.
+
+
+Package natbib Warning: Citation `SaloEtAl2022' multiply defined.
+
+
+Package natbib Warning: Citation `SaloEtAl2023' multiply defined.
+
+
+Package natbib Warning: Citation `KissStrunk2006' multiply defined.
+
+
+Package natbib Warning: Citation `BirdEtAl2009' multiply defined.
+
+
+Package natbib Warning: Citation `M.F.Porter1980' multiply defined.
+
+
+LaTeX Warning: Label `LastBibItem' multiply defined.
+
+)
 \openout1 = `pocs2-project-ajb-revtex4.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -635,8 +687,7 @@ LaTeX Font Info:    ... okay on input line 60.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
 Package hyperref Info: Link coloring ON on input line 60.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -683,10 +734,8 @@ Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 60.
 
 
 (./pocs2-project-ajb.author.tex) (./pocs2-project-ajb.abs.tex
-
-Package xcolor Warning: Incompatible color definition on input line 1.
-
 LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
+
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -695,11 +744,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-(./pocs2-project-ajb.title.tex
-
-Package xcolor Warning: Incompatible color definition on input line 1.
-
-)
+(./pocs2-project-ajb.title.tex)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ifnextchar' on input line 89.
@@ -750,37 +795,53 @@ Package xcolor Warning: Incompatible color definition on input line 17.
 
 Package xcolor Warning: Incompatible color definition on input line 19.
 
-<figures/project/rankcount.pdf, id=63, 527.08919pt x 376.52669pt>
+<figures/project/rankcount.pdf, id=71, 527.08919pt x 376.52669pt>
 File: figures/project/rankcount.pdf Graphic file (type pdf)
 <use figures/project/rankcount.pdf>
-Package pdftex.def Info: figures/project/rankcount.pdf  used on input line 24.
+Package pdftex.def Info: figures/project/rankcount.pdf  used on input line 26.
 (pdftex.def)             Requested size: 510.0pt x 364.33417pt.
 
-Package xcolor Warning: Incompatible color definition on input line 27.
+Package xcolor Warning: Incompatible color definition on input line 38.
 
 
-Package xcolor Warning: Incompatible color definition on input line 35.
-
-
-Package xcolor Warning: Incompatible color definition on input line 37.
-
-
-Package xcolor Warning: Incompatible color definition on input line 37.
-
-
-Package xcolor Warning: Incompatible color definition on input line 45.
+Package xcolor Warning: Incompatible color definition on input line 38.
 
 [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-Package xcolor Warning: Incompatible color definition on input line 50.
+Package xcolor Warning: Incompatible color definition on input line 60.
 
 
-Package xcolor Warning: Incompatible color definition on input line 55.
+Package xcolor Warning: Incompatible color definition on input line 60.
 
 
-Package xcolor Warning: Incompatible color definition on input line 57.
+Package xcolor Warning: Incompatible color definition on input line 60.
 
-) (./pocs2-project-ajb.acknowledgments.tex) (./pocs2-project-ajb-revtex4.bbl
+
+Package xcolor Warning: Incompatible color definition on input line 60.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 62.
+
+[2 <./figures/project/rankcount.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 83.
+
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 8
+3.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
+
+
+Package xcolor Warning: Incompatible color definition on input line 83.
+
+
+Package xcolor Warning: Incompatible color definition on input line 89.
+
+(./pocs2-project-ajb-revtex4.bbl
 
 Package xcolor Warning: Incompatible color definition on input line 9.
 
@@ -793,7 +854,6 @@ Package xcolor Warning: Incompatible color definition on input line 85.
 
 Package xcolor Warning: Incompatible color definition on input line 102.
 
-[2 <./figures/project/rankcount.pdf>]
 
 Package xcolor Warning: Incompatible color definition on input line 112.
 
@@ -815,6 +875,7 @@ Package xcolor Warning: Incompatible color definition on input line 227.
 
 Package xcolor Warning: Incompatible color definition on input line 484.
 
+[3]
 
 Package xcolor Warning: Incompatible color definition on input line 501.
 
@@ -824,19 +885,185 @@ Package xcolor Warning: Incompatible color definition on input line 531.
 
 Package xcolor Warning: Incompatible color definition on input line 559.
 
-) [3] (./pocs2-project-ajb-revtex4.aux)
+
+Package xcolor Warning: Incompatible color definition on input line 569.
+
+)) (./pocs2-project-ajb.acknowledgments.tex) (./pocs2-project-ajb-revtex4.bbl
+
+Package xcolor Warning: Incompatible color definition on input line 9.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.Olivetti
+EtAl2020}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.56   {Hiszpanski}}]{OlivettiEtAl2020}
+                                       %
+
+Package xcolor Warning: Incompatible color definition on input line 69.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.PolakEtA
+l2023}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.73   \citenamefont {Morgan}}]{PolakEtAl2023}
+                                              %
+
+Package xcolor Warning: Incompatible color definition on input line 85.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.DunnEtAl
+2022}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.90   \citenamefont {Jain}}]{DunnEtAl2022}
+                                           %
+
+Package xcolor Warning: Incompatible color definition on input line 102.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.DuEtAl20
+19}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.104 ...},\ and\ \citenamefont {Hu}}]{DuEtAl2019}
+                                                  %
+
+Package xcolor Warning: Incompatible color definition on input line 112.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.Doshi-Ve
+lezKim2017}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.114   {Kim}(2017)}]{Doshi-VelezKim2017}
+                                         %
+
+Package xcolor Warning: Incompatible color definition on input line 120.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.ZhaoEtAl
+2024}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.124   \citenamefont {Du}}]{ZhaoEtAl2024}
+                                          %
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.MarekEtA
+l2022}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.151   {Dosenbach}}]{MarekEtAl2022}
+                                    %
+
+Package xcolor Warning: Incompatible color definition on input line 198.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.YarkoniE
+tAl2011}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.201 ... \citenamefont {Wager}}]{YarkoniEtAl2011}
+                                                  %
+
+Package xcolor Warning: Incompatible color definition on input line 212.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.Poldrack
+EtAl2008}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.216   {Nichols}}]{PoldrackEtAl2008}
+                                     %
+
+Package xcolor Warning: Incompatible color definition on input line 227.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.Botvinik
+-NezerEtAl2020}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.298   {Schonberg}}]{Botvinik-NezerEtAl2020}
+                                             %
+
+Package xcolor Warning: Incompatible color definition on input line 484.
+
+[4]
+pdfTeX warning (ext4): destination with the same identifier (name{cite.YuanEtAl
+2023}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.488   {Garavan}}]{YuanEtAl2023}
+                                 %
+
+Package xcolor Warning: Incompatible color definition on input line 501.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.SaloEtAl
+2022}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.509   \citenamefont {Laird}}]{SaloEtAl2022}
+                                             %
+
+Package xcolor Warning: Incompatible color definition on input line 531.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.SaloEtAl
+2023}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.539   {Laird}}]{SaloEtAl2023}
+                               %
+
+Package xcolor Warning: Incompatible color definition on input line 559.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.KissStru
+nk2006}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.561   {Strunk}(2006)}]{KissStrunk2006}
+                                        %
+
+Package xcolor Warning: Incompatible color definition on input line 569.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.BirdEtAl
+2009}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.571 ...nd\ \citenamefont {Loper}}]{BirdEtAl2009}
+                                                  %
+pdfTeX warning (ext4): destination with the same identifier (name{cite.M.F.Port
+er1980}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.579 ... {{M. F. Porter}}(1980)}]{M.F.Porter1980}
+                                                  %) [5]
+
+Package natbib Warning: There were multiply defined citations.
+
+(./pocs2-project-ajb-revtex4.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `pocs2-project-ajb-revtex4.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 05926F34B4CD7268D34A636FF7B05103;1299.
+(rerunfilecheck)             Checksum: D348BFD3DC99B17938889CDB780A1F46;1686.
  ) 
 Here is how much of TeX's memory you used:
- 15513 strings out of 478268
- 243131 string characters out of 5846347
- 574744 words of memory out of 5000000
- 33419 multiletter control sequences out of 15000+600000
- 478683 words of font info for 66 fonts, out of 8000000 for 9000
+ 15561 strings out of 478268
+ 243950 string characters out of 5846347
+ 584494 words of memory out of 5000000
+ 33453 multiletter control sequences out of 15000+600000
+ 479029 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,8n,95p,1965b,525s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,8n,95p,1965b,539s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
 /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
@@ -845,15 +1072,17 @@ sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/
 local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
 al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
 texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/tex
-live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texli
-ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive
-/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/20
-22/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on pocs2-project-ajb-revtex4.pdf (3 pages, 677815 bytes).
+live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
+ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texliv
+e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/
+2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
+022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/202
+2/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on pocs2-project-ajb-revtex4.pdf (5 pages, 648541 bytes).
 PDF statistics:
- 210 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 94 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 271 PDF objects out of 1000 (max. 8388607)
+ 220 compressed objects within 3 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 110 words of extra memory for PDF output out of 10000 (max. 10000000)
 

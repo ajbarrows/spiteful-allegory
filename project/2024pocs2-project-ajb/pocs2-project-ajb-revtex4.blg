@@ -1,6 +1,10 @@
 This is BibTeX, Version 0.99d (TeX Live 2022)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: pocs2-project-ajb-revtex4.aux
+Illegal, another \bibdata command---line 74 of file pocs2-project-ajb-revtex4.aux
+ : \bibdata
+ :         {pocs2-project-ajb-revtex4Notes,pocs2-project-ajb.bib}
+I'm skipping whatever remains of this command
 The style file: apsrev4-2.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -186,45 +190,45 @@ while executing---line 3516 of file apsrev4-2.bst
 ---they aren't the same literal types for entry ZhaoEtAl2024
 while executing---line 3516 of file apsrev4-2.bst
 Warning--missing journal in ZhaoEtAl2024
-You've used 15 entries,
+You've used 18 entries,
             6079 wiz_defined-function locations,
-            1738 strings with 24018 characters,
-and the built_in function-call counts, 42457 in all, are:
-= -- 1314
-> -- 2390
-< -- 384
-+ -- 692
-- -- 678
-* -- 8508
-:= -- 3101
-add.period$ -- 13
-call.type$ -- 15
-change.case$ -- 65
-chr.to.int$ -- 25
-cite$ -- 19
-duplicate$ -- 3695
-empty$ -- 2706
-format.name$ -- 1357
-if$ -- 8653
+            1763 strings with 24458 characters,
+and the built_in function-call counts, 45200 in all, are:
+= -- 1522
+> -- 2447
+< -- 395
++ -- 712
+- -- 690
+* -- 8904
+:= -- 3377
+add.period$ -- 16
+call.type$ -- 18
+change.case$ -- 79
+chr.to.int$ -- 28
+cite$ -- 22
+duplicate$ -- 3958
+empty$ -- 2921
+format.name$ -- 1390
+if$ -- 9209
 int.to.chr$ -- 1
-int.to.str$ -- 22
-missing$ -- 508
-newline$ -- 91
-num.names$ -- 39
-pop$ -- 1152
+int.to.str$ -- 25
+missing$ -- 546
+newline$ -- 100
+num.names$ -- 48
+pop$ -- 1261
 preamble$ -- 1
-purify$ -- 65
+purify$ -- 80
 quote$ -- 0
-skip$ -- 1208
+skip$ -- 1329
 stack$ -- 0
-substring$ -- 257
-swap$ -- 4461
-text.length$ -- 329
+substring$ -- 318
+swap$ -- 4690
+text.length$ -- 334
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 484
+type$ -- 522
 warning$ -- 5
-while$ -- 44
+while$ -- 52
 width$ -- 0
-write$ -- 165
-(There were 52 error messages)
+write$ -- 190
+(There were 53 error messages)
