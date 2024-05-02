@@ -223,6 +223,7 @@ def detect_corpus_in_sentences(text: tuple, corpus: dict, skip_words: set):
         sentences = nltk.sent_tokenize(abstract)
     except:
         return {study_id: 'invalid_abstract'}
+      
 
     # drop first and last sentence (!!)
     sentences = sentences[1:-1]
@@ -230,6 +231,7 @@ def detect_corpus_in_sentences(text: tuple, corpus: dict, skip_words: set):
     corp = set(corpus.values())
 
     detected = []
+    keywords = []
     for sentence in sentences:
 
         # turn sentences into tokens
@@ -245,19 +247,20 @@ def detect_corpus_in_sentences(text: tuple, corpus: dict, skip_words: set):
         
         # detect corpus words in sentence
         overlap = stems.intersection(corp)
-
+        
         if len(overlap) > 0:
-
-            # keywords = []
-            # for word in overlap:
-            #     for k, v in corpus.items():
-            #         if v == word:
-            #             keywords.append(k)
+            for word in overlap:
+                for k, v in corpus.items():
+                    if v == word:
+                        keywords.append(k)
             
-            # detected[sentence] = keywords
             detected.append(sentence)
+    
+    # reglue
+    detected = " ".join(detected)
+    out = {study_id: [keywords, detected]}
 
-    return {study_id: "".join(detected)}
+    return out
 
 def run_detect_parallel(abstract_dict, methods_corpus, skip_words):
 
@@ -270,13 +273,15 @@ def run_detect_parallel(abstract_dict, methods_corpus, skip_words):
     return r
 
 def gather_detected_output(df: pd.DataFrame, res: list):
-
+    
     out = {k: v for d in res for k, v in d.items()}
 
     detected = pd.DataFrame()
 
     detected['study_id'] = out.keys()
-    detected['det_sentences'] = out.values()
+    detected['keywords'] = [', '.join(v[0]) for v in out.values()]
+    detected['det_sentences'] = [v[1] for v in out.values()]
+
 
     df = (df
           .set_index('study_id')
