@@ -153,7 +153,8 @@ def combine_texts(ns: pd.DataFrame, nq: pd.DataFrame):
 def rankcount_from_abstracts(df: pd.DataFrame):
 
     # turn abstracts into single string, parse
-    abs = df['abstract'].str.cat()
+    # abs = df['abstract'].str.cat()
+    abs = df['det_sentences'].str.cat()
     parsed = parse_text(abs)
     rankcount = generic_sizerank_df(parsed)
 
@@ -258,7 +259,7 @@ def detect_corpus_in_sentences(text: tuple, corpus: dict, skip_words: set):
     
     # reglue
     detected = " ".join(detected)
-    out = {study_id: [keywords, detected]}
+    out = {study_id: [set(keywords), detected]}
 
     return out
 

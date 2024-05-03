@@ -3,6 +3,16 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 
+import matplotlib.pyplot as plt
+import seaborn as sns
+import scienceplots
+
+plt.style.use('science')
+
+plt.rcParams["xtick.minor.visible"] =  False
+plt.rcParams["ytick.minor.visible"] =  False
+plt.rcParams['legend.frameon'] = True
+
 def _count_publications(df: pd.DataFrame):
 
     df_agg = df.groupby('year').count()['study_id']
@@ -87,7 +97,9 @@ def make_rankcount_plot(df, first_n=10, n_words_sampled=10,
         showlegend=False,
         plot_bgcolor= "rgba(0, 0, 0, 0)",
         paper_bgcolor= "rgba(0, 0, 0, 0)",
-        title=dict(text='Rank-count distribution for content words')
+        margin=dict(l=20, r=20, t=20, b=20),
+        height=400
+        # title=dict(text='Rank-count distribution for content words')
     )
 
     fig = go.Figure(data=data, layout=layout)
@@ -95,18 +107,29 @@ def make_rankcount_plot(df, first_n=10, n_words_sampled=10,
 
 
 
-def plot_pubcounts(df, title="Neurosynth Publication Counts", 
-                   fpath='./data/08_reporting/project/ns_pubcount.pdf'):
+# def plot_pubcounts(df, title="Neurosynth Publication Counts", 
+#                    fpath='./data/08_reporting/project/ns_pubcount.pdf'):
+
+#     pubcounts = _count_publications(df)
+
+#     fig = px.line(pubcounts, x='year', y='study_id')
+#     fig.update_layout(
+#         title=title,
+#         xaxis_title='Year',
+#         yaxis_title='Publications',
+#         font_family="Computer Modern"
+#     )
+#     fig.write_image(fpath, width=700, height=500)
+
+def plot_pubcounts(df, fpath='./data/08_reporting/project/ns_pubcount.pdf'):
 
     pubcounts = _count_publications(df)
+    fig, ax = plt.subplots(figsize=(4, 2))
 
-    fig = px.line(pubcounts, x='year', y='study_id')
-    fig.update_layout(
-        title=title,
-        xaxis_title='Year',
-        yaxis_title='Publications',
-        font_family="Computer Modern"
-    )
-    fig.write_image(fpath, width=700, height=500)
+    ax.plot(pubcounts['year'], pubcounts['study_id'])
+    ax.set_ylabel('Publications')
+    ax.set_xlabel('Year')
+
+    plt.savefig(fpath)
 
 

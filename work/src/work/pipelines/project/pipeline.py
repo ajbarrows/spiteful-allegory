@@ -118,34 +118,34 @@ process_text = pipeline(
         )
 
 
-        # node(
-        #     rankcount_from_abstracts,
-        #     inputs='neurosynth_text',
-        #     outputs=['parsed', 'rankcount']
-        # ),
-        # node(
-        #     add_nltk_pos,
-        #     inputs=[
-        #         'rankcount',
-        #         'params:pos_to_keep',
-        #         'params:simple_verbs'
-        #     ],
-        #     outputs='rankcount_pos'
-        # )
     ]
 )
 
 
 generate_plots = pipeline(
-    [
+    [   
         node(
             plot_pubcounts,
             inputs='neurosynth_text',
             outputs=None
         ),
         node(
+            rankcount_from_abstracts,
+            inputs='detected_text',
+            outputs=['parsed', 'rankcount']
+        ),
+        node(
+            add_nltk_pos,
+            inputs=[
+                'rankcount',
+                'params:pos_to_keep',
+                'params:simple_verbs'
+            ],
+            outputs='rankcount_pos'
+        ),
+        node(
             make_rankcount_plot,
-            inputs='rankcount_pos',
+            inputs="rankcount_pos",
             outputs=None
         )
     ]

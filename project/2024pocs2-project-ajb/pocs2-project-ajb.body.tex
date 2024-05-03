@@ -12,45 +12,63 @@
 
 The emergence of ``big data'' and analysis techniques built to suit have prompted efforts toward building increasingly large data sets with the goal of uncovering new insights. Many such efforts focus on extracting numerical information from published works using automated methods \cite{OlivettiEtAl2020}. The emergence of large language models (LLMs) has, at least in some cases, accelerated the pace with which these data sets are compiled, as even general-purpose LLMs are shown to be remarkably effective at extracting relevant information \cite{PolakEtAl2023, DunnEtAl2022}. However, machine learning methods have been generally criticized for their lack of explainability, requiring novel and fairly complex solutions to build models which offer reproducible results \cite{DuEtAl2019, Doshi-VelezKim2017}. This is especially true for LLMs whose ability to perform well under a diversity of new conditions is unlike that of any traditional machine learning algorithm \cite{ZhaoEtAl2024}. It is therefore especially important that methods used to obtain information from previously-published work are transparent, with any implementation of machine learning-based automated extraction methods carefully justified and documented.
 
-\subsection{Neuroimaging Methods}
+\subsection{Neuroimaging methods}
 
 The field of neuroimaging suffers from a crisis of reproducibility, best documented in \cite{MarekEtAl2022}, which demonstrated that resolving individual differences when effect sizes are small often requires thousands of participants. Authors have built groundbreaking automated meta-analytic tools like \href{https://neurosynth.org/}{\texttt{Neurosynth}} \cite{YarkoniEtAl2011} to extract relevant information from each paper in their vast database of neuroimaging studies in order to make inferences about relationships between brain function and behavior. While a massive effort by any account, this technique is relatively simplistic, and risks erroneously connecting psychological constructs by identifying terms (e.g., attention, ADHD, depression) and functional magnetic resonance imaging (fMRI) image coordinates that appear in the same paper. This approach has the potential to lead to transformative work, but it also presents several key drawbacks. First, despite clear, published guidelines for reporting fMRI studies \cite{PoldrackEtAl2008}, fMRI analytical methods are far from harmonized, which could lead to large discrepancies in results \cite{Botvinik-NezerEtAl2020} all effects in analysis of brain-behavior associations, which suggests that many studies included in automated meta-analysis datasets may include spurious correlations. Third, although most brain-behavior fMRI studies to date employ mass univariate analyses in which each imaging unit of interest is independently assessed for evidence of task-related activation, authors are beginning to undertake multivariate analysis using brain activation as a predictor of behavior \cite[e.g.,][]{YuanEtAl2023}. Results from machine learning-based multivariate predictive models may not be easily represented on the cortical surface. 	
 
-The present work leverages natural language processing (NLP)  and the comprehensive set of fMRI-related publications compiled for use in \texttt{Neurosynth} \cite{YarkoniEtAl2011} to generate a comprehensive view of methods used in fMRI research. If successful, this approach could (1) inform which analytical strategies (e.g., pre-processing, variable and model selection, external validity estimates) are most often used, and under which conditions, and (2) identify which of these strategies are most effective. 
+\subsection{Topic modeling}
 
+Probabilistic summaries of document content through topic modeling is most often found in the form of latent Dirichlet allocation \cite[LDA;][]{Blei2003}, including the automated extraction of fMRI research topics using the Neurosynth dataset \cite{PoldrackEtAl2012}. However, embedded topic models (ETMs) are growing in popularity due to their facility with documents containing a large variety of words (i.e., heavy-tailed distributions) in which infrequently-appearing words may still contribute important meaning. The authors of the technique demonstrated strengths of ETMs seen in topic interpretability compared to LDA, and others have shown its effectiveness using only limited corpora \cite{GulEtAl2023}. At its core, ETMs use word embeddings, which represent individual words as vectors according to their meaning (i.e., context) such that similar words are close in low-dimensional space. ETMs combine these vector representations with the Bayesian LDA topic-assignment procedure to extract latent topics characterizing the space of documents.
 
-\todo{Introduce topic modeling...methinks}
+The present work leverages natural language processing (NLP) and the comprehensive set of fMRI-related publications compiled for use in \texttt{Neurosynth} \cite{YarkoniEtAl2011} to generate a comprehensive view of methods used in fMRI research. If successful, this approach could (1) inform which analytical strategies (e.g., pre-processing, variable and model selection, external validity estimates) are most often used, and under which conditions, and (2) identify which of these strategies are most effective. 
 
-\begin{figure*}[tp!]
-  \centering	
-    \includegraphics[width=\textwidth]{figures/project/rankcount.pdf}  
-  \caption{
-    \todo{Add caption, and replace POS with something else}
-  }
-  \label{fig:papertag.}
-\end{figure*}
 
 \section{Description of data sets}
 \label{sec:papertag.data}
 
-\todo{Describe Neurosynth}
 
-The Neurosynth project \cite{YarkoniEtAl2011}, originally built for automated meta analysis of neuroimaging studies, contains 
+The Neurosynth project \cite{YarkoniEtAl2011}, originally built for automated meta analysis of neuroimaging studies, contains data and metadata for 14,371 studies as of this writing. According to the project's website, this database continuously grows, and represents a significant fraction of all fMRI studies. Studies are included from journals for which the project's authors have written filtering algorithms, if they are offered in HTML format, and if they include at least one detectable neuroimaging coordinate (see \cite{YarkoniEtAl2011} for details). 
 
-Abstracts for all texts contained in the most recent Neurosynth and Neuroquery databases were downloaded using NiMARE, a Python package meant for neuroimaging study meta-analysis \cite{SaloEtAl2022, SaloEtAl2023}. Combining abstracts from these sources resulted in texts from 19,148 publications, uniquely identified by their PubMed ID (PMID). 
+Texts for the current investigation were obtained using NiMARE, a Python package meant for neuroimaging study meta-analysis \cite{SaloEtAl2022, SaloEtAl2023}, by querying a PubMed API and providing each Neurosynth entry's unique PubMed ID. 
+
+\begin{figure}[!tp]
+	\centering
+	\includegraphics[width=\columnwidth]{figures/project/ns_pubcount.pdf}
+	\caption{Publications in the Neurosynth dataset for which abstracts were available through the PubMed API (n=14,369)}
+	\label{fig:papertag.pubcounts}
+	\end{figure}
+
 
 \section{Model}
 \label{sec:papertag.model}
 
-\todo{potentially remove}
+
+\begin{figure}[tp!]
+	\centering
+	\includegraphics[width=\columnwidth]{figures/project/terms_over_time}
+	\caption{List of neuroimaging methods-related terms manually generated from a sample of 50 abstracts in the Neurosynth dataset and the percent of abstracts in each year where terms appeared at least once. Abstracts were pre-processed in an effort to isolate methods-related sentences (see section \ref{sec:papertag.methods} for details).}
+	\label{fig:papertag.corpus}
+\end{figure}
 
 \section{Results}
 \label{sec:papertag.results}
 
 \todo{Explain what we found}
 
+\begin{figure*}[]
+	\centering	
+	\includegraphics[width=\textwidth]{figures/project/rankcount.pdf}  
+	\caption{Rank-count distribution for methods-related corpus extracted using the list of words shown in Figure \ref{fig:papertag.corpus}. The 10 most commonly-used terms, the least common term, and a random selection of ``middle'' terms are labeled. Parts of speech were assigned for purposes of dataset exploration using NLTK's \texttt{pos\_tag} function \cite{BirdEtAl2009}.}
+	\label{fig:papertag.rankcount}
+\end{figure*}
+
+\todo{Add limitations}
+% not using full text
+
 \section{Concluding remarks}
 \label{sec:papertag.concludingremarks}
+
+
 
 \todo{Bring it home.}
 
@@ -59,34 +77,36 @@ Abstracts for all texts contained in the most recent Neurosynth and Neuroquery d
 
 \subsection{Methods-related text extraction}
 
-Polak et al. (2023) \cite{PolakEtAl2023} present a straightforward framework for text extraction using NLP, which this present work follows in part, replacing zero-shot classification (step 2) with a hands-on approach. The author randomly selected sample of 50 abstracts from the Neurosynth dataset and manually constructed a list of words and phrases ostensibly related to methods used in neuroimaging studies (see Table \ref{tab:corpus}). Next, the corpus of abstracts obtained from the Neurosynth dataset was divided into sentences using the \texttt{PunktSentenceTokenizer} \cite{KissStrunk2006} implemented in the Natural Language Toolkit (NLTK) Python module \cite{BirdEtAl2009}, and each sentence was processed using regular expressions to harmonize differing conventions of English writing (e.g., dashes, extra white spaces), and to separate the abstracts into collections of 1-grams (i.e., tokens). 
+Polak et al. (2023) \cite{PolakEtAl2023} present a straightforward framework for text extraction using NLP, which this present work follows in part, replacing zero-shot classification (step 2) with a hands-on approach. The author randomly selected sample of 50 abstracts from the Neurosynth dataset and manually constructed a list of words and phrases ostensibly related to methods used in neuroimaging studies (see Table \ref{fig:papertag.corpus}). Next, the corpus of abstracts obtained from the Neurosynth dataset was divided into sentences using the \texttt{PunktSentenceTokenizer} \cite{KissStrunk2006} implemented in the Natural Language Toolkit (NLTK) Python module \cite{BirdEtAl2009}, and each sentence was processed using regular expressions to harmonize differing conventions of English writing (e.g., dashes, extra white spaces), and to separate the abstracts into collections of 1-grams (i.e., tokens). 
 
-\begin{table}[]
-	\begin{tabular}{lll}
-		amplitude   & event            & one-back      \\
-		analysis    & experiment       & paradigm      \\
-		anatomical  & FC               & projected     \\
-		ANCOVA      & fractional       & regressor     \\
-		anisotropy  & galvanic         & regularized   \\
-		ANOVA       & GLM              & resting-state \\
-		bivariate   & linear           & ROI           \\
-		BOLD        & machine learning & seed-based    \\
-		clinical    & mean             & sensitivity   \\
-		contrast    & microstructural  & specificity   \\
-		correlation & mixed effects    & structural    \\
-		density     & ML               & tensor        \\
-		diffusion   & morphometry      & voxel-wise    \\
-		dot-probe   & network          & whole brain  
-	\end{tabular}
-	\caption{List of neuroimaging methods-related terms manually generated from a sample of 50 abstracts in the Neurosynth dataset.}
-	\label{tab:corpus}
-\end{table}
+%\begin{table}[]
+%	\begin{tabular}{lll}
+%		amplitude   & event            & one-back      \\
+%		analysis    & experiment       & paradigm      \\
+%		anatomical  & FC               & projected     \\
+%		ANCOVA      & fractional       & regressor     \\
+%		anisotropy  & galvanic         & regularized   \\
+%		ANOVA       & GLM              & resting-state \\
+%		bivariate   & linear           & ROI           \\
+%		BOLD        & machine learning & seed-based    \\
+%		clinical    & mean             & sensitivity   \\
+%		contrast    & microstructural  & specificity   \\
+%		correlation & mixed effects    & structural    \\
+%		density     & ML               & tensor        \\
+%		diffusion   & morphometry      & voxel-wise    \\
+%		dot-probe   & network          & whole brain  
+%	\end{tabular}
+%	\caption{List of neuroimaging methods-related terms manually generated from a sample of 50 abstracts in the Neurosynth dataset.}
+%	\label{tab:corpus}
+%\end{table}
 
-In an effort to avoid mismatches which could arise from term detection among differing parts of speech for words that convey the same meaning, the Porter stemming algorithm \cite{M.F.Porter1980} was used to reduce both the scientific abstract sentences and the list of methods terms to fundamental word stems. Because the current paper is concerned specifically with neuroimaging \emph{methods}, the first and last sentences of each abstract were discarded (assuming neither contained a description of the corresponding paper's procedures), as were sentences prefaced with the terms \{results, conclusions, or significance statement\}. Finally, a parallelized Python function detected the presence of any terms in Table \ref{tab:corpus} and recorded those sentences in a tabular dataset alongside the original abstracts. 
+
+
+In an effort to avoid mismatches which could arise from term detection among differing parts of speech for words that convey the same meaning, the Porter stemming algorithm \cite{M.F.Porter1980} was used to reduce both the scientific abstract sentences and the list of methods terms to fundamental word stems. Because the current paper is concerned specifically with neuroimaging \emph{methods}, the first and last sentences of each abstract were discarded (assuming neither contained a description of the corresponding paper's procedures), as were sentences prefaced with the terms \{results, conclusions, or significance statement\}. Finally, a parallelized Python function detected the presence of any terms in Table \ref{fig:papertag.corpus} and recorded those sentences in a tabular dataset alongside the original abstracts. 
 
 \subsection{Topic evaluation}
 
-\todo{write topic modeling procedure}s
+\todo{write topic modeling procedure}
 
 All code is available at \href{https://github.com/ajbarrows/spiteful-allegory}{https://github.com/ajbarrows/spiteful-allegory}.
 
@@ -101,5 +121,5 @@ All code is available at \href{https://github.com/ajbarrows/spiteful-allegory}{h
 %Having a bit of a challenge pulling together abstracts with some metadata. Theoretically, things in the \texttt{Neurosynth} and \texttt{Neuroquery} datasets are identified by their PubMed IDs, but when I try to request metadata on those PubMed IDs, many entries come back empty. A bit head scratching. In any case, I think some ordering is important. I'll keep at it.
 
 
-\bibliography{pocs2-project-ajb}
+%\bibliography{pocs2-project-ajb}
 
