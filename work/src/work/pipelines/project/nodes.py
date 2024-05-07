@@ -4,9 +4,17 @@ import pandas as pd
 import numpy as np
 import requests
 import xmltodict
+from bertopic import BERTopic
+
 import nltk
 from nltk.stem import PorterStemmer
+from nltk import word_tokenize
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
 from joblib import Parallel, delayed, cpu_count
+
+from sklearn.decomposition import LatentDirichletAllocation
+from sklearn.feature_extraction.text import CountVectorizer
 
 from nimare.extract import download_abstracts, fetch_neuroquery, fetch_neurosynth
 from nimare.io import convert_neurosynth_to_dataset
@@ -291,3 +299,132 @@ def gather_detected_output(df: pd.DataFrame, res: list):
           )
 
     return df
+
+def _process_text(input_text):
+
+    # 1-grams
+    tokens = word_tokenize(input_text)
+
+    # remove stop words
+    stop_words = set(stopwords.words('english'))
+
+    # condense words into lemma
+    lem = WordNetLemmatizer()
+
+    # execute
+    text = [lem.lemmatize(t.lower()) for t in tokens if t not in stop_words]
+
+    # recycle
+    out = " ".join(text)
+
+    return out
+
+
+def add_cleaned_text_column(df: pd.DataFrame, input_col = 'det_sentences'):
+    
+    df = df[df[input_col] != '']
+    df['cleaned'] = df[input_col].apply(_process_text)
+    docs = df['cleaned'].to_list()
+
+    return df, docs
+
+def fit_BERTopic_model(docs: list):
+
+    topic_model = BERTopic()
+    topics, probs = topic_model.fit_transform(docs)
+
+    return topic_model
+
+def fit_lda_model(docs: list):
+
+    vectorizer = CountVectorizer()
+    X = vectorizer.fit_transform(docs)
+
+    lda = LatentDirichletAllocation(n_components=10)
+    lda_fit= lda.fit_transform(X)
+
+    return lda, vectorizer
+
+def extract_BERTopic_topics(mod, timepoint=None):
+
+    topics = mod.get_topics()
+    topic_idx = list(topics)[1:]
+    first_n_topics = {k:topics[k] for k in topic_idx}
+
+    bert_topics = pd.DataFrame()
+
+    for k, v in first_n_topics.items():
+        tmp = pd.DataFrame()
+        topic = 'Topic ' + str(k)
+        term = [t[0] for t in v]
+        weight = [t[1] for t in v]
+
+
+        tmp['term'] = term
+        tmp['weight'] = weight
+        tmp['topic'] = topic
+
+        bert_topics = pd.concat([bert_topics, tmp])
+
+    bert_topics['model'] = 'BERTopic'
+
+    if timepoint:
+        bert_topics['timepoint'] = timepoint
+
+    return bert_topics
+
+def extract_LDA_topics(mod, vectorizer, timepoint=None):
+
+    lda_topics = pd.DataFrame()
+    feature_names = vectorizer.get_feature_names_out()
+    for topic_idx, topic in enumerate(mod.components_):
+        top_features_ind = topic.argsort()[::-1]
+        top_features = feature_names[top_features_ind]
+        weights = topic[top_features_ind]
+
+        tmp = pd.DataFrame()
+        topic = 'Topic ' + str(topic_idx)
+
+        tmp['term'] = top_features
+        tmp['weight'] = weights
+        tmp['topic'] = topic
+
+        lda_topics = pd.concat([lda_topics, tmp])
+
+    lda_topics['model'] = 'LDA'
+
+    if timepoint:
+        lda_topics['timepoint'] = timepoint
+        
+    return lda_topics
+
+def join_output(*dfs):
+    return pd.concat(dfs)
+
+def fit_models_by_group(df: pd.DataFrame, year_map: dict):
+
+    df['year_group'] = df['year']
+    df['year_group'] = df['year_group'].replace(year_map)
+
+    lda_models = {}
+    bert_models = {}
+    output = pd.DataFrame()
+    grouped = df.groupby('year_group')
+    for group_name, df in grouped:
+        
+        df, docs = add_cleaned_text_column(df)
+
+        topic_model = fit_BERTopic_model(docs)
+        lda, vectorizer = fit_lda_model(docs)
+
+        bert_topics = extract_BERTopic_topics(topic_model, timepoint=group_name)
+        lda_topics = extract_LDA_topics(lda, vectorizer, timepoint=group_name)
+
+        tmp = join_output(bert_topics, lda_topics)
+
+        output = pd.concat([output, tmp])
+
+        lda_models[group_name] = (lda, vectorizer)
+        bert_models[group_name] = topic_model
+
+    return output, lda_models, bert_models

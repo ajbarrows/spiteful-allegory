@@ -80,7 +80,6 @@ random_abstracts:
   type: pandas.CSVDataSet
   filepath: data/03_primary/random_abstracts.csv
 
-
 rankcount:
   type: pandas.ParquetDataset
   filepath: data/03_primary/rankcount.parquet
@@ -95,3 +94,25 @@ methods_corpus:
 detected_text:
   type: pandas.ParquetDataSet
   filepath: data/04_feature/detected_text.parquet
+
+
+# model output
+lda_model:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/lda_model_overall.pkl
+bert_model:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/bert_model_verall.pkl
+overall_topics:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/overall_topics.csv
+
+lda_group_models:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/lda_group_models.pkl
+bert_group_models:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/bert_group_models.pkl
+topics_by_year:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/topics_by_year.csv

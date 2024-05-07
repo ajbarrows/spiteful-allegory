@@ -11,6 +11,7 @@ def register_pipelines() -> dict[str, Pipeline]:
         'download_data': download_data,
         # 'process_data': merge_neurodata
         'process_data': process_text,
+        'fit_model': model_pipeline,
         'generate_plots': generate_plots
     }
     return pipelines

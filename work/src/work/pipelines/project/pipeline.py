@@ -121,6 +121,46 @@ process_text = pipeline(
     ]
 )
 
+model_pipeline = pipeline(
+    [
+        node(
+            add_cleaned_text_column,
+            inputs='detected_text',
+            outputs=['ns_prepped', 'docs_prepped']
+        ),
+        node(
+            fit_BERTopic_model,
+            inputs='docs_prepped',
+            outputs='BERTopic_model'
+        ),
+        node(
+            extract_BERTopic_topics,
+            inputs=['BERTopic_model'],
+            outputs='BERTopic_topics'
+        ),
+        node(
+            fit_lda_model,
+            inputs='docs_prepped',
+            outputs=['lda_model', 'vectorizer']
+        ),
+        node(
+            extract_LDA_topics,
+            inputs=['lda_model', 'vectorizer'],
+            outputs='lda_topics'
+        ),
+        node(
+            join_output,
+            inputs=['BERTopic_topics', 'lda_topics'],
+            outputs='overall_topics'
+        ),
+        node(
+            fit_models_by_group,
+            inputs=['detected_text', 'params:year_map'],
+            outputs=['topics_by_year', 'lda_group_models', 'bert_group_models']
+        )
+    ]
+)
+
 
 generate_plots = pipeline(
     [   
