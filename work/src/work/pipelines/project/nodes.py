@@ -348,6 +348,7 @@ def fit_lda_model(docs: list):
 def extract_BERTopic_topics(mod, timepoint=None):
 
     topics = mod.get_topics()
+    frequencies = mod.get_topic_freq()
     topic_idx = list(topics)[1:]
     first_n_topics = {k:topics[k] for k in topic_idx}
 
@@ -358,11 +359,13 @@ def extract_BERTopic_topics(mod, timepoint=None):
         topic = 'Topic ' + str(k)
         term = [t[0] for t in v]
         weight = [t[1] for t in v]
+        frequency = frequencies['Count'].iloc[k]
 
 
         tmp['term'] = term
         tmp['weight'] = weight
         tmp['topic'] = topic
+        tmp['frequency'] = frequency
 
         bert_topics = pd.concat([bert_topics, tmp])
 

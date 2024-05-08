@@ -187,7 +187,33 @@ generate_plots = pipeline(
             make_rankcount_plot,
             inputs="rankcount_pos",
             outputs=None
+        ),
+        node(
+            get_top_n_topics,
+            inputs='overall_topics',
+            outputs='top_n_topics'
+        ),
+        node(
+            split_models,
+            inputs='overall_topics',
+            outputs=['bert', 'lda']
+        ),
+        node(
+            produce_top_n_topics,
+            inputs=['bert', 'lda', 'top_n_topics'],
+            outputs=None
+        ),
+        node(
+            produce_topics_by_year,
+            inputs='topics_by_year',
+            outputs=None
+        ),
+        node(
+            produce_appendix,
+            inputs=['topics_by_year', 'top_n_topics'],
+            outputs=None
         )
+
     ]
 
 )

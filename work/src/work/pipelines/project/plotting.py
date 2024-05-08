@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 import plotly.express as px
@@ -132,4 +133,102 @@ def plot_pubcounts(df, fpath='./data/08_reporting/project/ns_pubcount.pdf'):
 
     plt.savefig(fpath)
 
+def get_top_n_topics(df, MAX_TOPICS = 10):
+    topics = pd.unique(df['topic'])
+    return(topics[:MAX_TOPICS])
+
+def split_models(df):
+
+    bert = df[df['model'] == 'BERTopic']
+    lda =  df[df['model'] == 'LDA']
+
+    return bert, lda
+
+def filter_data(bert, lda, topic):
+
+    bert_top = bert[bert['topic'] == topic].sort_values('weight')
+    lda_top = lda[lda['topic'] == topic].iloc[:10].sort_values('weight')
+
+    return bert_top, lda_top
+
+def filter_timepoint(df, timepoint):
+    
+    bert = df[(df['model'] == 'BERTopic') & (df['timepoint'] == timepoint)]
+    lda = df[(df['model'] == 'LDA') & (df['timepoint'] == timepoint)]
+
+    return bert, lda
+
+def produce_top_n_topics(bert, lda, top_n_topics, fpath='./data/08_reporting/project/top_n_topics.pdf'):
+
+    fig = plt.figure(figsize=(14, 12))
+    subfigs = fig.subfigures(5, 2, hspace=0, wspace=0.1)
+
+    for subfig, topic, in zip(subfigs.flat, top_n_topics):
+
+        bert_top, lda_top = filter_data(bert, lda, topic)
+
+        axs = subfig.subplot_mosaic([['top', 'top'], ['bottom_left', 'bottom_right']], gridspec_kw={'height_ratios': [0.05, 10]})
+
+        ax = axs['top']
+        ax.text(0.5, -0.1, topic, ha='center', va='center')
+        ax.set_axis_off()
+
+        ax = axs["bottom_left"]
+        ax.barh(lda_top['term'], lda_top['weight'], color='skyblue')
+        ax.set_xticks([])
+        ax.set_xlabel('LDA')
+
+        ax = axs["bottom_right"]
+        ax.barh(bert_top['term'], bert_top['weight'] * -1, color='mediumorchid')
+        ax.yaxis.tick_right()
+        ax.set_xticks([])
+        ax.set_xlabel('BERTopic')
+
+    plt.savefig(fpath, bbox_inches='tight')
+
+
+def produce_topics_by_year(df, topic='Topic 0', fpath='./data/08_reporting/project/topics_by_timepoint.pdf'):
+
+    fig = plt.figure(figsize=(14, 6))
+    subfigs = fig.subfigures(2, 2, hspace=0, wspace=0.1)
+
+    timepoints = pd.unique(df['timepoint'])
+
+    for subfig, timepoint, in zip(subfigs.flat, timepoints):
+
+        bert, lda = filter_timepoint(df, timepoint)
+        bert_top, lda_top = filter_data(bert, lda, topic)
+
+        axs = subfig.subplot_mosaic([['top', 'top'], ['bottom_left', 'bottom_right']], gridspec_kw={'height_ratios': [0.05, 10]})
+
+        ax = axs['top']
+        title = "Years " + timepoint
+        ax.text(0.5, -0.1, title, ha='center', va='center')
+        ax.set_axis_off()
+
+        ax = axs["bottom_left"]
+        ax.barh(lda_top['term'], lda_top['weight'], color='skyblue')
+        ax.set_xticks([])
+        ax.set_xlabel('LDA')
+
+        ax = axs["bottom_right"]
+        ax.barh(bert_top['term'], bert_top['weight'] * -1, color='mediumorchid')
+        ax.yaxis.tick_right()
+        ax.set_xticks([])
+        ax.set_xlabel('BERTopic')
+
+    plt.savefig(fpath, bbox_inches='tight')
+
+def produce_appendix(df, top_n_topics, fpath = './data/08_reporting/project/appendix/'):
+
+    timepoints = pd.unique(df['timepoint'])
+
+    
+    for timepoint in timepoints:
+        fname = timepoint + '.pdf'
+        fdir = os.path.join(fpath, fname)
+
+        bert, lda = filter_timepoint(df, timepoint)
+        produce_top_n_topics(bert, lda, top_n_topics, fpath=fdir)
+        
 
