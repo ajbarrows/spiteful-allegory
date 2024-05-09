@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.30)  9 MAY 2024 15:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.30)  9 MAY 2024 16:35
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1282,29 +1282,29 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (./pres.nav)
-<figures/graphics/larner.jpg, id=29, 196.5744pt x 45.5301pt>
+<figures/graphics/larner.jpg, id=33, 196.5744pt x 45.5301pt>
 File: figures/graphics/larner.jpg Graphic file (type jpg)
 <use figures/graphics/larner.jpg>
 Package pdftex.def Info: figures/graphics/larner.jpg  used on input line 110.
 (pdftex.def)             Requested size: 85.35826pt x 19.77069pt.
-<figures/graphics/nerve.jpg, id=30, 1470.49374pt x 263.98625pt>
+<figures/graphics/nerve.jpg, id=34, 1470.49374pt x 263.98625pt>
 File: figures/graphics/nerve.jpg Graphic file (type jpg)
 <use figures/graphics/nerve.jpg>
 Package pdftex.def Info: figures/graphics/nerve.jpg  used on input line 110.
 (pdftex.def)             Requested size: 85.35826pt x 15.32289pt.
-<figures/graphics/complexsystems.png, id=31, 542.025pt x 453.695pt>
+<figures/graphics/complexsystems.png, id=35, 542.025pt x 453.695pt>
 File: figures/graphics/complexsystems.png Graphic file (type png)
 <use figures/graphics/complexsystems.png>
 Package pdftex.def Info: figures/graphics/complexsystems.png  used on input lin
 e 110.
 (pdftex.def)             Requested size: 56.9055pt x 47.62898pt.
-<figures/graphics/complexbrain.png, id=33, 523.9575pt x 467.7475pt>
+<figures/graphics/complexbrain.png, id=37, 523.9575pt x 467.7475pt>
 File: figures/graphics/complexbrain.png Graphic file (type png)
 <use figures/graphics/complexbrain.png>
 Package pdftex.def Info: figures/graphics/complexbrain.png  used on input line 
 110.
 (pdftex.def)             Requested size: 56.9055pt x 50.79575pt.
-<figures/graphics/complexwhale.png, id=39, 495.8525pt x 343.2825pt>
+<figures/graphics/complexwhale.png, id=44, 495.8525pt x 343.2825pt>
 File: figures/graphics/complexwhale.png Graphic file (type png)
 <use figures/graphics/complexwhale.png>
 Package pdftex.def Info: figures/graphics/complexwhale.png  used on input line 
@@ -1362,7 +1362,7 @@ thkerncmss.
  <./figures/graphics/complexwhale.png> <./figures/graphics/larner.jpg> <./figur
 es/graphics/nerve.jpg> <./figures/graphics/complexsystems.png> <./figures/graph
 ics/complexbrain.png>]
-<figures/papers/Marek22.pdf, id=57, 597.50829pt x 793.83177pt>
+<figures/papers/Marek22.pdf, id=63, 597.50829pt x 793.83177pt>
 File: figures/papers/Marek22.pdf Graphic file (type pdf)
 <use figures/papers/Marek22.pdf>
 Package pdftex.def Info: figures/papers/Marek22.pdf  used on input line 138.
@@ -1375,12 +1375,12 @@ Package pdftex.def Info: figures/graphics/complexwhale.png  used on input line
  [2
 
  <./figures/papers/Marek22.pdf>]
-<figures/neurosynth.png, id=137, 586.19pt x 104.39pt>
+<figures/neurosynth.png, id=144, 586.19pt x 104.39pt>
 File: figures/neurosynth.png Graphic file (type png)
 <use figures/neurosynth.png>
 Package pdftex.def Info: figures/neurosynth.png  used on input line 182.
 (pdftex.def)             Requested size: 92.47145pt x 16.46698pt.
-<figures/neuroquery.png, id=139, 198.7425pt x 50.1875pt>
+<figures/neuroquery.png, id=146, 198.7425pt x 50.1875pt>
 File: figures/neuroquery.png Graphic file (type png)
 <use figures/neuroquery.png>
 Package pdftex.def Info: figures/neuroquery.png  used on input line 182.
@@ -1441,7 +1441,7 @@ Package pdftex.def Info: figures/graphics/complexwhale.png  used on input line
  [8
 
 ]
-<figures/project/top_n_topics_pres.pdf, id=237, 1027.94415pt x 503.84053pt>
+<figures/project/top_n_topics_pres.pdf, id=250, 1027.94415pt x 503.84053pt>
 File: figures/project/top_n_topics_pres.pdf Graphic file (type pdf)
 <use figures/project/top_n_topics_pres.pdf>
 Package pdftex.def Info: figures/project/top_n_topics_pres.pdf  used on input l
@@ -1455,7 +1455,7 @@ Package pdftex.def Info: figures/graphics/complexwhale.png  used on input line
  [9
 
  <./figures/project/top_n_topics_pres.pdf>]
-<figures/project/topics_by_timepoint.pdf, id=253, 1013.18405pt x 407.49846pt>
+<figures/project/topics_by_timepoint.pdf, id=267, 1013.18405pt x 407.49846pt>
 File: figures/project/topics_by_timepoint.pdf Graphic file (type pdf)
 <use figures/project/topics_by_timepoint.pdf>
 Package pdftex.def Info: figures/project/topics_by_timepoint.pdf  used on input
@@ -1519,20 +1519,14 @@ See the caption package documentation for explanation.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 3.0pt have occurred.
 
-
-Package rerunfilecheck Warning: File `pres.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `pres.out':
-(rerunfilecheck)             Before: B10340FB32F829E60BFA90ADB4FE18FC;352
-(rerunfilecheck)             After:  F65C089E9F19A2B16A40041884CE6AD5;445.
+Package rerunfilecheck Info: File `pres.out' has not changed.
+(rerunfilecheck)             Checksum: F65C089E9F19A2B16A40041884CE6AD5;445.
  ) 
 Here is how much of TeX's memory you used:
- 33653 strings out of 478268
- 708224 string characters out of 5846347
+ 33659 strings out of 478268
+ 708276 string characters out of 5846347
  951338 words of memory out of 5000000
- 51119 multiletter control sequences out of 15000+600000
+ 51125 multiletter control sequences out of 15000+600000
  487158 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,532b,819s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1547,10 +1541,10 @@ local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/
 local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/l
 ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
 cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on pres.pdf (13 pages, 1906040 bytes).
+Output written on pres.pdf (13 pages, 1906777 bytes).
 PDF statistics:
- 356 PDF objects out of 1000 (max. 8388607)
- 261 compressed objects within 3 object streams
+ 372 PDF objects out of 1000 (max. 8388607)
+ 277 compressed objects within 3 object streams
  41 named destinations out of 1000 (max. 500000)
- 191 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 199 words of extra memory for PDF output out of 10000 (max. 10000000)
 
