@@ -1,1 +1,1 @@
-\todo{Add a title that captures the paper's story} 
+Semi-supervised text extraction helps describe methodological approaches in neuroimaging research 

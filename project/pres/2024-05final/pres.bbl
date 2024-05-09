@@ -1,0 +1,97 @@
+\begin{thebibliography}{1}
+
+\bibitem{MarekEtAl2022}
+S.~Marek, B.~{Tervo-Clemmens}, F.~J. Calabro, D.~F. Montez, B.~P. Kay, A.~S.
+  Hatoum, M.~R. Donohue, W.~Foran, R.~L. Miller, T.~J. Hendrickson, S.~M.
+  Malone, S.~Kandala, E.~Feczko, O.~{Miranda-Dominguez}, A.~M. Graham, E.~A.
+  Earl, A.~J. Perrone, M.~Cordova, O.~Doyle, L.~A. Moore, G.~M. Conan,
+  J.~Uriarte, K.~Snider, B.~J. Lynch, J.~C. Wilgenbusch, T.~Pengo, A.~Tam,
+  J.~Chen, D.~J. Newbold, A.~Zheng, N.~A. Seider, A.~N. Van, A.~Metoki, R.~J.
+  Chauvin, T.~O. Laumann, D.~J. Greene, S.~E. Petersen, H.~Garavan, W.~K.
+  Thompson, T.~E. Nichols, B.~T.~T. Yeo, D.~M. Barch, B.~Luna, D.~A. Fair, and
+  N.~U.~F. Dosenbach.
+\newblock Reproducible brain-wide association studies require thousands of
+  individuals.
+\newblock {\em Nature}, 603(7902):654--660, Mar. 2022.
+
+\bibitem{Nuzzo}
+R.~Nuzzo.
+\newblock P values, the `gold standard' of statistical validity, are not as
+  reliable as many scientists assume.
+
+\bibitem{Hawkins2004}
+D.~M. Hawkins.
+\newblock The {{Problem}} of {{Overfitting}}.
+\newblock {\em Journal of Chemical Information and Computer Sciences},
+  44(1):1--12, Jan. 2004.
+
+\bibitem{Bishop2020}
+D.~Bishop.
+\newblock How scientists can stop fooling themselves over statistics.
+\newblock {\em Nature}, 584(7819):9--9, Aug. 2020.
+
+\bibitem{Botvinik-NezerEtAl2020}
+R.~{Botvinik-Nezer}, F.~Holzmeister, C.~F. Camerer, A.~Dreber, J.~Huber,
+  M.~Johannesson, M.~Kirchler, R.~Iwanir, J.~A. Mumford, R.~A. Adcock,
+  P.~Avesani, B.~M. Baczkowski, A.~Bajracharya, L.~Bakst, S.~Ball, M.~Barilari,
+  N.~Bault, D.~Beaton, J.~Beitner, R.~G. Benoit, R.~M. W.~J. Berkers, J.~P.
+  Bhanji, B.~B. Biswal, S.~{Bobadilla-Suarez}, T.~Bortolini, K.~L. Bottenhorn,
+  A.~Bowring, S.~Braem, H.~R. Brooks, E.~G. Brudner, C.~B. Calderon, J.~A.
+  Camilleri, J.~J. Castrellon, L.~Cecchetti, E.~C. Cieslik, Z.~J. Cole,
+  O.~Collignon, R.~W. Cox, W.~A. Cunningham, S.~Czoschke, K.~Dadi, C.~P. Davis,
+  A.~D. Luca, M.~R. Delgado, L.~Demetriou, J.~B. Dennison, X.~Di, E.~W. Dickie,
+  E.~Dobryakova, C.~L. Donnat, J.~Dukart, N.~W. Duncan, J.~Durnez, A.~Eed,
+  S.~B. Eickhoff, A.~Erhart, L.~Fontanesi, G.~M. Fricke, S.~Fu, A.~Galv{\'a}n,
+  R.~Gau, S.~Genon, T.~Glatard, E.~Glerean, J.~J. Goeman, S.~A.~E. Golowin,
+  C.~{Gonz{\'a}lez-Garc{\'i}a}, K.~J. Gorgolewski, C.~L. Grady, M.~A. Green,
+  J.~F. Guassi~Moreira, O.~Guest, S.~Hakimi, J.~P. Hamilton, R.~Hancock,
+  G.~Handjaras, B.~B. Harry, C.~Hawco, P.~Herholz, G.~Herman, S.~Heunis,
+  F.~Hoffstaedter, J.~Hogeveen, S.~Holmes, C.-P. Hu, S.~A. Huettel, M.~E.
+  Hughes, V.~Iacovella, A.~D. Iordan, P.~M. Isager, A.~I. Isik, A.~Jahn, M.~R.
+  Johnson, T.~Johnstone, M.~J.~E. Joseph, A.~C. Juliano, J.~W. Kable,
+  M.~Kassinopoulos, C.~Koba, X.-Z. Kong, T.~R. Koscik, N.~E. Kucukboyaci, B.~A.
+  Kuhl, S.~Kupek, A.~R. Laird, C.~Lamm, R.~Langner, N.~Lauharatanahirun,
+  H.~Lee, S.~Lee, A.~Leemans, A.~Leo, E.~Lesage, F.~Li, M.~Y.~C. Li, P.~C. Lim,
+  E.~N. Lintz, S.~W. Liphardt, A.~B. Losecaat~Vermeer, B.~C. Love, M.~L. Mack,
+  N.~Malpica, T.~Marins, C.~Maumet, K.~McDonald, J.~T. McGuire, H.~Melero,
+  A.~S. M{\'e}ndez~Leal, B.~Meyer, K.~N. Meyer, G.~Mihai, G.~D. Mitsis,
+  J.~Moll, D.~M. Nielson, G.~Nilsonne, M.~P. Notter, E.~Olivetti, A.~I. Onicas,
+  P.~Papale, K.~R. Patil, J.~E. Peelle, A.~P{\'e}rez, D.~Pischedda, J.-B.
+  Poline, Y.~Prystauka, S.~Ray, P.~A. {Reuter-Lorenz}, R.~C. Reynolds,
+  E.~Ricciardi, J.~R. Rieck, A.~M. {Rodriguez-Thompson}, A.~Romyn, T.~Salo,
+  G.~R. {Samanez-Larkin}, E.~{Sanz-Morales}, M.~L. Schlichting, D.~H. Schultz,
+  Q.~Shen, M.~A. Sheridan, J.~A. Silvers, K.~Skagerlund, A.~Smith, D.~V. Smith,
+  P.~{Sokol-Hessner}, S.~R. Steinkamp, S.~M. Tashjian, B.~Thirion, J.~N. Thorp,
+  G.~Tingh{\"o}g, L.~Tisdall, S.~H. Tompson, C.~{Toro-Serey}, J.~J.
+  Torre~Tresols, L.~Tozzi, V.~Truong, L.~Turella, A.~E. Van `T~Veer,
+  T.~Verguts, J.~M. Vettel, S.~Vijayarajah, K.~Vo, M.~B. Wall, W.~D. Weeda,
+  S.~Weis, D.~J. White, D.~Wisniewski, A.~{Xifra-Porxas}, E.~A. Yearling,
+  S.~Yoon, R.~Yuan, K.~S.~L. Yuen, L.~Zhang, X.~Zhang, J.~E. Zosky, T.~E.
+  Nichols, R.~A. Poldrack, and T.~Schonberg.
+\newblock Variability in the analysis of a single neuroimaging dataset by many
+  teams.
+\newblock {\em Nature}, 582(7810):84--88, June 2020.
+
+\bibitem{YarkoniEtAl2011}
+T.~Yarkoni, R.~A. Poldrack, T.~E. Nichols, D.~C. Van~Essen, and T.~D. Wager.
+\newblock Large-scale automated synthesis of human functional neuroimaging
+  data.
+\newblock {\em Nature Methods}, 8(8):665--670, Aug. 2011.
+
+\bibitem{DockesEtAl2020}
+J.~Dock{\`e}s, R.~A. Poldrack, R.~Primet, H.~G{\"o}z{\"u}kan, T.~Yarkoni,
+  F.~Suchanek, B.~Thirion, and G.~Varoquaux.
+\newblock {{NeuroQuery}}, comprehensive meta-analysis of human brain mapping.
+\newblock {\em eLife}, 9:e53385, Mar. 2020.
+
+\bibitem{Blei2003}
+D.~M. Blei.
+\newblock Latent {{Dirichlet Allocation}}.
+\newblock {\em Journal of Machine Learning Research}, 3, 2003.
+
+\bibitem{Grootendorst2022a}
+M.~Grootendorst.
+\newblock {{BERTopic}}: {{Neural}} topic modeling with a class-based {{TF-IDF}}
+  procedure, Mar. 2022.
+
+\end{thebibliography}

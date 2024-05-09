@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.30)  3 MAY 2024 16:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.30)  9 MAY 2024 12:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -682,22 +682,23 @@ Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 60.
 \openout3 = `pocs2-project-ajb-revtex4Notes.bib'.
 
 
-(./pocs2-project-ajb.author.tex) (./pocs2-project-ajb.abs.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+(./pocs2-project-ajb.author.tex) (./pocs2-project-ajb.abs.tex)
 (./pocs2-project-ajb.title.tex)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ifnextchar' on input line 89.
 
+LaTeX Font Info:    Trying to load font information for U+msa on input line 89.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 89.
+
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 
 Package xcolor Warning: Incompatible color definition on input line 89.
 
@@ -706,137 +707,232 @@ Package xcolor Warning: Incompatible color definition on input line 89.
 
 (./pocs2-project-ajb.body.tex
 
-Package xcolor Warning: Incompatible color definition on input line 13.
+Package xcolor Warning: Incompatible color definition on input line 14.
 
 
-Package xcolor Warning: Incompatible color definition on input line 13.
+Package xcolor Warning: Incompatible color definition on input line 14.
 
 
-Package xcolor Warning: Incompatible color definition on input line 13.
+Package xcolor Warning: Incompatible color definition on input line 14.
 
 
-Package xcolor Warning: Incompatible color definition on input line 13.
+Package xcolor Warning: Incompatible color definition on input line 14.
 
 
-Package xcolor Warning: Incompatible color definition on input line 13.
+Package xcolor Warning: Incompatible color definition on input line 14.
 
 
-Package xcolor Warning: Incompatible color definition on input line 13.
+Package xcolor Warning: Incompatible color definition on input line 14.
 
 
-Package xcolor Warning: Incompatible color definition on input line 17.
+Package xcolor Warning: Incompatible color definition on input line 18.
 
 
-Package xcolor Warning: Incompatible color definition on input line 17.
+Package xcolor Warning: Incompatible color definition on input line 18.
 
 
-Package xcolor Warning: Incompatible color definition on input line 17.
+Package xcolor Warning: Incompatible color definition on input line 18.
 
 
-Package xcolor Warning: Incompatible color definition on input line 17.
+Package xcolor Warning: Incompatible color definition on input line 18.
 
 
-Package xcolor Warning: Incompatible color definition on input line 17.
+Package xcolor Warning: Incompatible color definition on input line 18.
 
 
-Package xcolor Warning: Incompatible color definition on input line 17.
+Package xcolor Warning: Incompatible color definition on input line 18.
 
 
-Package xcolor Warning: Incompatible color definition on input line 21.
+Package xcolor Warning: Incompatible color definition on input line 22.
 
 
-Package xcolor Warning: Incompatible color definition on input line 21.
+Package xcolor Warning: Incompatible color definition on input line 22.
 
 
-Package xcolor Warning: Incompatible color definition on input line 21.
+Package xcolor Warning: Incompatible color definition on input line 22.
 
 
-Package xcolor Warning: Incompatible color definition on input line 23.
+Package xcolor Warning: Incompatible color definition on input line 22.
 
 [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-Package xcolor Warning: Incompatible color definition on input line 30.
+Package xcolor Warning: Incompatible color definition on input line 24.
 
 
-Package xcolor Warning: Incompatible color definition on input line 30.
+Package xcolor Warning: Incompatible color definition on input line 24.
 
 
-Package xcolor Warning: Incompatible color definition on input line 32.
+Package xcolor Warning: Incompatible color definition on input line 24.
 
 
-Package xcolor Warning: Incompatible color definition on input line 32.
+Package xcolor Warning: Incompatible color definition on input line 38.
 
-<figures/project/ns_pubcount.pdf, id=109, 267.68109pt x 143.82869pt>
+
+Package xcolor Warning: Incompatible color definition on input line 45.
+
+
+Package xcolor Warning: Incompatible color definition on input line 45.
+
+
+Package xcolor Warning: Incompatible color definition on input line 47.
+
+
+Package xcolor Warning: Incompatible color definition on input line 47.
+
+<figures/project/ns_pubcount.pdf, id=121, 267.68109pt x 143.82869pt>
 File: figures/project/ns_pubcount.pdf Graphic file (type pdf)
 <use figures/project/ns_pubcount.pdf>
-Package pdftex.def Info: figures/project/ns_pubcount.pdf  used on input line 36
+Package pdftex.def Info: figures/project/ns_pubcount.pdf  used on input line 51
 .
 (pdftex.def)             Requested size: 246.0pt x 132.18134pt.
-<figures/project/terms_over_time.pdf, id=110, 423.56639pt x 923.60217pt>
+
+Package xcolor Warning: Incompatible color definition on input line 60.
+
+
+Package xcolor Warning: Incompatible color definition on input line 60.
+
+
+Package xcolor Warning: Incompatible color definition on input line 60.
+
+<figures/project/terms_over_time.pdf, id=125, 423.56639pt x 923.60217pt>
 File: figures/project/terms_over_time.pdf Graphic file (type pdf)
 <use figures/project/terms_over_time.pdf>
 Package pdftex.def Info: figures/project/terms_over_time.pdf  used on input lin
-e 48.
+e 64.
 (pdftex.def)             Requested size: 246.0pt x 536.40837pt.
 
-Package xcolor Warning: Incompatible color definition on input line 49.
+Package xcolor Warning: Incompatible color definition on input line 65.
 
 
-Package xcolor Warning: Incompatible color definition on input line 49.
+Package xcolor Warning: Incompatible color definition on input line 65.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 58.
-
-<figures/project/rankcount.pdf, id=113, 527.08919pt x 301.125pt>
-File: figures/project/rankcount.pdf Graphic file (type pdf)
-<use figures/project/rankcount.pdf>
-Package pdftex.def Info: figures/project/rankcount.pdf  used on input line 60.
-(pdftex.def)             Requested size: 510.0pt x 291.3741pt.
-
-Package xcolor Warning: Incompatible color definition on input line 61.
+               Default added (so using `tbp') on input line 72.
 
 
-Package xcolor Warning: Incompatible color definition on input line 61.
+Overfull \hbox (20.23808pt too wide) in paragraph at lines 75--85
+ []$[]$ 
+ []
+
+<figures/project/top_n_topics.pdf, id=128, 1029.90631pt x 851.25781pt>
+File: figures/project/top_n_topics.pdf Graphic file (type pdf)
+<use figures/project/top_n_topics.pdf>
+Package pdftex.def Info: figures/project/top_n_topics.pdf  used on input line 9
+0.
+(pdftex.def)             Requested size: 510.0pt x 421.53629pt.
+
+Package xcolor Warning: Incompatible color definition on input line 91.
 
 
-Package xcolor Warning: Incompatible color definition on input line 61.
+Package xcolor Warning: Incompatible color definition on input line 91.
 
 
-Package xcolor Warning: Incompatible color definition on input line 61.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 96.
 
-[2 <./figures/project/ns_pubcount.pdf> <./figures/project/terms_over_time.pdf>]
+<figures/project/topics_by_timepoint.pdf, id=131, 1013.18405pt x 407.49846pt>
+File: figures/project/topics_by_timepoint.pdf Graphic file (type pdf)
+<use figures/project/topics_by_timepoint.pdf>
+Package pdftex.def Info: figures/project/topics_by_timepoint.pdf  used on input
+ line 97.
+(pdftex.def)             Requested size: 510.0pt x 205.12288pt.
 
-Package xcolor Warning: Incompatible color definition on input line 80.
-
-
-Package xcolor Warning: Incompatible color definition on input line 80.
-
-
-Package xcolor Warning: Incompatible color definition on input line 80.
-
-
-Package xcolor Warning: Incompatible color definition on input line 80.
+Package xcolor Warning: Incompatible color definition on input line 105.
 
 
 Package xcolor Warning: Incompatible color definition on input line 105.
 
+[2 <./figures/project/ns_pubcount.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 107.
+
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-05.
+07.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 105.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 107.
 
 
-Package xcolor Warning: Incompatible color definition on input line 105.
+Package xcolor Warning: Incompatible color definition on input line 115.
 
 
-Package xcolor Warning: Incompatible color definition on input line 111.
+Package xcolor Warning: Incompatible color definition on input line 115.
 
-[3 <./figures/project/rankcount.pdf>]) (./pocs2-project-ajb.acknowledgments.tex
-) (./pocs2-project-ajb-revtex4.bbl
+[3]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 127.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 127.
+
+
+Class revtex4-2 Warning: Deferred float stuck during \clearpage processing.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 133.
+
+
+Package xcolor Warning: Incompatible color definition on input line 136.
+
+
+Package xcolor Warning: Incompatible color definition on input line 136.
+
+[4 <./figures/project/terms_over_time.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 141.
+
+
+Package xcolor Warning: Incompatible color definition on input line 141.
+
+
+Package xcolor Warning: Incompatible color definition on input line 141.
+
+
+Package xcolor Warning: Incompatible color definition on input line 141.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 144.
+
+<figures/project/rankcount.pdf, id=196, 527.08919pt x 301.125pt>
+File: figures/project/rankcount.pdf Graphic file (type pdf)
+<use figures/project/rankcount.pdf>
+Package pdftex.def Info: figures/project/rankcount.pdf  used on input line 146.
+
+(pdftex.def)             Requested size: 510.0pt x 291.3741pt.
+
+Package xcolor Warning: Incompatible color definition on input line 147.
+
+
+Package xcolor Warning: Incompatible color definition on input line 147.
+
+
+Package xcolor Warning: Incompatible color definition on input line 147.
+
+
+Package xcolor Warning: Incompatible color definition on input line 147.
+
+
+Package xcolor Warning: Incompatible color definition on input line 153.
+
+
+Package xcolor Warning: Incompatible color definition on input line 153.
+
+[5 <./figures/project/top_n_topics.pdf>] [6 <./figures/project/topics_by_timepo
+int.pdf> <./figures/project/rankcount.pdf>])
+(./pocs2-project-ajb.acknowledgments.tex) (./pocs2-project-ajb-revtex4.bbl
 
 Package xcolor Warning: Incompatible color definition on input line 9.
 
@@ -870,7 +966,7 @@ Package xcolor Warning: Incompatible color definition on input line 227.
 
 Package xcolor Warning: Incompatible color definition on input line 484.
 
-[4]
+[7]
 
 Package xcolor Warning: Incompatible color definition on input line 501.
 
@@ -878,47 +974,127 @@ Package xcolor Warning: Incompatible color definition on input line 501.
 Package xcolor Warning: Incompatible color definition on input line 525.
 
 
-Package xcolor Warning: Incompatible color definition on input line 565.
+Package xcolor Warning: Incompatible color definition on input line 541.
 
 
-Package xcolor Warning: Incompatible color definition on input line 593.
+Package xcolor Warning: Incompatible color definition on input line 557.
 
 
-Package xcolor Warning: Incompatible color definition on input line 612.
+Package xcolor Warning: Incompatible color definition on input line 569.
 
-) [5] (./pocs2-project-ajb-revtex4.aux)
+
+Package xcolor Warning: Incompatible color definition on input line 599.
+
+
+Package xcolor Warning: Incompatible color definition on input line 627.
+
+
+Package xcolor Warning: Incompatible color definition on input line 661.
+
+
+Package xcolor Warning: Incompatible color definition on input line 672.
+
+) [8] (./pocs2-project-ajb.appendix.tex
+<figures/project/appendix/1997-2002.pdf, id=278, 1024.68405pt x 851.25781pt>
+File: figures/project/appendix/1997-2002.pdf Graphic file (type pdf)
+<use figures/project/appendix/1997-2002.pdf>
+Package pdftex.def Info: figures/project/appendix/1997-2002.pdf  used on input 
+line 2.
+(pdftex.def)             Requested size: 510.0pt x 423.69247pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3 ...cs in Neurosynth abstracts from 1997-2002.}
+                                                  
+<figures/project/appendix/2003-2008.pdf, id=279, 1039.07301pt x 851.25781pt>
+File: figures/project/appendix/2003-2008.pdf Graphic file (type pdf)
+<use figures/project/appendix/2003-2008.pdf>
+Package pdftex.def Info: figures/project/appendix/2003-2008.pdf  used on input 
+line 7.
+(pdftex.def)             Requested size: 510.0pt x 417.80841pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.8 ...cs in Neurosynth abstracts from 2003-2008.}
+                                                  
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/project/appendix/2009-2013.pdf, id=280, 1030.48955pt x 851.25781pt>
+File: figures/project/appendix/2009-2013.pdf Graphic file (type pdf)
+<use figures/project/appendix/2009-2013.pdf>
+Package pdftex.def Info: figures/project/appendix/2009-2013.pdf  used on input 
+line 12.
+(pdftex.def)             Requested size: 510.0pt x 421.30247pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.13 ...s in Neurosynth abstracts from 2009-2013.}
+                                                  
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/project/appendix/2014-2018.pdf, id=281, 1028.51746pt x 851.25781pt>
+File: figures/project/appendix/2014-2018.pdf Graphic file (type pdf)
+<use figures/project/appendix/2014-2018.pdf>
+Package pdftex.def Info: figures/project/appendix/2014-2018.pdf  used on input 
+line 18.
+(pdftex.def)             Requested size: 510.0pt x 422.1078pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.19 ...s in Neurosynth abstracts from 2014-2018.}
+                                                  
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [1 <./figures/project/appendix/1997-2002.pdf>] [2 <./figures/project/appendix
+/2003-2008.pdf>] [3 <./figures/project/appendix/2009-2013.pdf>] [4 <./figures/p
+roject/appendix/2014-2018.pdf>] (./pocs2-project-ajb-revtex4.aux)
 Package rerunfilecheck Info: File `pocs2-project-ajb-revtex4.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 3B468793BF4A839166E81DF70776E9BD;1712.
+(rerunfilecheck)             Checksum: 6157CAEAB54E63EFD83741C7CBDE9D25;2024.
  ) 
 Here is how much of TeX's memory you used:
- 15591 strings out of 478268
- 244811 string characters out of 5846347
- 576724 words of memory out of 5000000
- 33478 multiletter control sequences out of 15000+600000
- 479196 words of font info for 68 fonts, out of 8000000 for 9000
+ 15689 strings out of 478268
+ 247849 string characters out of 5846347
+ 581045 words of memory out of 5000000
+ 33547 multiletter control sequences out of 15000+600000
+ 478257 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,8n,95p,1965b,539s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/
-local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
-texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/tex
-live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texliv
-e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/
-2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/202
-2/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2022/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on pocs2-project-ajb-revtex4.pdf (5 pages, 543993 bytes).
+ 99i,9n,95p,1965b,539s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
+/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
+ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/202
+2/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2022/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on pocs2-project-ajb-revtex4.pdf (12 pages, 722169 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
- 41 named destinations out of 1000 (max. 500000)
- 120 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 420 PDF objects out of 1000 (max. 8388607)
+ 341 compressed objects within 4 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 174 words of extra memory for PDF output out of 10000 (max. 10000000)
 

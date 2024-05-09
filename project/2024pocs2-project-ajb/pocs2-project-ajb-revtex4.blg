@@ -186,45 +186,45 @@ while executing---line 3516 of file apsrev4-2.bst
 ---they aren't the same literal types for entry ZhaoEtAl2024
 while executing---line 3516 of file apsrev4-2.bst
 Warning--missing journal in ZhaoEtAl2024
-You've used 21 entries,
+You've used 26 entries,
             6079 wiz_defined-function locations,
-            1785 strings with 25069 characters,
-and the built_in function-call counts, 48496 in all, are:
-= -- 1765
-> -- 2532
-< -- 411
-+ -- 738
-- -- 710
-* -- 9402
-:= -- 3689
-add.period$ -- 19
-call.type$ -- 21
-change.case$ -- 94
-chr.to.int$ -- 31
-cite$ -- 25
-duplicate$ -- 4261
-empty$ -- 3160
-format.name$ -- 1437
-if$ -- 9889
+            1821 strings with 26357 characters,
+and the built_in function-call counts, 54290 in all, are:
+= -- 2102
+> -- 2742
+< -- 442
++ -- 802
+- -- 764
+* -- 10407
+:= -- 4224
+add.period$ -- 24
+call.type$ -- 26
+change.case$ -- 119
+chr.to.int$ -- 36
+cite$ -- 30
+duplicate$ -- 4787
+empty$ -- 3565
+format.name$ -- 1558
+if$ -- 11044
 int.to.chr$ -- 1
-int.to.str$ -- 28
-missing$ -- 594
-newline$ -- 109
-num.names$ -- 57
-pop$ -- 1382
+int.to.str$ -- 33
+missing$ -- 657
+newline$ -- 124
+num.names$ -- 72
+pop$ -- 1575
 preamble$ -- 1
-purify$ -- 95
+purify$ -- 120
 quote$ -- 0
-skip$ -- 1477
+skip$ -- 1680
 stack$ -- 0
-substring$ -- 389
-swap$ -- 4978
-text.length$ -- 344
+substring$ -- 479
+swap$ -- 5514
+text.length$ -- 371
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 565
+type$ -- 647
 warning$ -- 5
-while$ -- 60
+while$ -- 71
 width$ -- 0
-write$ -- 217
+write$ -- 258
 (There were 52 error messages)

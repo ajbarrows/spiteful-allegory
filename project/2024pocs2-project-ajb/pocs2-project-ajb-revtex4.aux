@@ -26,9 +26,8 @@
 \citation{Botvinik-NezerEtAl2020}
 \citation{YuanEtAl2023}
 \citation{Blei2003}
-\citation{PoldrackEtAl2012}
+\citation{PoldrackEtAl2012,RubinEtAl2017}
 \citation{GulEtAl2023}
-\citation{YarkoniEtAl2011}
 \newlabel{FirstPage}{{}{1}{}{section*.1}{}}
 \@writefile{toc}{\contentsline {title}{\input {pocs2-project-ajb.title} }{1}{section*.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {abstract}{Abstract}{1}{section*.1}\protected@file@percent }
@@ -36,33 +35,51 @@
 \newlabel{sec:papertag.introduction}{{I}{1}{Introduction}{section.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {A}Neuroimaging methods}{1}{subsection.1.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {B}Topic modeling}{1}{subsection.1.2}\protected@file@percent }
+\citation{Grootendorst2022a}
+\citation{McInnesEtAl2020}
+\citation{Grootendorst2022a}
+\citation{YarkoniEtAl2011}
 \citation{YarkoniEtAl2011}
 \citation{YarkoniEtAl2011}
 \citation{SaloEtAl2022,SaloEtAl2023}
-\citation{BirdEtAl2009}
-\citation{BirdEtAl2009}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Publications in the Neurosynth dataset for which abstracts were available through the PubMed API (n=14,369)}}{2}{figure.1}\protected@file@percent }
-\newlabel{fig:papertag.pubcounts}{{1}{2}{Publications in the Neurosynth dataset for which abstracts were available through the PubMed API (n=14,369)}{figure.1}{}}
+\citation{Grootendorst2022a}
+\citation{PedregosaEtAl2011}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Description of data sets}{2}{section.2}\protected@file@percent }
 \newlabel{sec:papertag.data}{{II}{2}{Description of data sets}{section.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Publications in the Neurosynth dataset for which abstracts were available through the PubMed API (n=14,369)}}{2}{figure.1}\protected@file@percent }
+\newlabel{fig:papertag.pubcounts}{{1}{2}{Publications in the Neurosynth dataset for which abstracts were available through the PubMed API (n=14,369)}{figure.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Model}{2}{section.3}\protected@file@percent }
 \newlabel{sec:papertag.model}{{III}{2}{Model}{section.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Results}{2}{section.4}\protected@file@percent }
 \newlabel{sec:papertag.results}{{IV}{2}{Results}{section.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces List of neuroimaging methods-related terms manually generated from a sample of 50 abstracts in the Neurosynth dataset and the percent of abstracts in each year where terms appeared at least once. Abstracts were pre-processed in an effort to isolate methods-related sentences (see section \ref  {sec:papertag.methods} for details).}}{2}{figure.2}\protected@file@percent }
-\newlabel{fig:papertag.corpus}{{2}{2}{List of neuroimaging methods-related terms manually generated from a sample of 50 abstracts in the Neurosynth dataset and the percent of abstracts in each year where terms appeared at least once. Abstracts were pre-processed in an effort to isolate methods-related sentences (see section \ref {sec:papertag.methods} for details)}{figure.2}{}}
+\citation{QiangEtAl2016}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Example of text pre-processing before fitting topic models.}}{3}{table.1}\protected@file@percent }
+\newlabel{tab:cleaned}{{I}{3}{Example of text pre-processing before fitting topic models}{table.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Discussion}{3}{section.5}\protected@file@percent }
+\newlabel{sec:papertag.discussion}{{V}{3}{Discussion}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}Limitations}{3}{subsection.5.1}\protected@file@percent }
 \citation{PolakEtAl2023}
 \citation{KissStrunk2006}
 \citation{BirdEtAl2009}
 \citation{M.F.Porter1980}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Rank-count distribution for methods-related corpus extracted using the list of words shown in Figure \ref  {fig:papertag.corpus}. The 10 most commonly-used terms, the least common term, and a random selection of ``middle'' terms are labeled. Parts of speech were assigned for purposes of dataset exploration using NLTK's \texttt  {pos\_tag} function \cite  {BirdEtAl2009}.}}{3}{figure.3}\protected@file@percent }
-\newlabel{fig:papertag.rankcount}{{3}{3}{Rank-count distribution for methods-related corpus extracted using the list of words shown in Figure \ref {fig:papertag.corpus}. The 10 most commonly-used terms, the least common term, and a random selection of ``middle'' terms are labeled. Parts of speech were assigned for purposes of dataset exploration using NLTK's \texttt {pos\_tag} function \cite {BirdEtAl2009}}{figure.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Concluding remarks}{3}{section.5}\protected@file@percent }
-\newlabel{sec:papertag.concludingremarks}{{V}{3}{Concluding remarks}{section.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Methods}{3}{section.6}\protected@file@percent }
-\newlabel{sec:papertag.methods}{{VI}{3}{Methods}{section.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A}Methods-related text extraction}{3}{subsection.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {B}Topic evaluation}{3}{subsection.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces List of neuroimaging methods-related terms manually generated from a sample of 50 abstracts in the Neurosynth dataset and the percent of abstracts in each year where terms appeared at least once. Abstracts were pre-processed in an effort to isolate methods-related sentences (see section \ref  {sec:papertag.methods} for details).}}{4}{figure.2}\protected@file@percent }
+\newlabel{fig:papertag.corpus}{{2}{4}{List of neuroimaging methods-related terms manually generated from a sample of 50 abstracts in the Neurosynth dataset and the percent of abstracts in each year where terms appeared at least once. Abstracts were pre-processed in an effort to isolate methods-related sentences (see section \ref {sec:papertag.methods} for details)}{figure.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Concluding remarks}{4}{section.6}\protected@file@percent }
+\newlabel{sec:papertag.concludingremarks}{{VI}{4}{Concluding remarks}{section.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Methods}{4}{section.7}\protected@file@percent }
+\newlabel{sec:papertag.methods}{{VII}{4}{Methods}{section.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}Methods-related text extraction}{4}{subsection.7.1}\protected@file@percent }
+\citation{BirdEtAl2009}
+\citation{BirdEtAl2009}
+\citation{BirdEtAl2009}
+\citation{PedregosaEtAl2011}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Top 10 terms from the first 10 topics extracted from methods-related text in Neurosynth database abstracts. Sentences were first assembled according to a detection set of methods-related words (see Figure \ref  {fig:papertag.corpus}), and pre-processed identically for both BERTopic and LDA models. Each model was fit using default parameters. The first two topics produced using BERTopic were discarded (i.e., outliers and punctuation). Clear differences in topic-detection are seen between the algorithms, with LDA more likely to capture basic, descriptive language most related to study methods, and BERTopic more likely to extract surrounding ``meaningful'' terms.}}{5}{figure.3}\protected@file@percent }
+\newlabel{fig:papertag.topterms}{{3}{5}{Top 10 terms from the first 10 topics extracted from methods-related text in Neurosynth database abstracts. Sentences were first assembled according to a detection set of methods-related words (see Figure \ref {fig:papertag.corpus}), and pre-processed identically for both BERTopic and LDA models. Each model was fit using default parameters. The first two topics produced using BERTopic were discarded (i.e., outliers and punctuation). Clear differences in topic-detection are seen between the algorithms, with LDA more likely to capture basic, descriptive language most related to study methods, and BERTopic more likely to extract surrounding ``meaningful'' terms}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Topic evaluation}{5}{subsection.7.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Top 10 terms (from the first topic) over four time periods (i.e., roughly even divisions of the period which the Neurosynth database covers: 1997-2002 ($n_{studies}=347$), 2003-2008 ($n=2818$), 2009-2013 ($n=5288$), and 2014-2018 ($n=4328$)). We note the emergence of neuroimaging analysis techniques like functional connectivity between 2009-2013, and a focus on task-based fMRI, both seen in the BERTopic-extracted terms. LDA, in contrast, tended to select a similar group of terms for each time period.}}{6}{figure.4}\protected@file@percent }
+\newlabel{fig:papertag.termsovertime}{{4}{6}{Top 10 terms (from the first topic) over four time periods (i.e., roughly even divisions of the period which the Neurosynth database covers: 1997-2002 ($n_{studies}=347$), 2003-2008 ($n=2818$), 2009-2013 ($n=5288$), and 2014-2018 ($n=4328$)). We note the emergence of neuroimaging analysis techniques like functional connectivity between 2009-2013, and a focus on task-based fMRI, both seen in the BERTopic-extracted terms. LDA, in contrast, tended to select a similar group of terms for each time period}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Rank-count distribution for methods-related corpus extracted using the list of words shown in Figure \ref  {fig:papertag.corpus}. The 10 most commonly-used terms, the least common term, and a random selection of ``middle'' terms are labeled. Parts of speech were assigned for purposes of dataset exploration using NLTK's \texttt  {pos\_tag} function \cite  {BirdEtAl2009}.}}{6}{figure.5}\protected@file@percent }
+\newlabel{fig:papertag.rankcount}{{5}{6}{Rank-count distribution for methods-related corpus extracted using the list of words shown in Figure \ref {fig:papertag.corpus}. The 10 most commonly-used terms, the least common term, and a random selection of ``middle'' terms are labeled. Parts of speech were assigned for purposes of dataset exploration using NLTK's \texttt {pos\_tag} function \cite {BirdEtAl2009}}{figure.5}{}}
 \bibdata{pocs2-project-ajb-revtex4Notes,pocs2-project-ajb.bib}
 \bibcite{OlivettiEtAl2020}{{1}{2020}{{Olivetti\ \emph  {et~al.}}}{{Olivetti, Cole, Kim, Kononova, Ceder, Han,\ and\ Hiszpanski}}}
 \bibcite{PolakEtAl2023}{{2}{2023}{{Polak\ \emph  {et~al.}}}{{Polak, Modi, Latosinska, Zhang, Wang, Wang, Hazra,\ and\ Morgan}}}
@@ -74,19 +91,30 @@
 \bibcite{YarkoniEtAl2011}{{8}{2011}{{Yarkoni\ \emph  {et~al.}}}{{Yarkoni, Poldrack, Nichols, Van~Essen,\ and\ Wager}}}
 \bibcite{PoldrackEtAl2008}{{9}{2008}{{Poldrack\ \emph  {et~al.}}}{{Poldrack, Fletcher, Henson, Worsley, Brett,\ and\ Nichols}}}
 \bibcite{Botvinik-NezerEtAl2020}{{10}{2020}{{{Botvinik-Nezer}\ \emph  {et~al.}}}{{{Botvinik-Nezer}, Holzmeister, Camerer, Dreber, Huber, Johannesson, Kirchler, Iwanir, Mumford, Adcock, Avesani, Baczkowski, Bajracharya, Bakst, Ball, Barilari, Bault, Beaton, Beitner, Benoit, Berkers, Bhanji, Biswal, {Bobadilla-Suarez}, Bortolini, Bottenhorn, Bowring, Braem, Brooks, Brudner, Calderon, Camilleri, Castrellon, Cecchetti, Cieslik, Cole, Collignon, Cox, Cunningham, Czoschke, Dadi, Davis, Luca, Delgado, Demetriou, Dennison, Di, Dickie, Dobryakova, Donnat, Dukart, Duncan, Durnez, Eed, Eickhoff, Erhart, Fontanesi, Fricke, Fu, Galv{\'a}n, Gau, Genon, Glatard, Glerean, Goeman, Golowin, {Gonz{\'a}lez-Garc{\'i}a}, Gorgolewski, Grady, Green, Guassi~Moreira, Guest, Hakimi, Hamilton, Hancock, Handjaras, Harry, Hawco, Herholz, Herman, Heunis, Hoffstaedter, Hogeveen, Holmes, Hu, Huettel, Hughes, Iacovella, Iordan, Isager, Isik, Jahn, Johnson, Johnstone, Joseph, Juliano, Kable, Kassinopoulos, Koba, Kong, Koscik, Kucukboyaci, Kuhl, Kupek, Laird, Lamm, Langner, Lauharatanahirun, Lee, Lee, Leemans, Leo, Lesage, Li, Li, Lim, Lintz, Liphardt, Losecaat~Vermeer, Love, Mack, Malpica, Marins, Maumet, McDonald, McGuire, Melero, M{\'e}ndez~Leal, Meyer, Meyer, Mihai, Mitsis, Moll, Nielson, Nilsonne, Notter, Olivetti, Onicas, Papale, Patil, Peelle, P{\'e}rez, Pischedda, Poline, Prystauka, Ray, {Reuter-Lorenz}, Reynolds, Ricciardi, Rieck, {Rodriguez-Thompson}, Romyn, Salo, {Samanez-Larkin}, {Sanz-Morales}, Schlichting, Schultz, Shen, Sheridan, Silvers, Skagerlund, Smith, Smith, {Sokol-Hessner}, Steinkamp, Tashjian, Thirion, Thorp, Tingh{\"o}g, Tisdall, Tompson, {Toro-Serey}, Torre~Tresols, Tozzi, Truong, Turella, Van `T~Veer, Verguts, Vettel, Vijayarajah, Vo, Wall, Weeda, Weis, White, Wisniewski, {Xifra-Porxas}, Yearling, Yoon, Yuan, Yuen, Zhang, Zhang, Zosky, Nichols, Poldrack,\ and\ Schonberg}}}
-\@writefile{toc}{\contentsline {section}{\numberline {}References}{4}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {}References}{7}{section*.3}\protected@file@percent }
 \bibcite{YuanEtAl2023}{{11}{2023}{{Yuan\ \emph  {et~al.}}}{{Yuan, Hahn, Allgaier, Owens, Chaarani, Potter,\ and\ Garavan}}}
 \bibcite{Blei2003}{{12}{2003}{{Blei}}{{}}}
 \bibcite{PoldrackEtAl2012}{{13}{2012}{{Poldrack\ \emph  {et~al.}}}{{Poldrack, Mumford, Schonberg, Kalar, Barman,\ and\ Yarkoni}}}
-\bibcite{GulEtAl2023}{{14}{2023}{{Gul\ \emph  {et~al.}}}{{Gul, Shah,\ and\ Jan}}}
-\bibcite{SaloEtAl2022}{{15}{2022}{{Salo\ \emph  {et~al.}}}{{Salo, Yarkoni, Nichols, Poline, Kent, Gorgolewski, Glerean, Bottenhorn, Bilgel, Wright, Reeders, Kimbler, Nielson, Yanes, P{\'e}rez, Oudyk, Jarecka, Enge, Peraza,\ and\ Laird}}}
-\bibcite{SaloEtAl2023}{{16}{2023}{{Salo\ \emph  {et~al.}}}{{Salo, Yarkoni, Nichols, Poline, Bilgel, Bottenhorn, Jarecka, Kent, Kimbler, Nielson, Oudyk, Peraza, P{\'e}rez, Reeders, Yanes,\ and\ Laird}}}
-\bibcite{BirdEtAl2009}{{17}{2009}{{Bird\ \emph  {et~al.}}}{{Bird, Klein,\ and\ Loper}}}
-\bibcite{KissStrunk2006}{{18}{2006}{{Kiss\ and\ Strunk}}{{}}}
-\bibcite{M.F.Porter1980}{{19}{1980}{{{M. F. Porter}}}{{}}}
-\newlabel{LastBibItem}{{19}{5}{}{section*.3}{}}
+\bibcite{RubinEtAl2017}{{14}{2017}{{Rubin\ \emph  {et~al.}}}{{Rubin, Koyejo, Gorgolewski, Jones, Poldrack,\ and\ Yarkoni}}}
+\bibcite{GulEtAl2023}{{15}{2023}{{Gul\ \emph  {et~al.}}}{{Gul, Shah,\ and\ Jan}}}
+\bibcite{Grootendorst2022a}{{16}{2022}{{Grootendorst}}{{}}}
+\bibcite{McInnesEtAl2020}{{17}{2020}{{McInnes\ \emph  {et~al.}}}{{McInnes, Healy,\ and\ Melville}}}
+\bibcite{SaloEtAl2022}{{18}{2022}{{Salo\ \emph  {et~al.}}}{{Salo, Yarkoni, Nichols, Poline, Kent, Gorgolewski, Glerean, Bottenhorn, Bilgel, Wright, Reeders, Kimbler, Nielson, Yanes, P{\'e}rez, Oudyk, Jarecka, Enge, Peraza,\ and\ Laird}}}
+\bibcite{SaloEtAl2023}{{19}{2023}{{Salo\ \emph  {et~al.}}}{{Salo, Yarkoni, Nichols, Poline, Bilgel, Bottenhorn, Jarecka, Kent, Kimbler, Nielson, Oudyk, Peraza, P{\'e}rez, Reeders, Yanes,\ and\ Laird}}}
+\bibcite{PedregosaEtAl2011}{{20}{2011}{{Pedregosa\ \emph  {et~al.}}}{{Pedregosa, Varoquaux, Gramfort, Michel, Thirion, Grisel, Blondel, Prettenhofer, Weiss, Dubourg, Vanderplas, Passos,\ and\ Cournapeau}}}
+\bibcite{QiangEtAl2016}{{21}{2016}{{Qiang\ \emph  {et~al.}}}{{Qiang, Chen, Wang,\ and\ Wu}}}
+\bibcite{KissStrunk2006}{{22}{2006}{{Kiss\ and\ Strunk}}{{}}}
+\bibcite{BirdEtAl2009}{{23}{2009}{{Bird\ \emph  {et~al.}}}{{Bird, Klein,\ and\ Loper}}}
+\bibcite{M.F.Porter1980}{{24}{1980}{{{M. F. Porter}}}{{}}}
+\newlabel{LastBibItem}{{24}{8}{}{section*.3}{}}
 \bibstyle{apsrev4-2}
 \citation{REVTEX42Control}
 \citation{apsrev42Control}
-\newlabel{LastPage}{{}{5}{}{}{}}
-\gdef \@abspage@last{5}
+\@writefile{toc}{\appendix }
+\@writefile{toc}{\contentsline {section}{\numberline {A}Appendix}{A1}{appendix.A}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {A1}{\ignorespaces Top 10 topics in Neurosynth abstracts from 1997-2002.}}{A1}{figure.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {A2}{\ignorespaces Top 10 topics in Neurosynth abstracts from 2003-2008.}}{A2}{figure.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {A3}{\ignorespaces Top 10 topics in Neurosynth abstracts from 2009-2013.}}{A3}{figure.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {A4}{\ignorespaces Top 10 topics in Neurosynth abstracts from 2014-2018.}}{A4}{figure.4}\protected@file@percent }
+\newlabel{LastPage}{{}{A4}{}{}{}}
+\gdef \@abspage@last{12}

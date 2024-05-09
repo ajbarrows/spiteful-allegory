@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: pres.aux
+The style file: unsrtabbrv.bst
+Database file #1: zotero.bib
+Warning--empty journal in Nuzzo
+Warning--empty year in Nuzzo
+You've used 9 entries,
+            1795 wiz_defined-function locations,
+            508 strings with 9879 characters,
+and the built_in function-call counts, 4920 in all, are:
+= -- 156
+> -- 793
+< -- 0
++ -- 269
+- -- 260
+* -- 621
+:= -- 1018
+add.period$ -- 25
+call.type$ -- 9
+change.case$ -- 9
+chr.to.int$ -- 0
+cite$ -- 11
+duplicate$ -- 75
+empty$ -- 181
+format.name$ -- 260
+if$ -- 860
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 8
+newline$ -- 46
+num.names$ -- 9
+pop$ -- 21
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 29
+stack$ -- 0
+substring$ -- 116
+swap$ -- 8
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 20
+width$ -- 10
+write$ -- 94
+(There were 2 warnings)

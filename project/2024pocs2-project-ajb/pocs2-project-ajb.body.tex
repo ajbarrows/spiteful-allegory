@@ -7,6 +7,7 @@
 %% before figures in includegraphics
 %% commands forces search and localize
 
+
 \section{Introduction}
 \label{sec:papertag.introduction}
 
@@ -18,9 +19,23 @@ The field of neuroimaging suffers from a crisis of reproducibility, best documen
 
 \subsection{Topic modeling}
 
-Probabilistic summaries of document content through topic modeling is most often found in the form of latent Dirichlet allocation \cite[LDA;][]{Blei2003}, including the automated extraction of fMRI research topics using the Neurosynth dataset \cite{PoldrackEtAl2012}. However, embedded topic models (ETMs) are growing in popularity due to their facility with documents containing a large variety of words (i.e., heavy-tailed distributions) in which infrequently-appearing words may still contribute important meaning. The authors of the technique demonstrated strengths of ETMs seen in topic interpretability compared to LDA, and others have shown its effectiveness using only limited corpora \cite{GulEtAl2023}. At its core, ETMs use word embeddings, which represent individual words as vectors according to their meaning (i.e., context) such that similar words are close in low-dimensional space. ETMs combine these vector representations with the Bayesian LDA topic-assignment procedure to extract latent topics characterizing the space of documents.
+Probabilistic summaries of document content through topic modeling is most often found in the form of latent Dirichlet allocation \cite[LDA;][]{Blei2003}, including the automated extraction of fMRI research topics using the Neurosynth dataset \cite{PoldrackEtAl2012, RubinEtAl2017}. However, embedded topic models (ETMs) are growing in popularity due to their facility with documents containing a large variety of words (i.e., heavy-tailed distributions) in which infrequently-appearing words may still contribute important meaning. The authors of the technique demonstrated strengths of ETMs seen in topic interpretability compared to LDA, and others have shown its effectiveness using only limited corpora \cite{GulEtAl2023}. At its core, ETMs use word embeddings, which represent individual words as vectors according to their meaning (i.e., context) such that similar words are close in low-dimensional space. ETMs combine these vector representations with the Bayesian LDA topic-assignment procedure to extract latent topics characterizing the space of documents.
 
-The present work leverages natural language processing (NLP) and the comprehensive set of fMRI-related publications compiled for use in \texttt{Neurosynth} \cite{YarkoniEtAl2011} to generate a comprehensive view of methods used in fMRI research. If successful, this approach could (1) inform which analytical strategies (e.g., pre-processing, variable and model selection, external validity estimates) are most often used, and under which conditions, and (2) identify which of these strategies are most effective. 
+A popular implementation of embedded topic models, BERTopic \cite{Grootendorst2022a}, first creates topic embeddings from a document corpus, and then reduces the dimensionality of these embedding vectors using UMAP (see \cite{McInnesEtAl2020} for details), and finally introduces a term-importance metric (c-TF-IDF) which respects the appearance of a given term across embedding clusters, as well as its frequency across all documents. Each term $x$ within a class $c$, therefore, receives a \emph{weight} (from \cite{Grootendorst2022a}):
+
+\begin{equation}
+	W_{x,c}
+	=
+	\Vert
+	tf_{x, c}
+	\Vert
+	\times
+	\log(1+\frac{A}{f_x})
+\end{equation}
+
+where $tf_{x,c}$ is the frequency of word $x$ in class $c$, $f_x$ is the frequency of word $x$ across all classes, and $A$ is the average number of words per class.
+
+The present work leverages natural language processing (NLP) and the comprehensive set of fMRI-related publications compiled for use in \texttt{Neurosynth} \cite{YarkoniEtAl2011} in an attempt to generate a comprehensive view of methods used in fMRI research. If successful, this approach could (1) inform which analytical strategies (e.g., pre-processing, variable and model selection, external validity estimates) are most often used, and under which conditions, and (2) identify which of these strategies are most effective. 
 
 
 \section{Description of data sets}
@@ -42,6 +57,7 @@ Texts for the current investigation were obtained using NiMARE, a Python package
 \section{Model}
 \label{sec:papertag.model}
 
+BERTopic \cite{Grootendorst2022a} and an scikit-learn implementation of LDA \cite{PedregosaEtAl2011} models were fit to extracted corpora of methods-related sentences contained in abstracts logged in the Neurosynth dataset. Models were fit to (1) all abstracts and (2) a subset of these abstracts pertaining to four non-overlapping time periods of neuroimaging literature. See section \ref{sec:papertag.methods} for details.
 
 \begin{figure}[tp!]
 	\centering
@@ -53,24 +69,61 @@ Texts for the current investigation were obtained using NiMARE, a Python package
 \section{Results}
 \label{sec:papertag.results}
 
-\todo{Explain what we found}
+\begin{table*}[]
+	\centering
+	\footnotesize
+	\begin{tabular}{ll}
+		\normalsize \textbf{Detected}                                                               												& \normalsize \textbf{Cleaned}                                                            \\ 
+		\hline
+		Loci within dorsolateral prefrontal cortex (DLPFC) evinced…                   					  & locus within dorsolateral prefrontal cortex ( dlpfc ) evinced…              \\
+		By systematically varying the interval between the visual...										  & by systematically varying interval visual...         \\
+		We used positron emission tomography to map neural responses to 0.5…            	& we used positron emission tomography map neural response 0.5…               \\
+		The correlation of regional cerebral blood flow with the change…                			  & the correlation regional cerebral blood flow change...                       \\
+		Blood oxygen level-dependent contrast functional magnetic...								 & blood oxygen level-dependent contrast functional magnetic... \\
+		\hline
+	\end{tabular}
+	\caption{Example of text pre-processing before fitting topic models.}
+	\label{tab:cleaned}
+\end{table*}
 
-\begin{figure*}[]
-	\centering	
-	\includegraphics[width=\textwidth]{figures/project/rankcount.pdf}  
-	\caption{Rank-count distribution for methods-related corpus extracted using the list of words shown in Figure \ref{fig:papertag.corpus}. The 10 most commonly-used terms, the least common term, and a random selection of ``middle'' terms are labeled. Parts of speech were assigned for purposes of dataset exploration using NLTK's \texttt{pos\_tag} function \cite{BirdEtAl2009}.}
-	\label{fig:papertag.rankcount}
+\begin{figure*}[tp!]
+	\includegraphics[width=\textwidth]{figures/project/top_n_topics}
+	\caption{Top 10 terms from the first 10 topics extracted from methods-related text in Neurosynth database abstracts. Sentences were first assembled according to a detection set of methods-related words (see Figure \ref{fig:papertag.corpus}), and pre-processed identically for both BERTopic and LDA models. Each model was fit using default parameters. The first two topics produced using BERTopic were discarded (i.e., outliers and punctuation). Clear differences in topic-detection are seen between the algorithms, with LDA more likely to capture basic, descriptive language most related to study methods, and BERTopic more likely to extract surrounding ``meaningful'' terms.}
+	\label{fig:papertag.topterms}
 \end{figure*}
 
-\todo{Add limitations}
-% not using full text
+
+\begin{figure*}[]
+	\includegraphics[width=\textwidth]{figures/project/topics_by_timepoint}
+	\caption{Top 10 terms (from the first topic) over four time periods (i.e., roughly even divisions of the period which the Neurosynth database covers: 1997-2002 ($n_{studies}=347$), 2003-2008 ($n=2818$), 2009-2013 ($n=5288$), and 2014-2018 ($n=4328$)). We note the emergence of neuroimaging analysis techniques like functional connectivity between 2009-2013, and a focus on task-based fMRI, both seen in the BERTopic-extracted terms. LDA, in contrast, tended to select a similar group of terms for each time period.}
+	\label{fig:papertag.termsovertime}
+\end{figure*}
+
+
+
+
+The initial algorithm for extracting methods-related abstract successfully detected sections from 12,781 abstracts in the Neurosynth dataset. The detection frequencies for the search terms used are displayed by year in Figure \ref{fig:papertag.corpus}. The top 10 terms from the first 10 topics extracted using both the novel BERTopic approach and the more popular LDA-based technique are displayed in Figure \ref{fig:papertag.topterms}, less the first two BERTopic vectors, which contained outliers and punctuation respectively. In general, BERTopic terms encapsulated more ``meaningful'' ideas, and largely referred to general concepts of study (e.g.,  memory, audiovisual, pain, reward) whereas LDA tended to select purely operational concepts (e.g., method, imaging, BOLD, encoding). Notably, each subsequent LDA topic appeared to be fundamentally related to the previous, whereas each additional BERTopic topic captured a new and unique idea.
+
+Methods-related sentences were divided into four, roughly evenly-spaced periods, and topic models were fit to the subset of extracted sentences belonging to those periods. The top 10 terms from the first topics from each subset are shown in Figure \ref{fig:papertag.termsovertime}. As with the overall set of extracted topics, LDA appeared to summarize similar results from each time period (e.g., fMRI, imaging, brain), whereas BERTopic offered new, more differentiable and easily-interpreted patterns (e.g., \{word, semantic, retrieval\}, \{auditory, language, speech\}, \{connectivity, functional, restingstate\}). The top 10 terms from the first 10 topics for each time period are available in the Appendix.
+
+
+\section{Discussion}
+\label{sec:papertag.discussion}
+
+The present work represents a first-pass attempt to isolate and characterize methods-related words from a set of scientific abstracts in an effort to describe a field's approaches over time. We produced a corpus of methods-related terms using manual inspection of a selection of abstracts, constructed an efficient framework through which to query new text corpora for the presence of these terms, and we evaluated the performance of two popular topic modeling algorithms on the extracted text. Inspection of the topics reveals easily-interpreted terms -- particularly using the BERTopic procedure -- and a notable change in methods over time. 
+
+LDA, a popular technique for topic extraction, has been shown to underperform when only short snippets of text are available, as limited contextual information is available \cite{QiangEtAl2016}. The present work suggests that embedding and cluster-based algorithms likely overcome this limitation, as visually-coherent topics emerged from sections in which LDA extracted only broadly-associated words. However, as briefly illustrated in Table \ref{tab:cleaned}, isolating a particular topic \textit{a priori} is a difficult task, as (1) not all abstracts are structured such that descriptions of methods are in the middle of the text, and (2) some abstracts in the neuroimaging literature do not report the study's methods at all. As such, topic extraction from a poorly-defined set of texts is nearly an impossible task. Nevertheless, we note the LDA more accurately captured words specifically related to study methods, whereas BERTopic appeared to ``focus'' on the surrounding contextual terms. The resulting terms from BERTopic models are more readable to a human, which is to say that they offer a more syntactically comprehensive view of the studied paper, but the present investigation's goal was to extract the basic -- even boring -- fundamental terms characterizing the authors' actions. 
+
+The overall aim of the present work was to explore the utility of applying semi-supervised methods to a database of scientific texts in order to extract a very specific subset \emph{of} that text. This limited set of results suggests the approach is, indeed, feasible, and would benefit from a larger text corpus in which scientific methods are clearly marked and described. 
+
+\subsection{Limitations}
+The present study includes several strengths. Open-source models, methods, and data are used in an effort to characterize a scientific field using novel, proven topic modeling techniques. This approach could be of interest to many in the field of neuroimaging research. However, this approach is not without limitations. As with any unsupervised technique, topic modeling extracts topics based on likelihood of coherence, and these relationships cannot be verified my any known method except manual inspection, which is nearly unfeasible for a necessarily large set of texts. Additionally, the present study did not consider formal topic model performance metrics (e.g., topic coherence and topic diversity) which, although important, may add only incremental information to algorithm selection. Manual inspection is the gold standard, in this case. Finally, while the Neurosynth database represents, as of this writing, an unrivaled effort toward including parsable neuroimaging-related literature, it does not contain \textit{all} studies, and only covers through the year 2018.
+
 
 \section{Concluding remarks}
 \label{sec:papertag.concludingremarks}
 
-
-
-\todo{Bring it home.}
+The present work serves as a pilot study for semi-supervised text extraction from scientific work with the aim of isolating specific sections. Future work should refine the methods detection procedure and extend the scope of the work to full texts where study methods are more easily identified and comprehensively described. Recent refinements in topic modeling procedures through word embeddings and LLMs are advancing at remarkable speeds, and will likely evolve to automatic detection of text subsections. In the meantime, semi-supervised topic detection shows clear promise for scientific literature evaluation, offering researchers a clear, longitudinal view of important fluctuations in interests, funding, and focuses.
 
 \section{Methods}
 \label{sec:papertag.methods}
@@ -79,46 +132,26 @@ Texts for the current investigation were obtained using NiMARE, a Python package
 
 Polak et al. (2023) \cite{PolakEtAl2023} present a straightforward framework for text extraction using NLP, which this present work follows in part, replacing zero-shot classification (step 2) with a hands-on approach. The author randomly selected sample of 50 abstracts from the Neurosynth dataset and manually constructed a list of words and phrases ostensibly related to methods used in neuroimaging studies (see Table \ref{fig:papertag.corpus}). Next, the corpus of abstracts obtained from the Neurosynth dataset was divided into sentences using the \texttt{PunktSentenceTokenizer} \cite{KissStrunk2006} implemented in the Natural Language Toolkit (NLTK) Python module \cite{BirdEtAl2009}, and each sentence was processed using regular expressions to harmonize differing conventions of English writing (e.g., dashes, extra white spaces), and to separate the abstracts into collections of 1-grams (i.e., tokens). 
 
-%\begin{table}[]
-%	\begin{tabular}{lll}
-%		amplitude   & event            & one-back      \\
-%		analysis    & experiment       & paradigm      \\
-%		anatomical  & FC               & projected     \\
-%		ANCOVA      & fractional       & regressor     \\
-%		anisotropy  & galvanic         & regularized   \\
-%		ANOVA       & GLM              & resting-state \\
-%		bivariate   & linear           & ROI           \\
-%		BOLD        & machine learning & seed-based    \\
-%		clinical    & mean             & sensitivity   \\
-%		contrast    & microstructural  & specificity   \\
-%		correlation & mixed effects    & structural    \\
-%		density     & ML               & tensor        \\
-%		diffusion   & morphometry      & voxel-wise    \\
-%		dot-probe   & network          & whole brain  
-%	\end{tabular}
-%	\caption{List of neuroimaging methods-related terms manually generated from a sample of 50 abstracts in the Neurosynth dataset.}
-%	\label{tab:corpus}
-%\end{table}
-
-
 
 In an effort to avoid mismatches which could arise from term detection among differing parts of speech for words that convey the same meaning, the Porter stemming algorithm \cite{M.F.Porter1980} was used to reduce both the scientific abstract sentences and the list of methods terms to fundamental word stems. Because the current paper is concerned specifically with neuroimaging \emph{methods}, the first and last sentences of each abstract were discarded (assuming neither contained a description of the corresponding paper's procedures), as were sentences prefaced with the terms \{results, conclusions, or significance statement\}. Finally, a parallelized Python function detected the presence of any terms in Table \ref{fig:papertag.corpus} and recorded those sentences in a tabular dataset alongside the original abstracts. 
 
+
 \subsection{Topic evaluation}
 
-\todo{write topic modeling procedure}
-
-All code is available at \href{https://github.com/ajbarrows/spiteful-allegory}{https://github.com/ajbarrows/spiteful-allegory}.
+The present work uses two popular topic modeling algorithms in an effort to extract representative topics from the processed corpus of methods-related text: LDA and BERTopic, described in section \ref{sec:papertag.introduction}. The methods-related sentences used as inputs were processed similarly for each algorithm. Text extracted from each study was treated individually to permit exploration of topics over time. For each corpus, the text was again split into tokens, and a set of English ``stop words'' was removed (see \texttt{NLTK.stopwords} \cite{BirdEtAl2009}). Words were then lemmatized using NLTK's \texttt{WordNetLemmatizer} under the assumption that differing parts of speech did not affect whether a particular topic accurately described a document. Some examples of cleaned text are shown in Table \ref{tab:cleaned}. A distribution of term frequencies is shown in Figure \ref{fig:papertag.rankcount}.
 
 
-%
-%\section{Scratch}
-%\begin{figure}
-%	\includegraphics[width=\columnwidth]{figures/project/abstract_rankcount}
-%	\caption{Rank-count distribution for word frequencies in all Neurosynth and Neuroquery abstracts.}
-%\end{figure}
-%
-%Having a bit of a challenge pulling together abstracts with some metadata. Theoretically, things in the \texttt{Neurosynth} and \texttt{Neuroquery} datasets are identified by their PubMed IDs, but when I try to request metadata on those PubMed IDs, many entries come back empty. A bit head scratching. In any case, I think some ordering is important. I'll keep at it.
+\begin{figure*}[]
+	\centering	
+	\includegraphics[width=\textwidth]{figures/project/rankcount.pdf}  
+	\caption{Rank-count distribution for methods-related corpus extracted using the list of words shown in Figure \ref{fig:papertag.corpus}. The 10 most commonly-used terms, the least common term, and a random selection of ``middle'' terms are labeled. Parts of speech were assigned for purposes of dataset exploration using NLTK's \texttt{pos\_tag} function \cite{BirdEtAl2009}.}
+	\label{fig:papertag.rankcount}
+\end{figure*}
+
+
+
+The \texttt{BERTopic} and \texttt{LatentDirichletAllocation} (scikit-learn \cite{PedregosaEtAl2011}) were then used to fit the embedded topic and LDA models respectively using default parameters. Finally, since a progression in topic coverage over time was of interest, the literature in the Neurosynth dataset (spanning from 1997-2018) was grouped into four time periods (i.e., 1997-2002, 2003-2008, 2009-2013, and 2014-2018). Additional embedding and LDA models were fit to text extracted from papers in those periods, as well as text from all papers. All code is available at \href{https://github.com/ajbarrows/spiteful-allegory}{https://github.com/ajbarrows/spiteful-allegory}, and all data are publicly available.
+
 
 
 %\bibliography{pocs2-project-ajb}
